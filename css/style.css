@@ -1,0 +1,20 @@
+/* Body */
+
+body {
+  background-color: #ccc;
+  font-family: TizenSansRegular, Arial, sans-serif;
+}
+
+@font-face {
+  font-family: TizenSansRegular;
+  src: url(../fonts/TizenSansRegular.ttf) format(truetype); /* Safari, Android, iOS */
+}
+
+.inner {
+  width: 60%;
+  margin: auto;
+  padding: 5%;
+  background-color: white;
+}
+
+/* Headings */
