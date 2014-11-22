@@ -1,0 +1,139 @@
+/* Fonts */
+
+@font-face {
+  font-family: SourceCodePro;
+  src: url(../fonts/SourceCodePro-Regular.ttf) format(truetype);
+}
+
+/* Flex */
+
+.flex-parent {
+  display: flex;
+}
+
+.flex-item {
+  flex: 1;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+/* Structural Containers */
+
+.inner {
+  width: 80%;
+  margin: auto;
+  background-color: white;
+  display: flex;
+}
+
+@media (max-width: 720px) {
+  .inner {
+    width: auto;
+  }
+}
+
+.side-panel {
+  background-color: #ededed;
+  flex: 1;
+  min-width: 200px;
+}
+
+.main {
+  padding: 5% 5% 0;
+  flex: 3;
+}
+
+/* Content Containers */
+
+.examples {
+  outline: 1px solid rgba(0,0,0,.25);
+  padding: 5%; 
+}
+
+.swatch {
+  background-color: #eee;
+  flex: 1;
+  margin-bottom: 20px;
+  padding: 20px;
+}
+
+.swatch:not(:last-child) {
+  margin-right: 20px;
+}
+
+/* Styleguide Headings */
+
+.section-title {
+  border-bottom: 1px solid rgba(0,0,0,.5);
+  padding-bottom: 20px;
+}
+
+.section-title,
+.sub-title {
+  margin: 20px auto;
+}
+
+.heading:not(:first-child):before {
+  content: "";
+  border-bottom: 1px solid rgba(0,0,0,.25);
+  display: block;
+  margin: 10px 0;
+}
+
+.label {
+  font-weight: 700; 
+  text-transform: uppercase;
+  color: #ccc;
+}
+
+/* Styleguide Text */
+
+a {
+  text-decoration: none;
+}
+
+pre {
+  background-color: #eee;
+  padding: 10px;
+  margin-bottom: 10px; 
+}
+
+pre, code {
+  font-size: .3rem;
+  color: #777;
+  font-family: SourceCodePro, serif;
+}
+
+.swatch .details {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: .5rem;
+  color: rgba(255,255,255, 0.75);
+  margin: 0;
+}
+
+/* Lists */
+
+li {
+  line-height: 1.5em;
+  font-weight: 600;
+}
+
+li li {
+  font-size: .9em;
+  font-weight: 400;
+}
+
+.contents-list {
+  position: fixed;
+  top: 0;
+  font-size: .5rem;
+  padding: 20px;
+}
