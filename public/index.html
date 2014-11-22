@@ -5,28 +5,120 @@
     <title>Style Guide</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/styleguide.css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
+    <script src="js/styleguide.js"></script>
   </head>
   <body>
+    <div id="top"></div>
     <div class="inner">
-      <section>
-        <header>
-          <h1>Heading Content</h1>
-        </header>
-        <h1>This is an H1 Heading.</h1>
-        <h2>This is an H2 Heading.</h2>
-        <h3>This is an H3 Heading.</h3>
-        <h4>This is an H4 Heading.</h4>
-        <h5>This is an H5 Heading.</h5>
-        <h6>This is an H6 Heading.</h6>
-      </section>
-      <section>
-        <header>
-          <h1>Paragraphs</h1>
-        </header>
-        <p>Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.
-        <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla non metus auctor fringilla. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec ullamcorper nulla non metus auctor fringilla.</p>
-        <p>Maecenas sed diam eget risus varius blandit sit amet non magna. Donec id elit non mi porta gravida at eget metus. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
-      </section>
+<!-- Contents List -->
+      <div class="side-panel">
+        <ul class="contents-list">
+          <p class="label"><a href="#top">Top</a></p>
+          <li><a href="#typography">Typography</a>
+            <ul>
+              <li><a href="#heading-content">Headings</a></li>
+              <li><a href="#paragraphs">Paragraphs</a></li>
+            </ul>
+          </li>
+          <li><a href="#colors">Colors</a>
+            <ul>
+              <li><a href="#swatches">Swatches</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="main">
+      <header>
+        <h1>DNA HMI for XWalk: Style Guide</h1>
+        <p class="intro">
+          Nullam quis risus eget urna mollis ornare vel eu leo. 
+          Cum sociis natoque penatibus et magnis dis parturient 
+          montes, nascetur ridiculus mus. Nullam id dolor id nibh 
+          ultricies vehicula.
+      </header>
+<!-- Typography -->
+        <section id="typography">
+          <h1 class="section-title">Typography</h1>
+          <!-- Headings -->
+          <section id="heading-content">
+            <h2 class="sub-title">Headings</h2>
+            <div class="examples">
+              <h1 class="heading">H1. Lorem ipsum dolor sit amet.</h1>
+              <pre><code>&lt;h1&gt;h1 heading text&lt;/h1&gt;</code></pre>
+              <h2 class="heading">H2. Lorem ipsum dolor sit amet.</h2>
+              <pre><code>&lt;h2&gt;h2 heading text&lt;/h2&gt;</code></pre>
+              <h3 class="heading">H3. Lorem ipsum dolor sit amet.</h3>
+              <pre><code>&lt;h3&gt;h3 heading text&lt;/h3&gt;</code></pre>
+              <h4 class="heading">H4. Lorem ipsum dolor sit amet.</h4>
+              <pre><code>&lt;h4&gt;h4 heading text&lt;/h4&gt;</code></pre>
+              <h5 class="heading">H5. Lorem ipsum dolor sit amet.</h5>
+              <pre><code>&lt;h5&gt;h5 heading text&lt;/h5&gt;</code></pre>
+              <h6 class="heading">H6. Lorem ipsum dolor sit amet.</h6>
+              <pre><code>&lt;h6&gt;h6 heading text&lt;/h6&gt;</code></pre>
+            </div>
+          </section>
+          <!-- Paragraphs and body copy -->
+          <section id="paragraphs">
+            <h2 class="sub-title">Paragraphs</h2>
+            <p class="label">Introductory Copy</p>
+            <pre><code>&lt;p class="intro"&gt;intro copy&lt;/p&gt;</code></pre>
+            <p class="intro">
+              Nullam quis risus eget urna mollis ornare vel eu leo. 
+              Cum sociis natoque penatibus et magnis dis parturient 
+              montes, nascetur ridiculus mus. Nullam id dolor 
+              id nibh ultricies vehicula.</p> 
+            <p class="label">Intro Copy > Small</p>
+            <pre><code>&lt;p class="intro"&gt;&lt;small&gt;small intro copy&lt;/small&gt;&lt;/p&gt;</code></pre>
+            <p class="intro">A sentence with <small>small text</small> in the middle.</p>
+            <p class="label">Body Copy</p>
+            <pre><code>&lt;p&gt;paragraph copy&lt;/p&gt;</code></pre>
+            <p>
+              Cum sociis natoque penatibus et magnis dis parturient 
+              montes, nascetur ridiculus mus. Donec ullamcorper nulla 
+              non metus auctor fringilla. Duis mollis, est non commodo 
+              luctus, nisi erat porttitor ligula, eget lacinia odio 
+              sem nec elit. Donec ullamcorper nulla non metus auctor 
+              fringilla.
+            <p>
+              Maecenas sed diam eget risus varius blandit sit amet non 
+              magna. Donec id elit non mi porta gravida at eget metus. 
+              Duis mollis, est non commodo luctus, nisi erat porttitor 
+              ligula, eget lacinia odio sem nec elit.
+          </section>
+        </section>
+<!-- Colors -->
+        <section id="colors">
+          <h1 class="section-title">Colors</h1>
+          <h2 class="sub-title">Swatches</h2>
+          <section id="swatches" class="flex-parent flex-column">
+            <div class="flex-parent flex-item space-between">
+              <div class="swatch" style="background-color: DarkSeaGreen">
+                <p class="details">#000000<br>rgb(0, 0, 0)<br>color-name</p>
+              </div>
+              <div class="swatch" style="background-color: Gold">
+                <p class="details">#000000<br>rgb(0, 0, 0)<br>color-name</p>
+              </div>
+              <div class="swatch" style="background-color: MediumAquaMarine">
+                <p class="details">#000000<br>rgb(0, 0, 0)<br>color-name</p>
+              </div>
+            </div>
+            <div class="flex-parent flex-item space-between">
+              <div class="swatch" style="background-color: PowderBlue">
+                <p class="details">#000000<br>rgb(0, 0, 0)<br>color-name</p>
+              </div>
+              <div class="swatch" style="background-color: Thistle">
+                <p class="details">#000000<br>rgb(0, 0, 0)<br>color-name</p>
+              </div>
+              <div class="swatch" style="background-color: LightSteelBlue">
+                <p class="details">#000000<br>rgb(0, 0, 0)<br>color-name</p>
+              </div>
+            </div>
+          </section>
+        </section> 
+      </div>
     </div>
   </body>
 </html>
