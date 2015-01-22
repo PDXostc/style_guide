@@ -1,0 +1,90 @@
+<template id="switches-html-classes">
+<pre>&lt;div class="switch <span class="orange-viv">off</span> switch-large"&gt;
+  &lt;div class="<span class="orange-viv">switch-plate</span>"&gt;
+    &lt;div class="<span class="orange-viv">switch-control</span>"&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+</template>
+
+
+<template id="switches-html">
+<pre>&lt;div class="switch off switch-large"&gt;
+  &lt;div class="switch-plate"&gt;
+    &lt;div class="switch-control"&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+</template>
+
+<template id="switches-js">
+<pre>$(document).on("click", ".switch-plate", function() {
+  $(this).closest(".switch").toggleClass("on off");
+})</pre>
+</template>
+
+<template id="switches-css">
+<pre>.switch {
+  margin: 20px;
+}
+
+<span class="comment">/* Sizes for varying switches */</span>
+
+.switch-large {
+  width: 450px;
+  height: 150px;
+} 
+
+.switch-small {
+  width: 225px;
+  height: 75px;
+}
+
+.switch-xsmall {
+  width: 150px;
+  height: 50px;
+}
+
+.switch-plate {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  transition: padding .25s ease-in-out;
+  -webkit-transition: padding .25s ease-in-out;
+}
+
+.switch-control {
+  height: 100%;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+  background-image: url(../images/switchcontrol.svg);
+  -webkit-filter: drop-shadow(4px 4px 5px rgba(0,0,0,0.35));
+} 
+
+<span class="comment">/* On/Off Styles for Background Plate */</span>
+
+.off .switch-plate {
+  background-image: url(../images/switchplate_off.svg);
+}
+
+.on .switch-plate {
+  background-image: url(../images/switchplate_on.svg);
+}
+
+<span class="comment">/* On/Off Styles for moving switch control(knob) */</span>
+
+.off .switch-plate {
+  padding-left: 3%;
+  padding-right: 64%;
+}
+
+.on .switch-plate {
+  padding-left: 64%;
+  padding-right: 3%;
+}</pre>
+</template>

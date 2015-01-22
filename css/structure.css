@@ -1,0 +1,22 @@
+/* demo styles */
+
+html {
+	background-color: #eee;
+}
+
+p, ul, li {
+	font-size: 3rem;
+}
+
+body {
+  transform: scale(.45,.45);
+  transform-origin: top left;
+}
+
+#app {
+	background-image: url(../images/homescreen.png);
+}
+
+.content {
+	border: 4px dashed rgba(255, 0, 0, 0.5);
+}

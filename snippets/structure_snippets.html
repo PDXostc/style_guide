@@ -1,0 +1,166 @@
+<template id="structure-html">  
+<pre>&lt;html&gt;
+  &lt;head&gt;
+    &lt;meta name="viewport" content="width=1080, height=1920, user-scalable=no"&gt;
+    &lt;link rel="stylesheet" href="css/style.css"&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    <span class="comment">&lt;!-- The #base element contains, #top-bar, #app, and #bottom-bar --&gt;</span>
+    <span class="orange-viv">&lt;div id="base"&gt;</span>
+      <span class="orange-lt">&lt;div id="top-bar"&gt;</span>
+        &lt;ul&gt;
+          &lt;li class="grid-space"&gt;&lt;/li&gt;
+          &lt;li class="grid-space"&gt;&lt;/li&gt;
+          &lt;li class="grid-space"&gt;&lt;/li&gt;
+          &lt;li class="grid-space"&gt;&lt;/li&gt;
+          &lt;li class="grid-space"&gt;&lt;/li&gt;
+          &lt;li class="grid-space"&gt;&lt;/li&gt;
+          &lt;li class="grid-space"&gt;&lt;/li&gt;
+          &lt;li class="grid-space"&gt;&lt;/li&gt;
+          &lt;li class="grid-space"&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/div&gt;
+      <span class="orange-lt">&lt;div id="app"&gt;</span>
+        &lt;div class="content"&gt;&lt;/div&gt;
+      &lt;/div&gt;
+      <span class="orange-lt">&lt;div id="bottom-bar"&gt;</span>
+        &lt;div id="settings-button"&gt;&lt;p&gt;Settings&lt;/p&gt;&lt;/div&gt;
+        &lt;div id="agl-logo"&gt;&lt;p&gt;Logo&lt;/p&gt;&lt;/div&gt;
+        &lt;div id="volume"&gt;&lt;p&gt;Volume&lt;/p&gt;&lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    <span class="comment">&lt;!-- #settings is .collapsed to allow for animation --&gt;</span>
+    <span class="orange-viv">&lt;div id="settings" class="collapsed"&gt;</span>
+      &lt;div class="content"&gt;
+        &lt;div class="close-button"&gt;&lt;p class="white right-align"&gt;&#10005;&lt;/p&gt;&lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    <span class="comment">&lt;!-- #modal loads .hidden --&gt;</span>
+    <span class="orange-viv">&lt;div id="modal" class="hidden"&gt;</span>
+      &lt;div class="content"&gt;
+        &lt;div class="close-button"&gt;&lt;p class="white right-align"&gt;&#10005;&lt;/p&gt;&lt;/div&gt;
+        &lt;div&gt;&lt;h1&gt;Modal messages go here&lt;/h1&gt;&lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</pre>
+</template>
+
+<template id="structure-css">
+<pre>body {
+  font-family: SourceSansPro, Arial, sans-serif;
+  width: 1080px;
+  height: 1920px;
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  position: relative;
+}
+
+.hidden,
+#modal.hidden,
+#settings.hidden {
+  display: none;
+}
+
+#base {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  height: inherit;
+}
+
+#modal,
+#settings {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  box-sizing: border-box;
+  display: flex;
+}
+
+#modal {
+  align-items: center;
+}
+
+#settings {
+  flex: 1;
+  background-color: rgba(0, 0, 0, 0.9);
+  transition: height .25s ease-out;
+}
+
+#settings.collapsed {
+  overflow: hidden;
+  height: 0%;
+}
+
+.content {
+  flex: 1;
+  padding: 20px;
+}
+
+#app .content,
+#settings .content {
+  margin: 20px;
+}
+
+#modal .content {
+  background-color: #333;
+}
+
+#top-bar {
+  height: 114px;
+  background-color: black;
+}
+
+#app {
+  display: flex;
+  flex: 1;
+  background-color: transparent;
+}
+
+#bottom-bar {
+  height: 139px;
+  background-color: black;
+  display: flex;
+}
+
+#top-bar,
+#bottom-bar {
+  text-align: center;
+  box-shadow: inset 0 0 40px 2px rgba(255, 255, 255, 0.85);
+  align-items: center;
+}
+
+#top-bar ul {
+  display: flex;
+  margin: 0;
+  padding: 0; 
+}
+
+#top-bar .grid-space {
+  display: inline;
+  padding: 10px; 
+  flex: 1;
+  height: 100%;
+  background-color: transparent;
+  box-sizing: border-box;
+}
+
+#top-bar .grid-space:not(:last-child) {
+  border-right: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+#volume,
+#settings-button {
+  flex: 1;
+}
+
+#agl-logo {
+  flex: 3;
+}</pre>
+</template>
+
+<template id="structure-js"><pre></pre></template>

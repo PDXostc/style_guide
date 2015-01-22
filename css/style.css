@@ -1,0 +1,527 @@
+/* Fonts **************************************************/
+
+/* Adobe Source Sans */
+/* SIL OPEN FONT LICENSE Version 1.1 - 26 February 2007 */
+/* http://scripts.sil.org/OFL */
+
+@font-face {
+  font-family: SourceSansPro;
+  src: url(../fonts/SourceSansPro-ExtraLight.ttf) format(truetype);
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: SourceSansPro;
+  src: url(../fonts/SourceSansPro-Light.ttf) format(truetype);
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: SourceSansPro;
+  src: url(../fonts/SourceSansPro-LightItalic.ttf) format(truetype);
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: SourceSansPro;
+  src: url(../fonts/SourceSansPro-Regular.ttf) format(truetype);
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: SourceSansPro;
+  src: url(../fonts/SourceSansPro-Italic.ttf) format(truetype);
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: SourceSansPro;
+  src: url(../fonts/SourceSansPro-Semibold.ttf) format(truetype);
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: SourceSansPro;
+  src: url(../fonts/SourceSansPro-Bold.ttf) format(truetype);
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: SourceSansPro;
+  src: url(../fonts/SourceSansPro-Black.ttf) format(truetype);
+  font-weight: 900;
+}
+
+/* Root ***************************************************/
+
+html {
+  font-size: 10px;
+}
+
+/* Body */
+
+body {
+  font-family: SourceSansPro, Arial, sans-serif;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  position: relative;
+}
+
+/*Typography **********************************************/
+
+/* Headings */
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 400;
+  color: #fe9c00;
+  margin: .5em 0;
+  line-height: 1em;
+}
+
+h1 {
+  font-size: 7rem;
+}
+
+h2  {
+  font-size: 6rem;
+}
+
+h3 {
+  font-size: 5rem;
+}
+
+h4 {
+  font-size: 4rem;
+}
+
+h5 {
+  font-size: 3.6rem;
+}
+
+h6, label {
+  font-size: 3rem;
+  text-transform: uppercase;
+}
+
+/* Text */
+
+.text-large {
+  font-size: 3.4rem;
+}
+
+.text-medium {
+  font-size: 3.2rem;
+}
+
+p.lead {
+  font-size: 4.5rem;
+  font-weight: 300;
+}
+
+p, ul {
+  margin-bottom: 1em;
+}
+
+p, ul, li {
+  color: white;
+  font-size: 3rem;
+}
+
+/* Anchors */
+
+a {
+  color: inherit;
+}
+
+/* Lists */
+
+ul {
+  font-size: 3rem;
+}
+
+li {
+  margin-left: 1em;
+}
+
+
+/* Sectioning Content and Div *****************************/
+
+div, 
+nav,
+aside,
+article,
+section {
+  font-size: 3rem;
+}
+
+/* Structural Elements ************************************/
+
+#base {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  height: inherit;
+}
+
+#modal,
+#settings {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  box-sizing: border-box;
+  display: flex;
+}
+
+#modal {
+  align-items: center;
+}
+
+#settings {
+  flex: 1;
+  background-color: rgba(0, 0, 0, 0.9);
+  transition: height .25s ease-out;
+}
+
+#settings.collapsed {
+  overflow: hidden;
+  height: 0%;
+}
+
+.content {
+  flex: 1;
+  padding: 20px;
+}
+
+#app .content,
+#settings .content {
+  margin: 20px;
+}
+
+#modal .content {
+  background-color: #333;
+}
+
+#top-bar {
+  height: 114px;
+  background-color: black;
+}
+
+#app {
+  display: flex;
+  flex: 1;
+  background-color: transparent;
+}
+
+#bottom-bar {
+  height: 139px;
+  background-color: black;
+  display: flex;
+}
+
+#top-bar,
+#bottom-bar {
+  text-align: center;
+  box-shadow: inset 0 0 40px 2px rgba(255, 255, 255, 0.85);
+  align-items: center;
+}
+
+#top-bar ul {
+  display: flex;
+  margin: 0;
+  padding: 0; 
+}
+
+#top-bar .grid-space {
+  display: inline;
+  padding: 10px; 
+  flex: 1;
+  height: 100%;
+  background-color: transparent;
+  box-sizing: border-box;
+}
+
+#top-bar .grid-space:not(:last-child) {
+  border-right: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+#volume,
+#settings-button {
+  flex: 1;
+}
+
+#agl-logo {
+  flex: 3;
+}
+
+/* Colors *************************************************/
+
+.orange-lt {
+  color: #ffd38c;
+}
+
+.orange-lt-bg {
+  background-color: #ffd38c;
+}
+
+.orange-viv {
+  color: #fe9c00;
+}
+
+.orange-viv-bg {
+  background-color: #fe9c00;
+}
+
+.blue-lt {
+  color: #b2f0ff;
+}
+
+.blue-lt-bg {
+  background-color: #b2f0ff;
+}
+
+.blue-viv {
+  color: #53b5ce;
+}
+
+.blue-viv-bg {
+  background-color: #53b5ce;
+}
+
+.yellow-lt {
+  color: #ffffb2;
+}
+
+.yellow-lt-bg {
+  background-color: #ffffb2;
+}
+
+.yellow-viv {
+  color: #ffff00;
+}
+
+.yellow-viv-bg {
+  background-color: #ffff00;
+}
+
+.green-lt {
+  color: #cdffb2;
+}
+
+.green-lt-bg {
+  background-color: #cdffb2;
+}
+
+.green-viv {
+  color: #59ff00;
+}
+
+.green-viv-bg {
+  background-color: #59ff00;
+}
+
+.grey {
+  color: #c4c4c4;
+}
+
+.grey-bg {
+  background-color: #c4c4c4;
+}
+
+.white {
+  color: white;
+}
+
+.white-bg {
+  background-color: white;
+}
+
+.black {
+  color: black;
+}
+
+.black-bg {
+  background-color: black;
+}
+
+/* Shadow Boxes */
+
+/* Controls ***********************************************/
+
+/* Buttons ************************************************/
+
+.button, button {
+  content: "button";
+  color: white;
+  position: relative;
+  display: inline-block;
+  font-size: 3rem;
+  font-weight: 600;
+  font-family: inherit;
+  padding: 8px 20px 12px;
+  margin: 20px;
+  border-width: 1px;
+  border-style: solid;
+  background-color: rgba(0, 0, 0, 0.8);
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.9);
+}
+
+.button-orange {
+  border-color: #fe9c00;
+  box-shadow: inset 0 0 20px rgba(254, 156, 0, 0.9);
+}
+
+.button-blue {
+  border-color: #b2f0ff;
+  box-shadow: inset 0 0 20px rgba(178, 240, 255, 0.9);
+}
+
+.button-green {
+  border-color: #59ff00;
+  box-shadow: inset 0 0 20px rgba(89, 255, 0, 0.9);
+}
+
+.button-yellow {
+  border-color: #ffff00;
+  box-shadow: inset 0 0 20px rgba(255, 255, 0, 0.9);
+}
+
+/* Switches ***********************************************/
+
+.switch {
+  margin: 20px;
+}
+
+/* Sizes for varying switches */
+
+.switch-large {
+  width: 450px;
+  height: 150px;
+} 
+
+.switch-small {
+  width: 225px;
+  height: 75px;
+}
+
+.switch-xsmall {
+  width: 150px;
+  height: 50px;
+}
+
+.switch-plate {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  transition: padding .25s ease-in-out;
+  -webkit-transition: padding .25s ease-in-out;
+}
+
+.switch-control {
+  height: 100%;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+  background-image: url(../images/switchcontrol.svg);
+  -webkit-filter: drop-shadow(4px 4px 5px rgba(0,0,0,0.35));
+} 
+
+/* On/Off Styles for Background Plate */
+
+.off .switch-plate {
+  background-image: url(../images/switchplate_off.svg);
+}
+
+.on .switch-plate {
+  background-image: url(../images/switchplate_on.svg);
+}
+
+/* On/Off Styles for switch control(knob) */
+
+.off .switch-plate {
+  padding-left: 3%;
+  padding-right: 64%;
+}
+
+.on .switch-plate {
+  padding-left: 64%;
+  padding-right: 3%;
+}
+
+/* Buttons ************************************************/
+
+button,
+input[type="button"] {
+
+}
+
+/* Icons **************************************************/
+
+.icon {
+  width: 40px;
+  height: 40px;
+  background-position: center;
+}
+
+/* Header and Footer **************************************/
+
+header,
+footer {
+  padding: 20px;
+  margin: 0;
+}
+
+/* Modifiers **********************************************/
+
+.hidden,
+#modal.hidden,
+#settings.hidden {
+  display: none;
+}
+
+.right-align {
+  text-align: right;
+}
+
+.center {
+  text-align: center;
+}
+
+/* Flex Modifiers */
+
+.flex-parent {
+  display: flex;
+}
+
+.flex-item {
+  flex: 1;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-center {
+  align-items: center;
+}
+
+.flex-column-center {
+  flex-direction: column;
+  justify-content: center;
+}
+
+.space-between {
+  justify-content: space-between;
+}
