@@ -346,6 +346,20 @@ nav li {
   list-style-type: none; 
 }
 
+#switch-list-demo ul {
+  list-style-type: none;
+
+}
+
+#switch-list-demo li {
+  font-weight: 100;
+  margin: 0;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255,255,255,.1);
+  line-height: 50px;
+}
+
+
 /* Tables */
 
 table {
