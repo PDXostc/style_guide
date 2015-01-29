@@ -1,36 +1,36 @@
-var switchesSnippets = document.getElementById('switches-snippets').import;
-var structureSnippets = document.getElementById('structure-snippets').import;
+var switchesImport = document.getElementById('switches-snippets').import;
+var structureImport = document.getElementById('structure-snippets').import;
 
 function Snippet(snippetImport, id) {
   this.snippet = snippetImport.getElementById(id);
   this.snippetContent = document.importNode(this.snippet.content, true);
 }
 
-function loadSwitchesSnippets() {
-  var switchesHTML = new Snippet(switchesSnippets, 'switches-html');
-  var switchesCSS = new Snippet(switchesSnippets, 'switches-css');
-  var switchesJS = new Snippet(switchesSnippets, 'switches-js');
-  var switchesHTMLHighlights = new Snippet(switchesSnippets, 'switches-html-highlights');
-  var switchesJSHighlights = new Snippet(switchesSnippets, 'switches-js-highlights');
-
-  $("#switches .html code").html(switchesHTML.snippetContent);
-  $("#switches .html code.highlights").html(switchesHTMLHighlights.snippetContent);
-  $("#switches .css code").html(switchesCSS.snippetContent);
-  $("#switches .js code").html(switchesJS.snippetContent);
-  $("#switches .js code.highlights").html(switchesJSHighlights.snippetContent);
-}
-
-function loadStructureSnippets() {
-  var structureHTML = new Snippet(structureSnippets, 'structure-html');
-  var structureCSS = new Snippet(structureSnippets, 'structure-css');
-
-  $("#structure .html code").html(structureHTML.snippetContent);
-  $("#structure .css code").html(structureCSS.snippetContent);
+function loadSnippets(htmlImport, snippetObj) {
+  for (snippetInfo in snippetObj) {
+    var snippetIds = snippetObj[snippetInfo];
+    var snippet = new Snippet(htmlImport, snippetIds.templateId);
+    $(snippetIds.targetId).html(snippet.snippetContent);
+  }
 }
 
 var init = function() {
-  loadSwitchesSnippets();
-  loadStructureSnippets();
+  var snippets = {
+    structure: {
+      structureHTML: { templateId: "structure-html", targetId: "#structure .html code" },
+      structureCSS: { templateId: "structure-css", targetId: "#structure .css code" }
+    },
+    switches: {
+      switchesHTML: { templateId: "switches-html", targetId: "#switches .html code" },
+      switchesCSS: { templateId: "switches-css", targetId: "#switches .css code" },
+      switchesJS: { templateId: "switches-js", targetId: "#switches .js code" },
+      switchesHTMLHighlights: { templateId: "switches-html-highlights", targetId: "#switches .html code.highlights" },
+      switchesJSHighlights: { templateId: "switches-js-highlights", targetId: "#switches .js code.highlights" }
+    }
+  }
+
+  loadSnippets( structureImport, snippets.structure );
+  loadSnippets( switchesImport, snippets.switches );
 }
 
 $(document).ready(init);

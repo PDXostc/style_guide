@@ -1,0 +1,145 @@
+          <section id="structure">
+            <a class="toggle-button toggle">hide</a>
+            <h1 class="section-title">Structure
+              <span class="back-to-top"><a href="#top">&#9650;</a></span>
+            </h1>
+            <p class="doc notice">This HTML/CSS structure for top-level container elements is partially available in the AGL App Suite. The App Suite does not yet have the recommended naming conventions or a container for modals. Refer to <a href="#settings-setup" class="underline-link"><em>Settings Set-Up</em></a> for the current implementation.</p>
+            <article>
+              <p class="doc">This HTML structure provides a flexible, layered layout that applies to all applications. It utilizes Flexbox Layout to limit the need for absolute positioning, floats, z-indexing, and absolute sizing.</p>
+              <a id="structure-demo" class="button sg-button" href="AGL_structure.html" target="blank">View the demo</a>
+              <section class="sub-section">
+                <h3 class="sub-title">The HTML</h3>
+                <p class="doc">The HTML body is divided into 3 primary containers:</p>
+                <div class="flex-parent flex-pattern-1-2">
+                  <div>
+                    <ul class="doc">
+                      <li>#base</li>
+                      <li>#settings</li>
+                      <li>#modal</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <code class="highlights"></code>
+                  </div>
+                </div>
+                <p class="doc">The #base container contains:</p>
+                <section class="flex-parent flex-pattern-1-2">
+                  <div>
+                    <ul class="doc">
+                      <li>#top-bar</li>
+                      <li>#app</li>
+                      <li>#bottom-bar</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <code class="highlights"></code>
+                  </div>
+                </section>
+                <p class="doc">Each of these contain a .content container that serves as the target for loading app- or component-specific content.</p>
+                <section>
+                  <code></code>
+                </section>
+                <section class="html">
+                <p class="doc">All together, the full HTML is as follows:</p>
+                <code contenteditable></code>
+                </section>
+              </section>
+              <section class="css sub-section">
+                <h3 class="sub-title">The CSS</h3>
+                <code contenteditable></code>
+              </section>
+
+
+              <!-- FlexBox Primer -->
+
+              <section id="flexbox-101" class="sub-section">
+                <a class="toggle-button toggle">hide</a>
+                <h5 class="sub-title">How Flex Layout keeps things in place.</h5>
+                <article>
+                  <p class="label">A flex primer</p>
+                  <p class="doc">Flex allows child elements to expand in size based on a numerator. For instance, a flex parent element with two children each with a flex of 1 would look like this:</p>
+                  <div class="flex-parent flex-demo">
+                    <div class="flex-item center white-bg">1</div>
+                    <div class="flex-item center white-bg">1</div>
+                  </div>
+                  <p class="doc"><small><em>Each child element is 1 part of 2 or 1/2 of the parent.</em></small></p>
+                  <p class="doc">If no flex value is set, the default value is 0 which would cause the element to collapse. If the element has content or set sizing, it'll take up only the space needed.</p>
+                  <div class="flex-parent flex-demo">
+                    <div class="flex-parent flex-column-center center white-bg">0</div>
+                    <div class="flex-item center white-bg">1</div>
+                  </div>
+                  <div class="flex-parent flex-demo">
+                    <div class="flex-parent flex-column-center center white-bg" style="width: 200px"><small>200px<br>wide</small></div>
+                    <div class="flex-item center white-bg">1</div>
+                  </div>
+                  <p class="doc">Here's another example with multiple flex values:</p>
+                  <div class="flex-parent flex-demo">
+                    <div class="flex-item center white-bg" style="flex: 4">4</div>
+                    <div class="flex-item center white-bg">1</div>
+                    <div class="flex-item center white-bg" style="flex: 3">3</div>
+                    <div class="flex-item center white-bg" style="flex: 2">2</div>
+                    <div class="flex-parent flex-column-center center white-bg" style="width: 120px"><small>120px<br>wide</small></div>
+                  </div>
+                  <p class="label">Flex for AGL</p>
+                  <p class="doc">The #base element has 3 noteable CSS properties:</p>
+                  <code>
+                    <pre>display: flex;
+justify-content: space-between;
+flex-direction: column;</pre>
+                  </code>
+                  <code><pre>display: flex;</pre></code>
+                  <p class="doc">...enables flex layout.</p>
+                  <code><pre>flex-direction: column;</pre></code>
+                  <p class="doc">...causes the flexing to happen vertically.</p>
+                  <code><pre>justify-content: space-between;</pre></code>
+                  <p class="doc">...causes the #top-bar and #bottom-bar to stay at the top and bottom without positioning.</p>
+                  <p class="doc">#app has one important property:</p>
+                  <code><pre>flex: 1;</pre></code>
+                  <p class="doc">...which allows the #app container to expand to the remaining space.</p>
+                </article>
+              </section>
+              <section id="settings-setup" class="sub-section">
+                <a class="toggle-button toggle">hide</a>
+                <h5 class="sub-title">Settings Set-Up</h5>
+                <article>                
+                  <ol class="doc">
+                    <li>Create a div with id of "base" as the first child in the body</li>
+                    <li>Move #topBar and #bottomBar into it</li>
+                    <li>Create a div with id of "app" within #base</li>
+                    <li>Place the new #app div after #topBar but before #bottomBar</li>
+                    <li>Create a div with id of "clockElement" as the first child in #app
+                      <ul>
+                        <li>If you don't need the date and time in your app, comment out the #clockElement div</li>
+                      </ul>
+                    </li>
+                    <li>Move all remaining app-specific containers into #app after #clockELement
+                      <ul>
+                        <li>Be careful to maintain the current order</li>
+                        <li>You can wrap the content into another div for organization and code folding</li>
+                      </ul>
+                    </li>
+                    <li>Add a div with id of "settingsPage" after #base
+                      <ul>
+                        <li>Give it a class of "settingsPage hidden" <small class="grey">(Xwalk 12/2014)</small></li>
+                        <li>Javascript will now only add the <em>content</em> of settings (not the parent div)</li>
+                      </ul>
+                    </li>
+                  </ol>
+                <p class="doc">Your HTML should look similar to this:</p>
+                  <code contenteditable>
+                    <pre>&lt;body&gt;
+  &lt;div id="base"&gt;
+    &lt;div id="topBar"&gt;&lt;/div&gt;
+    &lt;div id="app"&gt;
+      &lt;div id="clockElement"&gt;&lt;/div&gt;
+      <span class="comment">&lt;-- Your app-specific HTML --&gt;</span>
+    &lt;/div&gt;
+    &lt;div id="bottomBar"&gt;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div id="settingsPage" class="settingsPage hidden"&gt;&lt;/div&gt;
+&lt;/body&gt;</pre>
+                  </code>
+                </article>
+              </section>
+            </article>
+          </section>
