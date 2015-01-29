@@ -660,16 +660,19 @@ flex-direction: column;</pre>
               <code><pre>.switch-large, .switch-small, .switch-xsmall</pre></code>
               <section class="js">
                 <p class="doc">JS toggles the <em>".on"</em> and <em>".off"</em> classes of the ancestor <em>".switch".</em></p>
-                <code contenteditable><pre>$(document).on("click", ".switch-plate", function() {
-  $(this).closest(".switch").<span class="orange-viv">toggleClass("on off")</span>;
-})</pre></code>
+                <code class="highlights" contenteditable></code>
               </section>
-              <section class="html-classes">
+              <section class="html">
                 <p class="doc"><em>".switch"</em> has 2 descendants:<br><em>".switch-plate"</em> which is the housing that changes color, and<br> <em>".switch-control"</em> which is the knob that slides.</p>
-                <code contenteditable></code>
+                <code class="highlights" contenteditable></code>
               </section>
               <p class="doc">The switch class is set to <em>".off"</em> by default.</p>
               <div class="switch off switch-large">
+                <div class="switch-plate">
+                  <div class="switch-control"></div>
+                </div>
+              </div>
+               <div class="switch off switch-medium">
                 <div class="switch-plate">
                   <div class="switch-control"></div>
                 </div>
