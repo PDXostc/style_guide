@@ -7,15 +7,17 @@ function Snippet(snippetImport, id) {
 }
 
 function loadSwitchesSnippets() {
-  var switchesHTMLClasses = new Snippet(switchesSnippets, 'switches-html-classes');
   var switchesHTML = new Snippet(switchesSnippets, 'switches-html');
   var switchesCSS = new Snippet(switchesSnippets, 'switches-css');
   var switchesJS = new Snippet(switchesSnippets, 'switches-js');
+  var switchesHTMLHighlights = new Snippet(switchesSnippets, 'switches-html-highlights');
+  var switchesJSHighlights = new Snippet(switchesSnippets, 'switches-js-highlights');
 
-  $("#switches .html-classes code").html(switchesHTMLClasses.snippetContent);
   $("#switches .html code").html(switchesHTML.snippetContent);
+  $("#switches .html code.highlights").html(switchesHTMLHighlights.snippetContent);
   $("#switches .css code").html(switchesCSS.snippetContent);
   $("#switches .js code").html(switchesJS.snippetContent);
+  $("#switches .js code.highlights").html(switchesJSHighlights.snippetContent);
 }
 
 function loadStructureSnippets() {
