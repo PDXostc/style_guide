@@ -1,0 +1,183 @@
+/* Switches ***********************************************/
+
+.switch {
+  margin: 20px;
+}
+
+/* Sizes for varying switches */
+
+.switch-large {
+  width: 300px;
+  height: 150px;
+} 
+
+.switch-large .switch-control {
+  -webkit-filter: drop-shadow(8px 8px 8px rgba(0,0,0,0.35));
+}
+
+.switch-medium {
+  width: 210px;
+  height: 105px;
+}
+
+.switch-medium .switch-control {
+  -webkit-filter: drop-shadow(5px 5px 5px rgba(0,0,0,0.35));
+}
+
+.switch-small {
+  width: 150px;
+  height: 75px;
+}
+
+.switch-small .switch-control {
+  -webkit-filter: drop-shadow(4px 4px 4px rgba(0,0,0,0.35));
+}
+
+.switch-xsmall {
+  width: 100px;
+  height: 50px;
+}
+
+.switch-xsmall .switch-control {
+  -webkit-filter: drop-shadow(2px 2px 2px rgba(0,0,0,0.35));
+}
+
+.switch-plate {
+  background-repeat: no-repeat;
+  background-size: 100%;
+  box-sizing: border-box;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.switch-control {
+  height: 80%;
+  width: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+  background-image: url(../images/switchcontrol.svg);
+} 
+
+/* On/Off Styles for Background Plate */
+
+.off .switch-plate {
+  padding-left: 10%;
+  padding-right: 0 !important; 
+  background-image: url(../images/switchplate_off.svg);
+  justify-content: flex-start;
+}
+
+.on .switch-plate {
+  padding-right: 10%;
+  padding-left: 0 !important; 
+  background-image: url(../images/switchplate_on.svg);
+  justify-content: flex-end;
+}
+
+/* Close button */
+.close-button {
+  padding: 10px;
+  position: relative;
+  right: 20px;
+  top: 0;
+  float: right;
+}
+.close-button::after {
+  content: "\00d7";
+  width: 26px;
+  height: 63px;
+  color: white;
+  font-size: 5rem;
+  cursor: pointer;
+}
+
+/* Forms */
+
+/* Text Inputs */
+
+label {
+  text-transform: uppercase;
+  color: #fe9c00;
+  display: block;
+}
+
+.input-group label.left-label {
+  justify-content: flex-start;
+}
+
+.input-group label {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  text-align: right;
+}
+
+.text-input {
+  border: none;
+  color: rgba(255,255,255,.8);
+}
+
+label,
+.text-input {
+  margin: 10px;
+}
+
+.text-input:focus {
+  outline: none;
+  color: white;
+  box-shadow: 0 0 20px rgba(255,255,255,.8);
+}
+
+.input-yellow {
+  color: rgba(255, 255, 178, 0.8);
+}
+
+.input-yellow:focus {
+  color: #ffffb2;
+  box-shadow: 0 0 20px rgba(255, 255, 178, 0.8);
+}
+
+.input-blue {
+  color: rgba(178, 240, 255, 0.8);
+}
+
+.input-blue:focus {
+  color: #b2f0ff;
+  box-shadow: 0 0 20px rgba(178, 240, 255, 0.8);
+}
+
+.input-green {
+  color: rgba(205, 255, 178, 0.8);
+}
+
+.input-green:focus {
+  color: #cdffb2;
+  box-shadow: 0 0 20px rgba(205, 255, 178, 0.8);
+}
+
+.input-orange {
+  color: rgba(255, 211, 140, 0.8);
+}
+
+.input-orange:focus {
+  color: #ffd38c;
+  box-shadow: 0 0 20px rgba(255, 211, 140, 0.8);
+}
+
+/* Modifiers */
+
+.borderless {
+  border: none;
+}
+
+.flex-item-2 {
+  flex: 2;
+}
+
+/* Already in common.css; here for cascading */
+
+.no-margin {
+  margin: 0;
+}

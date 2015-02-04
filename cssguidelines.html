@@ -1,0 +1,47 @@
+<h1 class="section-title doc">CSS Guidelines <span class="back-to-top"><a href="#top">&#9650;</a></span></h1>
+            <p class="doc notice">This section is work-in-progress.</p>
+            <p class="doc">All styling should be written in CSS files. Avoid writing embedded, or inline CSS. Javascript should be as unobtrusive as possible and use styles and IDs to modify the DOM rather than writing attribute and CSS property values.</p>
+            <!-- <h2 class="sub-title">Class and ID Naming</h2> -->
+            <!-- <p>All class and ID names should be hyphenated.</p> -->
+            <!-- <p>Why hyphens are better than camelCase:</p> -->
+            <!-- <ul> -->
+              <!-- <li>Easier to read:</li> -->
+              <!-- <code class="good"><pre>.shadow-box-yellow</pre></code> -->
+              <!-- <code class="bad"><pre>.shadowBoxYellow</pre></code> -->
+            <!-- </ul> -->
+
+            <div class="sub-section">
+              <h6 class="doc">Viewport Settings</h6>
+              <ul class="doc">
+                <li>Total area is 1080 x 1920 (w/h) which should scale down to 720x1280 proportionately.</li>
+              </ul>
+              <h6 class="doc">Stylesheet Links</h6>
+              <ul class="doc">
+                <li>The app specific style sheet shall be loaded last in the stack.</li>
+              </ul>
+              <h6 class="doc">Writing CSS</h6>
+              <ul class="doc">
+                <li>Inline or embedding CSS should be avoided.</li>
+                <li>Default styles should not be overwritten.</li>
+                <li>The :hover selector should not be used as :hover does not apply to touchscreens.</li>
+              </ul>
+              <h6 class="doc">Containers</h6>
+              <ul class="doc">
+                <li>Flex properties should be used where applicable.</li>
+              </ul>
+              <h6 class="doc">Units</h6>
+              <ul class="doc">
+                <li>Relative units are preferred over absolute units in property values.</li>
+              </ul>
+              <h6 class="doc">Z-indexing</h6>
+              <ul class="doc">
+                <li>Z-index should start as a base value of "1" and move up in single incremented up by 1 as needed for each overlaying elements.</li>
+                <li>Infinite or arbitrary z-indexing should not be used. (eg. z-index: 9999)</li>
+                <li>Z-index should only be used when the stack order cannot be changed.</li>
+                <li>Z-index should only be used on two or more elements. Z-index on one element has no effect.</li>
+              </ul>
+              <h6 class="doc">Inputs</h6>
+              <ul class="doc">
+                <li>The flashing input caret should be used on :focus elements that accept keyboard events or other user inputs.</li>
+              </ul>
+            </div>
