@@ -85,8 +85,6 @@ body::-webkit-scrollbar {
 
 nav {
   /*background-color: #222;*/
-  flex: 1;
-  min-width: 240px;
   margin: 0; 
 }
 
@@ -97,6 +95,7 @@ nav {
 
 .back-to-top {
   float: right;
+  font-size: .5em;
 }
 
 .toggle-button {
@@ -173,10 +172,6 @@ article {
   padding: 20px;
 }
 
-.swatch:not(:last-child) {
-  margin-right: 20px;
-}
-
 .notice {
   background-color: #ffd38c;
   color: black;
@@ -201,9 +196,9 @@ article {
 /* Styleguide Headings */
 
 .section-title {
-  border-bottom: 1px solid rgba(255,255,255, 0.25);
-  padding-bottom: 20px;
-  margin: 0 0 20px;
+  border-bottom: 1px solid rgba( 0, 0, 0, 0.25);
+  margin-bottom: 15px;
+  padding-bottom: 15px;
 }
 
 .sub-title {
@@ -265,6 +260,7 @@ a.external-link {
   border-bottom: 1px solid rgba(255,255,255,0.25);
 }
 
+.underline,
 a.underline-link {
   padding-bottom: 2px;
   border-bottom: 1px solid rgba(0,0,0,0.25);
@@ -338,17 +334,28 @@ li code {
   content: "\003e";
 }
 
-.swatch .details {
-  text-align: center;
-  text-transform: uppercase;
-  font-weight: 600;
-  font-size: 2rem;
-  margin: 0;
-  flex: 1;
+.swatch {
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 
-.swatch p {
+.color-info {
+  flex: 0 1 23%;
+}
+
+.color-info p {
   color: black;
+  margin: 0;
+}
+
+.hex-details,
+.rgb-details {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 0;
+  border-bottom: 1px solid rgba(0,0,0,0.25);
 }
 
 .swatch p.white {
@@ -357,10 +364,10 @@ li code {
 
 .swatch-label {
   text-transform: uppercase;
-  text-align: center;
   font-size: 2rem;
-  font-weight: 700;
-  margin: 10px;
+  padding: 10px;
+  margin: 0;
+  background-color: white;
 }
 
 /* Lists */
@@ -390,13 +397,20 @@ nav li li li {
   list-style-type: disc;
 }
 
-.contents-list {
+.nav-panel {
+  flex: 1;
+  min-width: 240px;
+}
+
+.nav-menus {
   position: fixed;
   top: 0;
-  width: 0;
-  min-width: inherit;
   box-sizing: border-box;
   padding: 20px;
+}
+
+.contents-list {
+  min-width: inherit;
   font-size: 3rem;
   color: #c4c4c4;
   list-style: none;

@@ -5,7 +5,10 @@ var imports = {
 
 var snippets = {
   structure: {
-    structureHTML: { templateId: "structure-html", targetId: "#structure .html code" },
+    structureHTML: { templateId: "structure-html", targetId: "#structure .html-complete code" },
+    structureHTMLBody: { templateId: "structure-html-body", targetId: "#structure .html-body code" },
+    structureHTMLBase: { templateId: "structure-html-base", targetId: "#structure .html-base code" },
+    structureHTMLContent: { templateId: "structure-html-content", targetId: "#structure .html-content code" },
     structureCSS: { templateId: "structure-css", targetId: "#structure .css code" }
   },
   switches: {
@@ -35,7 +38,8 @@ var init = function() {
     loadSnippets( imports["structure"], snippets["structure"] );
   });
 
-  $("nav").load("nav.html");
+  $("nav.primary").load("nav_primary.html");
+  $("nav.secondary").load("nav_secondary.html");
   $("#introduction").load("introduction.html");
   $("#typography").load("typography.html");
   $("#colors").load("colors.html");
