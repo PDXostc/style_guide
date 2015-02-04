@@ -510,71 +510,61 @@ textarea,
 /* Sizes for varying switches */
 
 .switch-large {
-  width: 300px;
+  width: 450px;
   height: 150px;
 } 
 
-.switch-large .switch-control {
-  -webkit-filter: drop-shadow(8px 8px 8px rgba(0,0,0,0.35));
-}
-
-.switch-medium {
-  width: 210px;
-  height: 105px;
-}
-
-.switch-medium .switch-control {
-  -webkit-filter: drop-shadow(5px 5px 5px rgba(0,0,0,0.35));
-}
-
 .switch-small {
-  width: 150px;
+  width: 225px;
   height: 75px;
 }
 
-.switch-small .switch-control {
-  -webkit-filter: drop-shadow(4px 4px 4px rgba(0,0,0,0.35));
-}
-
 .switch-xsmall {
-  width: 100px;
+  width: 150px;
   height: 50px;
 }
 
-.switch-xsmall .switch-control {
-  -webkit-filter: drop-shadow(2px 2px 2px rgba(0,0,0,0.35));
-}
-
 .switch-plate {
+  margin: 0;
+  padding: 0;
+  position: relative;
   background-repeat: no-repeat;
   background-size: 100%;
   box-sizing: border-box;
+  width: 100%;
   height: 100%;
-  display: flex;
-  align-items: center;
 }
 
 .switch-control {
-  height: 80%;
-  width: 50%;
+  height: 100%;
+  width: 100%;
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100% 100%;
   background-image: url(../images/switchcontrol.svg);
+  -webkit-filter: drop-shadow(4px 4px 5px rgba(0,0,0,0.35));
 } 
 
 /* On/Off Styles for Background Plate */
 
 .off .switch-plate {
-  padding-left: 10%;
   background-image: url(../images/switchplate_off.svg);
-  justify-content: flex-start;
 }
 
 .on .switch-plate {
-  padding-right: 10%;
   background-image: url(../images/switchplate_on.svg);
-  justify-content: flex-end;
+}
+
+/* On/Off Styles for switch control(knob) */
+
+.off .switch-plate {
+  padding-left: 3%;
+  padding-right: 64%;
+}
+
+.on .switch-plate {
+  padding-left: 64%;
+  padding-right: 3%;
 }
 
 /* Close button */
@@ -735,6 +725,7 @@ ul, ol {
   outline: none;
 }
 
+.ellipsis-one-line,
 .oneLineEllipsis {
   overflow: hidden;
   text-overflow: ellipsis;
@@ -1447,7 +1438,6 @@ ul, ol {
   background-position: center center;
   background-repeat: no-repeat;
 }
-
 .callingTrue {
   margin-top: 279px;
   background-color: rgb(255, 3, 3);

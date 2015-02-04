@@ -34,7 +34,20 @@ var init = function() {
   $("#structure").load("structure.html", function() {
     loadSnippets( imports["structure"], snippets["structure"] );
   });
-  loadSnippets( imports["switches"], snippets["switches"] );
+
+  $("nav").load("nav.html");
+  $("#introduction").load("introduction.html");
+  $("#typography").load("typography.html");
+  $("#colors").load("colors.html");
+  $("#controls").load("controls.html", function() {
+    loadSnippets( imports["switches"], snippets["switches"] );
+  });
+  $("#icons").load("icons.html");
+  $("#css-guidelines").load("cssguidelines.html");
+  $("#html-guidelines").load("htmlguidelines.html");
+  $("#supporting-documents").load("supportdocs.html");
+  $("#forms").load("forms.html");
+  $("#tables").load("tables.html");
 }
 
 $(document).ready(init);
