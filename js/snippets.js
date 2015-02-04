@@ -34,13 +34,13 @@ function loadSnippets(htmlImport, snippetObj) {
 }
 
 var init = function() {
+  $("#introduction").load("introduction.html");
   $("#structure").load("structure.html", function() {
     loadSnippets( imports["structure"], snippets["structure"] );
   });
-
+  $("#boxes").load("boxes.html");
   $("nav.primary").load("nav_primary.html");
   $("nav.secondary").load("nav_secondary.html");
-  $("#introduction").load("introduction.html");
   $("#typography").load("typography.html");
   $("#colors").load("colors.html");
   $("#controls").load("controls.html", function() {
