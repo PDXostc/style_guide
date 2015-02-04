@@ -1,0 +1,272 @@
+<a class="toggle-button toggle">hide</a>
+<h1 class="section-title">Boxes
+  <span class="back-to-top"><a href="#top">&#9650;</a></span>
+</h1>
+<p class="doc">"Boxes" are sections of content that can be individually styled. Applying a box style on a parent container will allow for easier styling of enclosed headers, headings, text, backgrounds, etc.</p>
+
+<p class="label">Basic Boxes</p>
+<div class="example">
+	<section class="box-outline">
+		<header class="box-header">
+			<h5 class="box-title">box-outline</h5>
+		</header>
+		<div class="box-content">
+			<p><small>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</small></p>
+		</div>
+	</section>
+	<div class="flex-parent">
+		<div class="box-inshadow">
+			<h5>box-inshadow</h5>
+			<p><small>Lorem ipsum dolor sit amet, consectetur</small></p>
+		</div>
+		<div class="box-outshadow">
+			<h5>box-inshadow</h5>
+			<p><small>Lorem ipsum dolor sit amet, consectetur</small></p>
+		</div>
+	</div>
+</div>
+
+<div class="flex-parent flex-pattern-1-2">
+	<div>
+		<p class="doc">Boxes come in three styles:</p>
+		<ul class="doc">
+			<li><span class="inline-code">.box-outline</span></li>
+			<li><span class="inline-code">.box-inshadow</span></li>
+			<li><span class="inline-code">.box-outshadow</span></li>
+		</ul>
+	</div>
+	<p class="doc">These styles should be used on the parent container of your content. If you have header content specific to your created section, you could use the <span class="inline-code">.box-header</span> class which applies a flush header area to the top of the box.</p>
+</div>
+
+<code contenteditable><pre><span class="comment">// box-outline with box-header and box-content example</span>
+&lt;div <span class="orange-viv">class="box-outline"</span>&gt;
+  &lt;header <span class="orange-viv">class="box-header"</span>&gt;
+    &lt;h5&gt;box-outline&lt;/h5&gt;
+  &lt;/header&gt;
+  &lt;div <span class="orange-viv">class="box-content"</span>&gt;
+    &lt;p&gt;&lt;small&gt;Lorem ipsum dolor sit amet, consectetur&lt;/small&gt;&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+<span class="comment">// box-inshadow example</span>
+&lt;div <span class="orange-viv">class="box-inshadow"</span>&gt;
+  &lt;h5&gt;box-inshadow&lt;/h5&gt;
+  &lt;p&gt;&lt;small&gt;Lorem ipsum dolor sit amet, consectetur&lt;/small&gt;&lt;/p&gt;
+&lt;/div&gt;
+
+<span class="comment">// box-outshadow example</span>
+&lt;div <span class="orange-viv">class="box-outshadow"</span>&gt;
+  &lt;h5&gt;box-outshadow&lt;/h5&gt;
+  &lt;p&gt;&lt;small&gt;Lorem ipsum dolor sit amet, consectetur&lt;/small&gt;&lt;/p&gt;
+&lt;/div&gt;</pre></code>
+
+
+<p class="label">Box Variations - Outline</p>
+<div id="box-variations" class="example">
+	<div class="flex-parent">
+		<div class="flex-item">
+			<p class="doc white"><span class="inline-code">.box-outline .box-yellow</span></p>		
+		  <section class="box-outline box-yellow flex-item">
+				<header class="box-header">
+					<h5 class="box-title">box-outline</h5>
+				</header>
+				<div class="box-content">
+					<p><small>Lorem ipsum dolor sit amet, consectetur</small></p>
+				</div>
+			</section>
+		</div>
+		<div class="flex-item">
+			<p class="doc white"><span class="inline-code">.box-outline .box-orange</span></p>		
+			<section class="box-outline box-orange flex-item">
+				<header class="box-header">
+					<h5 class="box-title">box-outline</h5>
+				</header>
+				<div class="box-content">
+					<p><small>Lorem ipsum dolor sit amet, consectetur</small></p>
+				</div>
+			</section>
+		</div>
+	</div>
+	<div class="flex-parent">
+		<div class="flex-item">
+			<p class="doc white"><span class="inline-code">.box-outline .box-blue</span></p>		
+		  <section class="box-outline box-blue flex-item">
+				<header class="box-header">
+					<h5 class="box-title">box-outline</h5>
+				</header>
+				<div class="box-content">
+					<p><small>Lorem ipsum dolor sit amet, consectetur</small></p>
+				</div>
+			</section>
+		</div>
+		<div class="flex-item">
+			<p class="doc white"><span class="inline-code">.box-outline .box-green</span></p>		
+			<section class="box-outline box-green flex-item">
+				<header class="box-header">
+					<h5 class="box-title">box-outline</h5>
+				</header>
+				<div class="box-content">
+					<p><small>Lorem ipsum dolor sit amet, consectetur</small></p>
+				</div>
+			</section>
+		</div>
+	</div>
+</div>
+
+<p class="label">Box Variations - In-Shadow</p>
+<div id="box-variations" class="example">
+	<div class="flex-parent">
+		<div class="flex-item">
+			<p class="doc white"><span class="inline-code">.box-inshadow .box-in-yellow</span></p>		
+		  <section class="box-inshadow box-in-yellow flex-item">
+				<header class="box-header">
+					<h5 class="box-title">box-inshadow</h5>
+				</header>
+				<div class="box-content">
+					<p><small>Lorem ipsum dolor sit amet, consectetur</small></p>
+				</div>
+			</section>
+		</div>
+		<div class="flex-item">
+			<p class="doc white"><span class="inline-code">.box-inshadow .box-in-range</span></p>		
+			<section class="box-inshadow box-in-orange flex-item">
+				<header class="box-header">
+					<h5 class="box-title">box-inshadow</h5>
+				</header>
+				<div class="box-content">
+					<p><small>Lorem ipsum dolor sit amet, consectetur</small></p>
+				</div>
+			</section>
+		</div>
+	</div>
+	<div class="flex-parent">
+		<div class="flex-item">
+			<p class="doc white"><span class="inline-code">.box-inshadow .box-in-blue</span></p>		
+		  <section class="box-inshadow box-in-blue flex-item">
+				<header class="box-header">
+					<h5 class="box-title">box-inshadow</h5>
+				</header>
+				<div class="box-content">
+					<p><small>Lorem ipsum dolor sit amet, consectetur</small></p>
+				</div>
+			</section>
+		</div>
+		<div class="flex-item">
+			<p class="doc white"><span class="inline-code">.box-inshadow .box-in-green</span></p>		
+			<section class="box-inshadow box-in-green flex-item">
+				<header class="box-header">
+					<h5 class="box-title">box-inshadow</h5>
+				</header>
+				<div class="box-content">
+					<p><small>Lorem ipsum dolor sit amet, consectetur</small></p>
+				</div>
+			</section>
+		</div>
+	</div>
+</div>
+
+
+<p class="label">Box Variations - Out-Shadow</p>
+<div id="box-variations" class="example">
+	<div class="flex-parent">
+		<div class="flex-item">
+			<p class="doc white"><span class="inline-code">.box-outshadow .box-out-yellow</span></p>		
+		  <section class="box-outshadow box-out-yellow flex-item">
+				<header class="box-header">
+					<h5 class="box-title">box-outshadow</h5>
+				</header>
+				<div class="box-content">
+					<p><small>Lorem ipsum dolor sit amet, consectetur</small></p>
+				</div>
+			</section>
+		</div>
+		<div class="flex-item">
+			<p class="doc white"><span class="inline-code">.box-outshadow .box-out-orange</span></p>		
+			<section class="box-outshadow box-out-orange flex-item">
+				<header class="box-header">
+					<h5 class="box-title">box-outshadow</h5>
+				</header>
+				<div class="box-content">
+					<p><small>Lorem ipsum dolor sit amet, consectetur</small></p>
+				</div>
+			</section>
+		</div>
+	</div>
+	<div class="flex-parent">
+		<div class="flex-item">
+			<p class="doc white"><span class="inline-code">.box-outshadow .box-out-blue</span></p>		
+		  <section class="box-outshadow box-out-blue flex-item">
+				<header class="box-header">
+					<h5 class="box-title">box-outshadow</h5>
+				</header>
+				<div class="box-content">
+					<p><small>Lorem ipsum dolor sit amet, consectetur</small></p>
+				</div>
+			</section>
+		</div>
+		<div class="flex-item">
+			<p class="doc white"><span class="inline-code">.box-outshadow .box-out-green</span></p>		
+			<section class="box-outshadow box-out-green flex-item">
+				<header class="box-header">
+					<h5 class="box-title">box-outshadow</h5>
+				</header>
+				<div class="box-content">
+					<p><small>Lorem ipsum dolor sit amet, consectetur</small></p>
+				</div>
+			</section>
+		</div>
+	</div>
+</div>
+
+
+<p class="label">Box Variations - In-Fill</p>
+<div id="box-variations" class="example">
+	<div class="flex-parent">
+		<div class="flex-item">
+			<p class="doc white"><span class="inline-code">.box-infill .box-infill-yellow</span></p>		
+		  <section class="box-infill box-infill-yellow flex-item">
+				<header class="box-header">
+					<h5 class="box-title">box-infill</h5>
+				</header>
+				<div class="box-content">
+					<p><small>Lorem ipsum dolor sit amet, consectetur</small></p>
+				</div>
+			</section>
+		</div>
+		<div class="flex-item">
+			<p class="doc white"><span class="inline-code">.box-infill box-infill-yellow</span></p>		
+			<section class="box-infill box-infill-orange flex-item">
+				<header class="box-header">
+					<h5 class="box-title">box-infill</h5>
+				</header>
+				<div class="box-content">
+					<p><small>Lorem ipsum dolor sit amet, consectetur</small></p>
+				</div>
+			</section>
+		</div>
+	</div>
+	<div class="flex-parent">
+		<div class="flex-item">
+			<p class="doc white"><span class="inline-code">.box-infill box-infill-blue</span></p>		
+		  <section class="box-infill box-infill-blue flex-item">
+				<header class="box-header">
+					<h5 class="box-title">box-infill</h5>
+				</header>
+				<div class="box-content">
+					<p><small>Lorem ipsum dolor sit amet, consectetur</small></p>
+				</div>
+			</section>
+		</div>
+		<div class="flex-item">
+			<p class="doc white"><span class="inline-code">.box-infill box-infill-green</span></p>		
+			<section class="box-infill box-infill-green flex-item">
+				<header class="box-header">
+					<h5 class="box-title">box-infill</h5>
+				</header>
+				<div class="box-content">
+					<p><small>Lorem ipsum dolor sit amet, consectetur</small></p>
+				</div>
+			</section>
+		</div>
+	</div>
+</div>
