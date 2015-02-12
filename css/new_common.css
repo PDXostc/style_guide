@@ -166,6 +166,84 @@ label,
   box-shadow: 0 0 20px rgba(255, 211, 140, 0.8);
 }
 
+/* Sliders */
+
+.vertical-slider {
+  display: flex;
+  margin: 40px 0;
+  position: relative;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.vertical-slider.thin-slider {
+  margin: 20px 0;
+}
+
+.vertical-slider.thick-slider {
+  margin: 60px 0;
+}
+
+.slider-channel {
+  display: flex;
+  justify-content: flex-end;
+  box-shadow: inset 0 0 40px black;
+  border: 2px solid rgba(65, 65, 65, .5);
+}
+
+.top-down-slider .slider-channel {
+  justify-content: flex-start;
+}
+
+.vertical-slider .slider-channel {
+  width: 40px;
+  height: 100%;
+  flex-direction: inherit;
+}
+
+.vertical-slider.thin-slider .slider-channel {
+  width: 20px;
+  box-shadow: inset 0 0 20px black;
+}
+
+.vertical-slider.thick-slider .slider-channel {
+  width: 60px;
+  box-shadow: inset 0 0 60px black;
+}
+
+/* Slider level preperty flex-basis controls the height 
+   of the level bar and the contained slider handle */
+
+.slider-level {
+  display: flex;
+  flex-basis: 0%;
+  overflow: visible;
+  background-color: rgba(178, 240, 255, 0.8);
+  box-shadow: inset 2px 2px .5em rgba(255,255,255,.4), inset -2px -2px .5em rgba(0,0,0,.4)
+}
+
+
+.vertical-slider .slider-control {
+  flex-direction: column;
+  margin: -20% 0;
+  padding: 20% 0;
+}
+
+.slider-handle {
+  flex: 1;
+  position: relative;
+  margin: -150% -100%;
+  background-size: 100%;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-image: url(../images/slider_control.png);
+}
+
+.top-down-slider .slider-handle {
+  background-position: bottom;
+}
+
 /* Modifiers */
 
 .borderless {

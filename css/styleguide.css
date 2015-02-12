@@ -154,13 +154,31 @@ article {
   content: "Default";
 }
 
+.level-25 {
+  flex-basis: 25%;
+}
+
+.level-50 {
+  flex-basis: 50%;
+}
+
+.level-100 {
+  flex-basis: 100%;
+}
+
 
 .example.no-title:before {
   display: none;
 }
+
 .example.no-title {
   padding: 40px;
 }
+
+.example:after {
+  content: "";
+  clear: both;
+  display: block;
 }
 
 .swatch {
@@ -608,4 +626,15 @@ table.no-text-wrap td {
 
 label.no-style {
   display: inline;
+}
+
+#vertical-sliders .example {
+  flex-basis: 48%;
+}
+
+#demo-vertical-slider,
+#demo-vertical-thin-slider,
+#demo-vertical-thick-slider,
+#demo-vertical-topdown-slider {
+  height: 480px; 
 }
