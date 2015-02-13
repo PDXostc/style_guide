@@ -37,7 +37,7 @@
       </div>
       <div id="switch-list-demo" class="flex-item">
         <ul>
-          <h6 class="doc">Settings List</h6>
+          <h6>Settings List</h6>
           <li class="flex-parent space-between">
             Setting 1
             <div class="switch switch-xsmall no-margin on">
@@ -82,18 +82,26 @@
       </div>
     </div>
   </div>
-  <section class="sub-section css">
-    <h4 class="doc">The CSS</h4>
-    <code contenteditable></code>
-  </section>
-  <section class="sub-section html">
-    <h4 class="doc">The HTML</h4>
-    <code contenteditable></code>
-  </section>
-  <section class="sub-section js">
-    <h4 class="doc">The JS</h4>
-    <code contenteditable></code>
-  </section>
+  <div class="tabs-component">
+    <!-- Tabs -->
+    <div class="tabs-labels">
+      <div class="tab-item active" data-content-id="html">HTML</div>
+      <div class="tab-item" data-content-id="css">CSS</div>
+      <div class="tab-item" data-content-id="js">JS</div>
+    </div>
+    <!-- Tabs content -->
+    <div class="tabs-content">
+      <section class="sub-section html" data-content-id="html">
+        <code contenteditable></code>
+      </section>
+      <section class="sub-section css hidden" data-content-id="css">
+        <code contenteditable></code>
+      </section>
+      <section class="sub-section js hidden" data-content-id="js">
+        <code contenteditable></code>
+      </section>
+    </div>
+  </div>
   <section class="sub-section">
     <h4 class="doc">The Images</h4>
     <p class="doc">The switch uses 3 images:</p>

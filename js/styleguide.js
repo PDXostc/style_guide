@@ -29,25 +29,38 @@ $(document).ready(function() {
   	$(this).closest(".switch").toggleClass("on off");
   });
 
+  // tabs control
+  $(document).on("click", ".tab-item", function() {
+    var contentId = $(this).data("content-id");
+    var tabComponent = $(this).closest(".tabs-component");
+    var tabContent = tabComponent.find(".tabs-content");
+    var contentSelector = "[data-content-id='" + contentId + "']";
+    var targetContent = tabContent.find(contentSelector);
+    targetContent.siblings().addClass("hidden");
+    targetContent.removeClass("hidden");
+    $(this).siblings().removeClass("active");
+    $(this).toggleClass("active");
+  });
+
   // settings expand
   $("#settings-button").on("click", function() {
     $("#settings").toggleClass("collapsed");
-  })
+  });
 
   // close settings
   $("#settings .close-button").on("click", function() {
     $("#settings").toggleClass("collapsed");
-  })
+  });
 
   // Modal show
   $("#agl-logo").on("click", function() {
     $("#modal").toggleClass("hidden");
-  })
+  });
 
   // close modal
   $("#modal .close-button").on("click", function() {
     $("#modal").toggleClass("hidden");
-  })
+  });
 
   // Toggle section
   $(document).on("click", ".toggle", function(e) {
@@ -55,5 +68,5 @@ $(document).ready(function() {
     $(this).siblings("article").slideToggle();
     console.log($(this).text());
     $(this).text() == "hide" ? $(this).text("show") : $(this).text("hide");
-  })
-})
+  });
+});
