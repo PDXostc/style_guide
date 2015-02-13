@@ -244,6 +244,42 @@ label,
   background-position: bottom;
 }
 
+/* Tabs */
+
+.tabs-component {
+  display: flex;
+  flex-direction: column;
+}
+
+.tabs-labels {
+  display: flex;
+  flex: 1;
+  z-index: 1;
+}
+
+.tab-item {
+  flex: 1;
+  background-color: #aaa;
+  text-align: center;
+}
+
+.tab-item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.tab-item.active {
+  background-color: #eee;
+  border-width: 1px;
+  border-style: solid;
+  border-bottom-width: 0;
+  border-color: rgba(0,0,0, 0.25);
+  margin-bottom: -1px;
+}
+
+.tabs-content {
+  z-index: 0;
+}
+
 /* Modifiers */
 
 .borderless {

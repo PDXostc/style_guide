@@ -44,10 +44,11 @@ var init = function() {
   $("#typography").load("typography.html");
   $("#colors").load("colors.html");
   $("#controls").load("controls.html", function() {
-    loadSnippets( imports["switches"], snippets["switches"] );
     $("#sliders").load("sliders.html");
     $("#buttons").load("buttons.html");
-    $("#switches").load("switches.html");
+    $("#switches").load("switches.html", function() {
+      loadSnippets( imports["switches"], snippets["switches"] );
+    });
   });
   $("#icons").load("icons.html");
   $("#css-guidelines").load("cssguidelines.html");
