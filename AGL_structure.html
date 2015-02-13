@@ -1,49 +1,44 @@
 <html id="structure-demo">
 	<head>
 		<meta name="viewport" content="width=1080, height=1920, user-scalable=no">
-		<link rel="stylesheet" href="css/style.css">
+		<title>AGL App HTML Structure</title>
+		<link rel="stylesheet" href="css/common.css">
 		<link rel="stylesheet" href="css/styleguide.css">
 		<link rel="stylesheet" href="css/structure.css">
+    <link rel="stylesheet" href="fonts/font-awesome-4.3/css/font-awesome.min.css">
+
 		<script src="js/jquery-2.1.1.min.js"></script>
     <script src="js/jquery-ui-1.11.2/jquery-ui.min.js"></script>
     <script src="js/styleguide.js"></script>
 	</head>
 	<body>
-		<div id="base">
-			<div id="top-bar">
-				<ul>
-					<li class="grid-space"></li>
-					<li class="grid-space"></li>
-					<li class="grid-space"></li>
-					<li class="grid-space"></li>
-					<li class="grid-space"></li>
-					<li class="grid-space"></li>
-					<li class="grid-space"></li>
-					<li class="grid-space"></li>
-					<li class="grid-space"></li>
-				</ul>
-			</div>
-			<div id="app">
-				<div class="content"></div>
-			</div>
-			<div id="bottom-bar" class="white">
-				<div id="settings-button"><p>Settings</p></div>
-				<div id="agl-logo"><p>Logo <small>(click for modal)</small></p></div>
-				<div id="volume"><p>Volume</p></div>
-			</div>
+		<!-- Top Bar -->
+		<div id="top-bar" class="box-inshadow">
+			<div class="topbar-space flex-center" id="home-screen-icon"></div>
+			<div class="topbar-space" data-app-id="" data-app-space="1"><img src="images/app-icon-placeholder.png"></div>
+			<div class="topbar-space" data-app-id="" data-app-space="2"><img src="images/app-icon-placeholder.png"></div>
+			<div class="topbar-space" data-app-id="" data-app-space="3"><img src="images/app-icon-placeholder.png"></div>
+			<div class="topbar-space" data-app-id="" data-app-space="4"><img src="images/app-icon-placeholder.png"></div>
+			<div class="topbar-space" data-app-id="" data-app-space="5"><img src="images/app-icon-placeholder.png"></div>
+			<div class="topbar-space" data-app-id="" data-app-space="6"><img src="images/app-icon-placeholder.png"></div>
+			<div class="topbar-space" data-app-id="" data-app-space="7"><img src="images/app-icon-placeholder.png"></div>
+			<div class="topbar-space flex-center" id="app-grid-icon"></div>
 		</div>
-		<!-- Settings Panel -->
-		<div id="settings" class="collapsed">
-			<div class="content">
-				<div class="close-button"><p class="white right-align">&#10005;</p></div>
-			</div>
+
+		<!-- Center Panel -->
+		<div id="center-panel">
+			<div id="app-layer"></div>
+			<div id="modal-layer" 	 class="hidden"></div>
+			<div id="settings-layer" class="hidden"></div>
+			<div id="app-grid-layer" class="hidden"></div>
+			<div id="alerts-layer"	 class="hidden"></div>
 		</div>
-		<!-- Modal -->
-		<div id="modal" class="hidden">
-			<div class="content">
-				<div class="close-button"><p class="white right-align">&#10005;</p></div>
-				<div><p class="white">Modal <br>messages <br>go <br>here <br>and <br>expand <br>to <br>height <br>as <br>needed.</p></div>
-			</div>
+
+		<!-- Bottom Bar -->
+		<div id="bottom-bar" class="box-inshadow">
+			<div id="settings-button"></div>
+			<div id="jlr-logo"></div>
+			<div id="volume-button"></div>
 		</div>
 	</body>
 </html>

@@ -1,22 +1,100 @@
-/* demo styles */
+/* Top & Bottom Bar */
 
-html {
-	background-color: #eee;
+#top-bar,
+#bottom-bar {
+	flex: 1;
+	display: flex;
+  background-color: black;
+  padding: 0;
+  margin: 0;
 }
 
-p, ul, li {
-	font-size: 3rem;
+/* Top Bar */
+
+#home-screen-icon {
+	content: "";
 }
 
-body {
-  transform: scale(.45,.45);
-  transform-origin: top left;
+#top-bar ul {
+  display: flex;
+  margin: 0;
+  padding: 0; 
 }
 
-#app {
-	background-image: url(../images/homescreen.png);
+#top-bar .topbar-space {
+  flex: 1;
+  margin: 0; 
+  padding: 10px;
+  display: inline-flex;
+  box-sizing: border-box;
+  background-color: transparent;
 }
 
-.content {
-	border: 4px dashed rgba(255, 0, 0, 0.5);
+#top-bar .topbar-space:not(:last-child) {
+  border-right: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+#top-bar .topbar-space img {
+	width: 100%;
+}
+
+#home-screen-icon {
+	background-size: 100%;
+	background-image: url(../images/homescreen_icon.png);
+}
+
+#app-grid-icon, 
+#home-screen-icon {
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+#app-grid-icon {
+	background-size: 70%;
+	background-image: url(../images/app_grid_icon.png);
+}
+
+/* Center Panel */
+
+#center-panel {
+	flex: 14;
+}
+
+#app-layer {
+  flex: 1;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  background-color: transparent;
+}
+
+#volume,
+#settings-button {
+  flex: 1;
+}
+
+#agl-logo {
+  flex: 3;
+}
+
+#app .content,
+.modal .content,
+#settings .content {
+  flex: 1;
+  padding: 20px;
+}
+
+#app .content,
+#settings .content {
+  margin: 20px;
+}
+.wrapper {
+  overflow: hidden;
+  display: flex;
+  flex-direction : column;
+  flex-grow: 1;
+}
+
+.modal .content {
+  background-color: #333;
 }
