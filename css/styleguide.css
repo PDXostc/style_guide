@@ -39,7 +39,7 @@ body::-webkit-scrollbar {
 }
 
 .inner {
-  /*width: 80%;*/
+  width: inherit;
   margin: 0 auto;
   padding: 0;
   /*background-color: rgba(255,255,255, 0.25);*/
@@ -638,4 +638,76 @@ label.no-style {
 #demo-vertical-thick-slider,
 #demo-vertical-topdown-slider {
   height: 480px; 
+}
+
+/* Structure Demo */
+
+#settings-layer {
+  justify-content: center;
+  align-items: center;
+}
+
+#app-grid-layer:after, 
+#settings-layer:after {
+  font-size: 7rem;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, .5);
+  -webkit-transform: rotate(0deg);
+}
+
+#app-grid-layer:after {
+  /*content: "app grid";*/
+  /*-webkit-animation: spin 10s linear infinite;*/
+}
+
+@-webkit-keyframes spin {
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@-webkit-keyframes negspin {
+  100% { -webkit-transform: rotate(-360deg); }
+}
+
+#settings-layer:after {
+  content: "settings";
+  -webkit-animation: negspin 10s linear infinite;
+}
+
+.layer.hidden {
+  display: none;
+}
+
+.agl-layer,
+#structure-center-panel {
+  background: none;
+  border-color: #333;
+  text-align: center;
+}
+
+.agl-layer {
+  height: 192px;
+  border-style: dotted;
+  background-color: rgba(221, 221, 221, 0.5);
+}
+
+.agl-layer:not(:first-of-type) {
+  margin: -90px 0 0 0;
+}
+
+.agl-layer:nth-child(even) {
+  margin-left: 20px;
+  margin-right: -20px;
+}
+
+#structure-center-panel {
+  padding-right: 40px;
+}
+
+#add-another-icon {
+  justify-content: center;
+}
+
+#add-another-icon p {
+  font-size: 7rem;
+  margin: 0;
 }

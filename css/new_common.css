@@ -77,20 +77,21 @@
 }
 
 /* Close button */
-.close-button {
-  padding: 10px;
-  position: relative;
-  right: 20px;
-  top: 0;
-  float: right;
-}
+
 .close-button::after {
   content: "\00d7";
-  width: 26px;
-  height: 63px;
+  width: 40px;
+  height: 40px;
+  padding: 40px;
   color: white;
   font-size: 5rem;
   cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Forms */

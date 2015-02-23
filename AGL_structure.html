@@ -2,42 +2,64 @@
 	<head>
 		<meta name="viewport" content="width=1080, height=1920, user-scalable=no">
 		<title>AGL App HTML Structure</title>
+
+		<!-- Stylesheets -->
 		<link rel="stylesheet" href="css/common.css">
+		<link rel="stylesheet" href="css/new_common.css">
 		<link rel="stylesheet" href="css/styleguide.css">
 		<link rel="stylesheet" href="css/structure.css">
     <link rel="stylesheet" href="fonts/font-awesome-4.3/css/font-awesome.min.css">
 
+		<!-- Imports -->
+    <link rel="import" href="app_grid_templates.html" id="app-grid-templates">
+
+		<!-- Scripts -->
 		<script src="js/jquery-2.1.1.min.js"></script>
     <script src="js/jquery-ui-1.11.2/jquery-ui.min.js"></script>
-    <script src="js/styleguide.js"></script>
+    <script src="js/AGL_demo.js" type="application/javascript"></script>
+
 	</head>
 	<body>
 		<!-- Top Bar -->
-		<div id="top-bar" class="box-inshadow">
-			<div class="topbar-space flex-center" id="home-screen-icon"></div>
-			<div class="topbar-space" data-app-id="" data-app-space="1"><img src="images/app-icon-placeholder.png"></div>
-			<div class="topbar-space" data-app-id="" data-app-space="2"><img src="images/app-icon-placeholder.png"></div>
-			<div class="topbar-space" data-app-id="" data-app-space="3"><img src="images/app-icon-placeholder.png"></div>
-			<div class="topbar-space" data-app-id="" data-app-space="4"><img src="images/app-icon-placeholder.png"></div>
-			<div class="topbar-space" data-app-id="" data-app-space="5"><img src="images/app-icon-placeholder.png"></div>
-			<div class="topbar-space" data-app-id="" data-app-space="6"><img src="images/app-icon-placeholder.png"></div>
-			<div class="topbar-space" data-app-id="" data-app-space="7"><img src="images/app-icon-placeholder.png"></div>
-			<div class="topbar-space flex-center" id="app-grid-icon"></div>
+		<div id="top-bar">
+			<div class="topbar-space flex-center" id="home-screen-button" ><img src="images/application_icons/homescreen_icon.png"></div>
+			<div class="topbar-space app-space" data-app-id="" data-app-space="1"><img src="images/application_icons/fingerprint_inactive.png"></div>
+			<div class="topbar-space app-space" data-app-id="" data-app-space="2"><img src="images/application_icons/nfc_inactive.png"></div>
+			<div class="topbar-space app-space" data-app-id="" data-app-space="3"><img src="images/application_icons/media_player_inactive.png"></div>
+			<div class="topbar-space app-space" data-app-id="" data-app-space="4"><img src="images/application_icons/dashboard_inactive.png"></div>
+			<div class="topbar-space app-space" data-app-id="" data-app-space="5"><img src="images/application_icons/email_inactive.png"></div>
+			<div class="topbar-space app-space" data-app-id="" data-app-space="6"><img src="images/application_icons/navigation_inactive.png"></div>
+			<div class="topbar-space app-space" data-app-id="" data-app-space="7"><img src="images/application_icons/fmradio_ianctive.png"></div>
+			<div class="topbar-space flex-center" id="app-grid-button"><img src="images/application_icons/application_grid.png"></div>
 		</div>
 
 		<!-- Center Panel -->
 		<div id="center-panel">
-			<div id="app-layer"></div>
-			<div id="modal-layer" 	 class="hidden"></div>
-			<div id="settings-layer" class="hidden"></div>
-			<div id="app-grid-layer" class="hidden"></div>
-			<div id="alerts-layer"	 class="hidden"></div>
+			<div id="app-layer">
+				<!-- app index.html loaded in an <iframe> -->
+			</div>
+			<div id="modal-layer" 	 class="layer hidden"></div>
+			<div id="settings-layer" class="layer hidden"></div>
+			<div id="app-grid-layer" class="layer hidden">
+				<section id="app-grid">
+					<span class="close-button"></span>
+					<header>
+						<h1>Apps</h1>
+					</header>
+					<div id="app-grid-apps" class="scrollable-y">
+						<div id="add-another-icon" class="app-grid-icon hexafied">
+							<p>+</p>
+						</div>
+					</div>
+				</section>
+			</div>
+			<div id="alerts-layer"	 class="layer hidden"></div>
 		</div>
 
 		<!-- Bottom Bar -->
-		<div id="bottom-bar" class="box-inshadow">
+		<div id="bottom-bar">
 			<div id="settings-button"></div>
-			<div id="jlr-logo"></div>
+			<div id="jlr-logo"><img src="images/JLR-Logo.png"></div>
 			<div id="volume-button"></div>
 		</div>
 	</body>
