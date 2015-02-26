@@ -11,14 +11,10 @@ body {
   background-color: black;
   padding: 0;
   margin: 0;
+  box-shadow: inset 0 0 6.4rem black;
 }
 
 /* Top Bar */
-
-#top-bar,
-#bottom-bar {
-  box-shadow: inset 0 0 6.4rem black;
-}
 
 #top-bar {
   background-color: rgba(255,255,255,.25);
@@ -30,10 +26,6 @@ body {
 
 #bottom-bar {
   background-color: rgba(255,255,255,.2);
-}
-
-.hexafied {
-  background: url(../images/application_icons/blank_hexagon.png) center no-repeat;
 }
 
 .topbar-space {
@@ -48,6 +40,12 @@ body {
 
 .topbar-space:not(:last-child) {
   border-right: 1px solid black;
+}
+
+/* App Icons */
+
+.hexafied {
+  background: url(../images/application_icons/blank_hexagon.png) center no-repeat;
 }
 
 #app-grid-button, 
@@ -151,29 +149,6 @@ body {
 
 .app-grid-icon:nth-child(9n) {
   margin-right: 100px;
-}
-
-#app .content,
-.modal .content,
-#settings .content {
-  flex: 1;
-  padding: 20px;
-}
-
-#app .content,
-#settings .content {
-  margin: 20px;
-}
-
-.wrapper {
-  overflow: hidden;
-  display: flex;
-  flex-direction : column;
-  flex-grow: 1;
-}
-
-.modal .content {
-  background-color: #333;
 }
 
 /* Bottom Bar */
