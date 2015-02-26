@@ -29,6 +29,9 @@ $(document).ready(function() {
   	$(this).closest(".switch").toggleClass("on off");
   });
 
+  // Button Slider control
+  
+
   // tabs control
   $(document).on("click", ".tab-item", function() {
     var contentId = $(this).data("content-id");

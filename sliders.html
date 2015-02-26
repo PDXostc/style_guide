@@ -1,5 +1,24 @@
 <h3 class="sub-title doc">Sliders</h3>
-<p class="doc">Sliders may implement a black bar and heagonal peg, round peg or square peg for position and control</p>
+<p class="doc">These sliders provide a UI for sliding components that receive scalable user inputs such as volume. These sliders are currently non-functional.</p>
+<section class="sub-section instructions">
+	
+<h4 class="doc">Adding a Slider to HTML</h4>
+<ol class="doc">
+	<li>Copy the HTML of the desired slider (from the code snippets below)</li>
+	<li>Place the HTML within a parent element with explicit height and/or width
+		<ul>
+			<li>The length of the slider is scaled to its parent
+				<ul>
+					<li>Vertical sliders need a parent with height</li>
+					<li>Horizontal sliders need a parent with width</li>
+				</ul>
+			</li>
+		</ul>
+	</li>
+	<li>To control sliding from Javascript, change the <span class="inline-code">flex-basis</span> property of the <span class="inline-code">.slider-level</span> in percentage units.</li>
+	<li>The CSS is already included in <span class="inline-code">common.css</span></li>
+</ol>
+</section>
 
 <!-- Vertical Sliders -->
 <section class="sub-section" id="vertical-sliders">
@@ -63,32 +82,161 @@
 			</div>
 		</div>
   </div>
-  <code><pre><span class="comment">// Thin Slider</span>
-&lt;div id="custom-id" <span class="orange-viv">class="vertical-slider thin-slider"</span>&gt;
-  &lt;div class="slider-channel"&gt;
-    &lt;div class="slider-level"&gt;
-      &lt;div class="slider-handle"&gt;&lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
 
-<span class="comment">// Base Slider</span>
-&lt;div id="custom-id" <span class="orange-viv">class="vertical-slider"</span>&gt;
-  &lt;div class="slider-channel"&gt;
-    &lt;div class="slider-level"&gt;
-      &lt;div class="slider-handle"&gt;&lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
+  <div class="tabs-component">
+    <!-- Tabs -->
+    <div class="tabs-labels">
+      <div class="tab-item active" data-content-id="html">HTML</div>
+      <div class="tab-item" data-content-id="css">CSS</div>
+      <div class="tab-item" data-content-id="js">JS</div>
+    </div>
+    <!-- Tabs content -->
+    <div class="tabs-content">
+      <section class="sub-section html" data-content-id="html">
+	    	<p class="doc reverse-highlight"><small>Last updated: 2/24/15</small></p>
+        <code contenteditable></code>
+      </section>
+      <section class="sub-section css hidden" data-content-id="css">
+	    	<p class="doc reverse-highlight"><small>Last updated: 2/24/15</small></p>
+        <code contenteditable></code>
+      </section>
+      <section class="sub-section js hidden" data-content-id="js">
+        <code contenteditable></code>
+      </section>
+    </div>
+  </div>
 
-<span class="comment">// Thick Slider</span>
-&lt;div id="custom-id" <span class="orange-viv">class="vertical-slider thick-slider"</span>&gt;
-  &lt;div class="slider-channel"&gt;
-    &lt;div class="slider-level"&gt;
-      &lt;div class="slider-handle"&gt;&lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;</pre></code>
+</section>
+
+<!-- Horizontal Sliders -->
+<section class="sub-section" id="horizontal-sliders">
+	<p class="label"><small>Horizontal Sliders</small></p>
+
+	<div class="example">
+		<!-- Horizontal Thin Slider -->
+		<div class="flex-item flex-parent flex-column">
+			<p class="doc white"><span class="inline-code">.horizontal-slider .thin-slider</span></p>
+	  	<div id="demo-horizontal-thin-slider" class="horizontal-slider thin-slider flex-item">
+				<div class="slider-channel">
+					<div class="slider-level level-25">
+							<div class="slider-handle"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="example">
+		<!-- Horizontal Medium Slider -->
+		<div class="flex-item flex-parent flex-column">
+			<p class="doc white"><span class="inline-code">.horizontal-slider</span></p>
+	  	<div id="demo-horizontal-slider" class="horizontal-slider flex-item">
+				<div class="slider-channel">
+					<div class="slider-level level-50">
+							<div class="slider-handle"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="example">
+		<!-- Horizontal Thick Slider -->
+		<div class="flex-item flex-parent flex-column">
+			<p class="doc white"><span class="inline-code">.horizontal-slider .thick-slider</span></p>
+	  	<div id="demo-horizontal-thick-slider" class="horizontal-slider thick-slider flex-item">
+				<div class="slider-channel">
+					<div class="slider-level level-100">
+							<div class="slider-handle"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Horizontal R-to-L Slider -->
+	<div class="example">
+		<div class="flex-item flex-parent flex-column">
+			<p class="doc white"><span class="inline-code">.horizontal-slider .thick-slider</span></p>
+	  	<div id="demo-horizontal-right-left-slider" class="horizontal-slider right-left-slider flex-item">
+				<div class="slider-channel">
+					<div class="slider-level level-100">
+							<div class="slider-handle"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+  <div class="tabs-component">
+    <!-- Tabs -->
+    <div class="tabs-labels">
+      <div class="tab-item active" data-content-id="html">HTML</div>
+      <div class="tab-item" data-content-id="css">CSS</div>
+      <div class="tab-item" data-content-id="js">JS</div>
+    </div>
+    <!-- Tabs content -->
+    <div class="tabs-content">
+      <section class="sub-section html" data-content-id="html">
+      	<p class="doc reverse-highlight"><small>Last updated: 2/24/15</small></p>
+        <code contenteditable></code>
+      </section>
+      <section class="sub-section css hidden" data-content-id="css">
+      	<p class="doc reverse-highlight"><small>Last updated: 2/24/15</small></p>
+        <code contenteditable></code>
+      </section>
+      <section class="sub-section js hidden" data-content-id="js">
+        <code contenteditable></code>
+      </section>
+    </div>
+  </div>
+</section>
+
+<section class="sub-section" id="button-sliders">
+	<p class="label"><small>Button Sliders</small></p>
+
+	<div class="example">
+		<div id="demo-button-slider" class="horizontal-slider thin-slider">
+			<div class="slider-button less-button"></div>
+			<div class="slider-channel">
+				<div class="slider-level">
+						<div class="slider-handle"></div>
+				</div>
+			</div>
+			<div class="slider-button more-button"></div>
+		</div>
+
+		<div class="slider-demo-controls">
+			<button type="button">Low</button>
+			<button type="button">Mid</button>
+			<button type="button">Full</button>
+		</div>
+	</div>
+
+	<div class="example">
+		<div id="demo-button-slider" class="horizontal-slider">
+			<div class="slider-button less-button"></div>
+			<div class="slider-channel">
+				<div class="slider-level level-50">
+						<div class="slider-handle"></div>
+				</div>
+			</div>
+			<div class="slider-button more-button"></div>
+		</div>
+	</div>
+
+	<div class="example">
+		<div id="demo-button-slider" class="horizontal-slider thick-slider">
+			<div class="slider-button less-button"></div>
+			<div class="slider-channel">
+				<div class="slider-level level-100">
+						<div class="slider-handle"></div>
+				</div>
+			</div>
+			<div class="slider-button more-button"></div>
+		</div>
+	</div>
+
 </section>
 
 <section class="sub-section" id="scroll-bars">

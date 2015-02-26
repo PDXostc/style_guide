@@ -1,6 +1,7 @@
 var imports = {
   switches: document.getElementById('switches-snippets').import,
-  structure: document.getElementById('structure-snippets').import
+  structure: document.getElementById('structure-snippets').import,
+  sliders: document.getElementById('sliders-snippets').import
 }
 
 var snippets = {
@@ -17,6 +18,11 @@ var snippets = {
     switchesJS: { templateId: "switches-js", targetId: "#switches .js code" },
     switchesHTMLHighlights: { templateId: "switches-html-highlights", targetId: "#switches .html code.highlights" },
     switchesJSHighlights: { templateId: "switches-js-highlights", targetId: "#switches .js code.highlights" }
+  },
+  sliders: {
+    vertSlidersHTML: { templateId: "vertical-slider-snippet", targetId: "#vertical-sliders .html code" }, 
+    horizSlidersHTML: { templateId: "horizontal-slider-snippet", targetId: "#horizontal-sliders .html code" }, 
+    vertSlidersCSS: { templateId: "vertical-slider-css-snippet", targetId: "#vertical-sliders .css code" } 
   }
 };
 
@@ -44,7 +50,9 @@ var init = function() {
   $("#typography").load("typography.html");
   $("#colors").load("colors.html");
   $("#controls").load("controls.html", function() {
-    $("#sliders").load("sliders.html");
+    $("#sliders").load("sliders.html", function() {
+      loadSnippets( imports["sliders"], snippets["sliders"] );
+    });
     $("#buttons").load("buttons.html");
     $("#switches").load("switches.html", function() {
       loadSnippets( imports["switches"], snippets["switches"] );
