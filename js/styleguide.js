@@ -50,6 +50,15 @@ $(document).ready(function() {
     $("#settings").toggleClass("collapsed");
   });
 
+  // $(document).on("mousedown", ".slider-channel", function() {
+  //   $(this).on("mousemove", function(){
+  //     var sliderVal = $(this).val();
+  //     console.log(sliderVal);
+  //     var fillBar;
+  //     $(".slider-channel::-webkit-slider-runnable-track::before").css("width", sliderVal);
+  //   });
+  // });
+
   // close settings
   $("#settings .close-button").on("click", function() {
     $("#settings").toggleClass("collapsed");
