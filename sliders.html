@@ -195,47 +195,61 @@
 <section class="sub-section" id="button-sliders">
 	<p class="label"><small>Button Sliders</small></p>
 
-	<div class="example">
-		<div id="demo-button-slider" class="horizontal-slider thin-slider">
+	<div class="example flex-parent flex-column">
+		<p class="doc white">Thin Slider</p>
+		<div id="demo-button-range-slider" class="horizontal-slider thin-slider">
 			<div class="slider-button less-button"></div>
-			<div class="slider-channel">
-				<div class="slider-level">
-						<div class="slider-handle"></div>
-				</div>
-			</div>
+			<input class="slider-input" type="range" id="range-slider-thin-input" value="50" onchange="rangesliderthinvalue.value=value"/>
 			<div class="slider-button more-button"></div>
 		</div>
 
-		<div class="slider-demo-controls">
-			<button type="button">Low</button>
-			<button type="button">Mid</button>
-			<button type="button">Full</button>
-		</div>
+		<output id="rangesliderthinvalue" class="orange-viv center">50</output>
 	</div>
 
-	<div class="example">
-		<div id="demo-button-slider" class="horizontal-slider">
+	<div class="example flex-parent flex-column">
+		<p class="doc white">Standard Slider</p>
+		<div class="horizontal-slider">
 			<div class="slider-button less-button"></div>
-			<div class="slider-channel">
-				<div class="slider-level level-50">
-						<div class="slider-handle"></div>
-				</div>
-			</div>
+			<input class="slider-input" type="range" id="range-slider-input" value="50" onchange="rangeslidervalue.value=value"/>
 			<div class="slider-button more-button"></div>
 		</div>
+
+		<output id="rangeslidervalue" class="orange-viv center">50</output>
 	</div>
 
-	<div class="example">
-		<div id="demo-button-slider" class="horizontal-slider thick-slider">
+	<div class="example flex-parent flex-column">
+		<p class="doc white">Thick Slider</p>
+		<div class="horizontal-slider thick-slider">
 			<div class="slider-button less-button"></div>
-			<div class="slider-channel">
-				<div class="slider-level level-100">
-						<div class="slider-handle"></div>
-				</div>
-			</div>
+			<input class="slider-input" type="range" id="range-slider-thick-input" value="50" onchange="rangesliderthickvalue.value=value"/>
 			<div class="slider-button more-button"></div>
 		</div>
+
+		<output id="rangesliderthickvalue" class="orange-viv center">50</output>
 	</div>
+
+	<div class="tabs-component">
+    <!-- Tabs -->
+    <div class="tabs-labels">
+      <div class="tab-item active" data-content-id="html">HTML</div>
+      <div class="tab-item" data-content-id="css">CSS</div>
+      <div class="tab-item" data-content-id="js">JS</div>
+    </div>
+    <!-- Tabs content -->
+    <div class="tabs-content">
+      <section class="sub-section html" data-content-id="html">
+      	<p class="doc reverse-highlight"><small>Last updated: 2/27/15</small></p>
+        <code contenteditable></code>
+      </section>
+      <section class="sub-section css hidden" data-content-id="css">
+      	<p class="doc reverse-highlight"><small>Last updated: 2/27/15</small></p>
+        <code contenteditable></code>
+      </section>
+      <section class="sub-section js hidden" data-content-id="js">
+        <code contenteditable></code>
+      </section>
+    </div>
+  </div>
 
 </section>
 
