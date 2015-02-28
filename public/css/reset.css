@@ -6,10 +6,14 @@
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 <<<<<<< HEAD
+<<<<<<< HEAD
 a, abbr, acronym, address, big, cite, code,
 =======
 a, abbr, acronym, address, article, big, cite, code,
 >>>>>>> Moves files to public folder
+=======
+a, abbr, acronym, address, article, big, cite, code,
+>>>>>>> e1baf5b702971c2f27fc57f8d41ad592a916cf17
 del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
 b, u, i, center,
@@ -36,12 +40,16 @@ body {
   /*line-height: 1;*/
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 ol, ul {
   list-style: none;
 }
 =======
 
 >>>>>>> Moves files to public folder
+=======
+
+>>>>>>> e1baf5b702971c2f27fc57f8d41ad592a916cf17
 blockquote, q {
   quotes: none;
 }

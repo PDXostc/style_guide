@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 $(document).ready(function(){
   $('a').click(function(){
       $('html, body').animate({
@@ -8,6 +9,8 @@ $(document).ready(function(){
   });
 })
 =======
+=======
+>>>>>>> e1baf5b702971c2f27fc57f8d41ad592a916cf17
 $(document).ready(function() {
 
   function jumpToAnchor(href) {
@@ -91,5 +94,9 @@ $(document).ready(function() {
     console.log($(this).text());
     $(this).text() == "hide" ? $(this).text("show") : $(this).text("hide");
   });
+<<<<<<< HEAD
 });
 >>>>>>> Moves files to public folder
+=======
+});
+>>>>>>> e1baf5b702971c2f27fc57f8d41ad592a916cf17
