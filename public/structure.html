@@ -1,0 +1,101 @@
+  <a class="toggle-button toggle">hide</a>
+  <h1 class="section-title">Structure
+    <span class="back-to-top"><a href="#top">&#9650;</a></span>
+  </h1>
+  <article>
+    <p class="doc">This HTML structure provides a flexible, layered layout for the entire application suite. It places the DOM elements in a specific stacking order based on agreed design. Each element in the document serves as a "housing" where specific components, content, and applications can be loaded.</p>
+    <a id="structure-demo" class="button sg-button" href="AGL_structure.html" target="blank">View the demo</a>
+
+
+    <section class="sub-section">
+      <h2 class="sub-title doc">The HTML</h2>
+      <section>
+        <h3 class="doc">Structure Diagram</h3>
+        <img src="images/html_structure_diagram.jpg">
+        <h3 class="doc">HTML Code</h3>
+        <div class="flex-parent flex-column">
+          <div class="flex-item html-complete"><code><pre></pre></code></div>
+          <div class="flex-item">
+          </div>
+        </div>
+      </section>
+      <p class="doc">The HTML body is divided into 3 primary containers:</p>
+      <div class="flex-parent flex-pattern-1-2 html-body">
+        <div>
+          <ul class="doc">
+            <li>#base</li>
+            <li>#settings</li>
+            <li>#modal</li>
+          </ul>
+        </div>
+        <div><code></code></div>
+      </div>
+      <p class="doc">The #base container contains:</p>
+      <section class="flex-parent flex-pattern-1-2 html-base">
+        <div>
+          <ul class="doc">
+            <li>#top-bar</li>
+            <li>#app</li>
+            <li>#bottom-bar</li>
+          </ul>
+        </div>
+        <div><code></code></div>
+      </section>
+      <p class="doc">Each of these contain a .content container that serves as the target for loading app- or component-specific content.</p>
+      <section class="html-content">
+        <code></code>
+      </section>
+      <section class="html-complete">
+      <p class="doc">All together, the full HTML is as follows:</p>
+      <code contenteditable></code>
+      </section>
+    </section>
+    <section class="css sub-section">
+      <h3 class="sub-title doc">The CSS</h3>
+      <code contenteditable></code>
+    </section>
+
+    <section id="settings-setup" class="sub-section">
+      <a class="toggle-button toggle">hide</a>
+      <h5 class="sub-title doc">Settings Set-Up</h5>
+      <article>                
+        <ol class="doc">
+          <li>Create a div with id of "base" as the first child in the body</li>
+          <li>Move #topBar and #bottomBar into it</li>
+          <li>Create a div with id of "app" within #base</li>
+          <li>Place the new #app div after #topBar but before #bottomBar</li>
+          <li>Create a div with id of "clockElement" as the first child in #app
+            <ul>
+              <li>If you don't need the date and time in your app, comment out the #clockElement div</li>
+            </ul>
+          </li>
+          <li>Move all remaining app-specific containers into #app after #clockELement
+            <ul>
+              <li>Be careful to maintain the current order</li>
+              <li>You can wrap the content into another div for organization and code folding</li>
+            </ul>
+          </li>
+          <li>Add a div with id of "settingsPage" after #base
+            <ul>
+              <li>Give it a class of "settingsPage hidden" <small class="grey">(Xwalk 12/2014)</small></li>
+              <li>Javascript will now only add the <em>content</em> of settings (not the parent div)</li>
+            </ul>
+          </li>
+        </ol>
+      <p class="doc">Your HTML should look similar to this:</p>
+        <code contenteditable>
+          <pre>&lt;body&gt;
+&lt;div id="base"&gt;
+&lt;div id="topBar"&gt;&lt;/div&gt;
+&lt;div id="app"&gt;
+&lt;div id="clockElement"&gt;&lt;/div&gt;
+<span class="comment">&lt;-- Your app-specific HTML --&gt;</span>
+&lt;/div&gt;
+&lt;div id="bottomBar"&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id="settingsPage" class="settingsPage hidden"&gt;&lt;/div&gt;
+&lt;/body&gt;</pre>
+        </code>
+      </article>
+    </section>
+  </article>
