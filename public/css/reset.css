@@ -5,7 +5,11 @@
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+<<<<<<< HEAD
 a, abbr, acronym, address, big, cite, code,
+=======
+a, abbr, acronym, address, article, big, cite, code,
+>>>>>>> Moves files to public folder
 del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
 b, u, i, center,
@@ -31,9 +35,13 @@ footer, header, hgroup, menu, nav, section {
 body {
   /*line-height: 1;*/
 }
+<<<<<<< HEAD
 ol, ul {
   list-style: none;
 }
+=======
+
+>>>>>>> Moves files to public folder
 blockquote, q {
   quotes: none;
 }
