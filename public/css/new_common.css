@@ -1,0 +1,486 @@
+/* Buttons ************************************************/
+
+.button-outline {
+  box-shadow: none;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+/* Boxes and Modules **************************************/
+
+.box-outline,
+.box-inshadow,
+.box-outshadow,
+.box-infill {
+  color: #fe9c00;
+  padding: 20px;
+  margin: 20px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(0, 0, 0, .8);
+}
+
+.box-inshadow {
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, .5);
+}
+
+.box-outshadow {
+  box-shadow: 0 0 20px rgba(255, 255, 255, .5);
+}
+
+.box-infill {
+  color: rgba(255, 255, 255, .8);
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 1), inset 0 0 6em 2em rgba(0, 0, 0, .5);
+}
+
+.box-header {
+  background-color: transparent;
+  padding: 20px;
+  margin: -20px -20px 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  color: inherit;
+  border-color: inherit;
+}
+
+.box-content {
+  padding: 20px;
+  margin: -20px;
+}
+
+.box-title {
+  margin: 0;
+  color: inherit;
+}
+
+/* Yellow */
+
+.box-yellow,
+.box-in-yellow,
+.box-out-yellow {
+  color: #ffffb2;
+  border-color: rgba(255, 255, 178, 0.5);
+}
+
+.box-in-yellow {
+  box-shadow: inset 0 0 20px rgba(255, 255, 0, .5);
+}
+
+.box-out-yellow {
+  box-shadow: 0 0 20px rgba(255, 255, 0, .5);
+}
+
+.box-infill-yellow {
+  background-color: rgba(255, 255, 0, .8);
+}
+
+/* Orange */
+
+.box-orange,
+.box-in-orange,
+.box-out-orange {
+  color: #FE9C00;
+  border-color: rgba(254, 156, 0, 0.5);
+}
+
+.box-in-orange {
+  box-shadow: inset 0 0 20px rgba(254, 156, 0, .5);
+}
+
+.box-out-orange {
+  box-shadow: 0 0 20px rgba(254, 156, 0, .5);
+}
+
+.box-infill-orange {
+  background-color: rgba(254, 156, 0, .8);
+}
+
+
+/* Blue */
+
+.box-blue,
+.box-in-blue,
+.box-out-blue {
+  color: #b2f0ff;
+  border-color: rgba(178, 240, 255, 0.5);
+}
+
+.box-in-blue {
+  box-shadow: inset 0 0 20px rgba(178, 240, 255, .5);
+}
+
+.box-out-blue {
+  box-shadow: 0 0 20px rgba(178, 240, 255, .5);
+}
+
+.box-infill-blue {
+  background-color: rgba(83, 181, 206, .8);
+}
+
+
+/* Green */
+
+.box-green,
+.box-in-green,
+.box-out-green {
+  color: #cdffb2;
+  border-color: rgba(205, 255, 178, 0.5);
+}
+
+.box-in-green {
+  box-shadow: inset 0 0 20px rgba(205, 255, 178, .5);
+}
+
+.box-out-green {
+  box-shadow: 0 0 20px rgba(205, 255, 178, .5);
+}
+
+.box-infill-green {
+  background-color: rgba(89, 255, 0, .7);
+}
+
+/* Switches ***********************************************/
+
+.switch {
+  margin: 20px;
+}
+
+/* Sizes for varying switches */
+
+.switch-large {
+  width: 300px;
+  height: 150px;
+} 
+
+.switch-large .switch-control {
+  -webkit-filter: drop-shadow(8px 8px 8px rgba(0,0,0,0.35));
+}
+
+.switch-medium {
+  width: 210px;
+  height: 105px;
+}
+
+.switch-medium .switch-control {
+  -webkit-filter: drop-shadow(5px 5px 5px rgba(0,0,0,0.35));
+}
+
+.switch-small {
+  width: 150px;
+  height: 75px;
+}
+
+.switch-small .switch-control {
+  -webkit-filter: drop-shadow(4px 4px 4px rgba(0,0,0,0.35));
+}
+
+.switch-xsmall {
+  width: 100px;
+  height: 50px;
+}
+
+.switch-xsmall .switch-control {
+  -webkit-filter: drop-shadow(2px 2px 2px rgba(0,0,0,0.35));
+}
+
+.switch-plate {
+  background-repeat: no-repeat;
+  background-size: 100%;
+  box-sizing: border-box;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.switch-control {
+  height: 80%;
+  width: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+  background-image: url(../images/switchcontrol.svg);
+} 
+
+/* On/Off Styles for Background Plate */
+
+.off .switch-plate {
+  padding-left: 10%;
+  padding-right: 0 !important; 
+  background-image: url(../images/switchplate_off.svg);
+  justify-content: flex-start;
+}
+
+.on .switch-plate {
+  padding-right: 10%;
+  padding-left: 0 !important; 
+  background-image: url(../images/switchplate_on.svg);
+  justify-content: flex-end;
+}
+
+/* Close button */
+
+.close-button::after {
+  content: "\00d7";
+  width: 40px;
+  height: 40px;
+  padding: 40px;
+  color: white;
+  font-size: 5rem;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Forms */
+
+/* Text Inputs */
+
+label {
+  text-transform: uppercase;
+  color: #fe9c00;
+  display: block;
+}
+
+.input-group label.left-label {
+  justify-content: flex-start;
+}
+
+.input-group label {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  text-align: right;
+}
+
+.text-input {
+  border: none;
+  color: rgba(255,255,255,.8);
+}
+
+label,
+.text-input {
+  margin: 10px;
+}
+
+.text-input:focus {
+  outline: none;
+  color: white;
+  box-shadow: 0 0 20px rgba(255,255,255,.8);
+}
+
+.input-yellow {
+  color: rgba(255, 255, 178, 0.8);
+}
+
+.input-yellow:focus {
+  color: #ffffb2;
+  box-shadow: 0 0 20px rgba(255, 255, 178, 0.8);
+}
+
+.input-blue {
+  color: rgba(178, 240, 255, 0.8);
+}
+
+.input-blue:focus {
+  color: #b2f0ff;
+  box-shadow: 0 0 20px rgba(178, 240, 255, 0.8);
+}
+
+.input-green {
+  color: rgba(205, 255, 178, 0.8);
+}
+
+.input-green:focus {
+  color: #cdffb2;
+  box-shadow: 0 0 20px rgba(205, 255, 178, 0.8);
+}
+
+.input-orange {
+  color: rgba(255, 211, 140, 0.8);
+}
+
+.input-orange:focus {
+  color: #ffd38c;
+  box-shadow: 0 0 20px rgba(255, 211, 140, 0.8);
+}
+
+/* Sliders ************************************************/
+
+/* Resets */
+
+.slider-input {
+  -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.slider-input::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Hides the slider thumb so that custom thumb can be made */
+}
+
+.slider-input:focus {
+  outline: none; /* Removes the blue accessibility border. */
+}
+
+/* Slider Styles */
+
+.slider-input{
+  height:2em;
+  font-size: 4em; /* Base size for scalability */
+  line-height: 0;
+  flex-basis: 85%;
+  overflow:hidden;
+  cursor: pointer;
+  padding: .25em 0;
+  position: relative;
+  -webkit-appearance:none;
+  background: transparent;
+}
+
+.slider-input::-webkit-slider-thumb {
+  height: 1em;
+  width: .85em;
+  font-size: 2em;
+  margin: -.25em 0;
+  overflow: visible;
+  position:relative;
+  background-size: .85em;
+  -webkit-appearance:none;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url(../images/hex_thumb_white_vert.png);
+  -webkit-filter: drop-shadow(.05em .05em .05em rgba(0,0,0,.25));
+}
+
+
+/* Style the level bar */
+.slider-input::-webkit-slider-thumb:after{
+  content:" ";
+  width:100vw;
+  right: 100%;
+  height: .5em;
+  margin: .25em 0;
+  position:absolute;
+  background: rgba(178, 240, 255, 0.8);
+  box-shadow: inset .125em .125em .5em rgba(255,255,255,.6),
+              inset -1em -1em .125em -1em rgba(0,0,0,.5);
+}
+
+/* Styles the track */
+.slider-input::-webkit-slider-runnable-track {
+  height: 1em;
+  background-color: transparent;
+  box-shadow: inset 0 0 0 .125em rgba(126,126,126,.25),
+              inset 0 0 .5em .125em rgba(0,0,0,.5);
+              
+}
+
+.vertical-slider,
+.horizontal-slider {
+  font-size: 1rem;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.thin-slider {
+  font-size: .5rem;
+}
+
+.thick-slider {
+  font-size: 1.5rem;
+}
+
+.slider-button {
+  width: 40px;
+  height: 40px;
+  border: 1px solid rgba(255, 255, 255, .4);
+  text-align: center;
+  text-shadow: 1px 1px 3px #444;
+  box-shadow: inset 0px 0px 2px 1px #5a3800;
+  background: linear-gradient(#db9604, #915a00);
+  animation: bounceInDown 900ms 200ms ease-in-out both;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.thin-slider .slider-button {
+  width: 20px;
+  height: 20px;
+}
+
+.thick-slider .slider-button {
+  width: 60px;
+  height: 60px;
+}
+
+.less-button::after {
+  content: "\02212";
+}
+
+.more-button::after {
+  content: "\0002b";
+}
+
+.less-button::after,
+.more-button::after {
+  color: white;
+}
+
+/* Tabs */
+
+.tabs-component {
+  display: flex;
+  flex-direction: column;
+}
+
+.tabs-labels {
+  display: flex;
+  flex: 1;
+  z-index: 1;
+}
+
+.tab-item {
+  flex: 1;
+  background-color: #aaa;
+  text-align: center;
+}
+
+.tab-item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.tab-item.active {
+  background-color: #eee;
+  border-width: 1px;
+  border-style: solid;
+  border-bottom-width: 0;
+  border-color: rgba(0,0,0, 0.25);
+  margin-bottom: -1px;
+}
+
+.tabs-content {
+  z-index: 0;
+}
+
+/* Modifiers */
+
+.borderless {
+  border: none;
+}
+
+.flex-item-2 {
+  flex: 2;
+}
+
+/* Already in common.css; here for cascading */
+
+.no-margin {
+  margin: 0;
+}
