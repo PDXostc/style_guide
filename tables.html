@@ -1,0 +1,317 @@
+<h1 class="section-title">Tables <span class="back-to-top"><a href="#top">&#9650;</a></span></h1>
+<p class="doc notice">This section is work-in-progress.</p>
+<div class="sub-section">
+	<div class="example default">
+	<table>
+		<tbody>
+			<tr>
+				<th>Column 1 Header</th>
+				<th>Column 2 Header</th>
+				<th>Column 3 Header</th>
+				<th>Column 4 Header</th>
+			</tr>
+			<tr>
+				<td>Column 1 Cell</td>
+				<td>Column 2 Cell</td>
+				<td>Column 3 Cell</td>
+				<td>Column 4 Cell</td>
+			</tr>
+			<tr>
+				<td>Column 1 Cell</td>
+				<td>Column 2 Cell</td>
+				<td>Column 3 Cell</td>
+				<td>Column 4 Cell</td>
+			</tr>
+			<tr>
+				<td>Column 1 Cell</td>
+				<td>Column 2 Cell</td>
+				<td>Column 3 Cell</td>
+				<td>Column 4 Cell</td>
+			</tr>
+			<tr>
+				<td>Column 1 Cell</td>
+				<td>Column 2 Cell</td>
+				<td>Column 3 Cell</td>
+				<td>Column 4 Cell</td>
+			</tr>
+			<tr>
+				<td>Column 1 Cell</td>
+				<td>Column 2 Cell</td>
+				<td>Column 3 Cell</td>
+				<td>Column 4 Cell</td>
+			</tr>
+			<tr>
+				<td>Column 1 Cell</td>
+				<td>Column 2 Cell</td>
+				<td>Column 3 Cell</td>
+				<td>Column 4 Cell</td>
+			</tr>
+			<tr>
+				<td>Column 1 Cell</td>
+				<td>Column 2 Cell</td>
+				<td>Column 3 Cell</td>
+				<td>Column 4 Cell</td>
+			</tr>
+			<tr>
+				<td>Column 1 Cell</td>
+				<td>Column 2 Cell</td>
+				<td>Column 3 Cell</td>
+				<td>Column 4 Cell</td>
+			</tr>
+			<tr>
+				<td>Column 1 Cell</td>
+				<td>Column 2 Cell</td>
+				<td>Column 3 Cell</td>
+				<td>Column 4 Cell</td>
+			</tr>
+		</tbody>
+	</table>
+	</div>
+		<p class="doc">Column widths are set by way of the <span class="inline-code">flex</span> property. This allows for control over column width versus dynamic sizing based on text content.</p>
+		<p class="doc">The default flex settings for the <span class="inline-code">table</span> element have been set to:
+	<ul class="doc">
+		<li class="doc"> 2 for the first column</li>
+		<li class="doc">1 for the remaining columns</li>
+	</ul>
+	<p class="doc">In the example above, the columns are calculated like this:</p>
+	<div class="example no-title">
+		<table>
+			<tr>
+				<td>Column 1</td>
+				<td>Column 2</td>
+				<td>Column 3</td>
+				<td>Column 4</td>
+			</tr>
+			<tr>
+				<td><span class="inline-code">flex: 2</span></td>
+				<td><span class="inline-code">flex: 1</span></td>
+				<td><span class="inline-code">flex: 1</span></td>
+				<td><span class="inline-code">flex: 1</span></td>
+			</tr>
+			<tr>
+				<td class="no-flex center highlight-cell" colspan="4">5 total <span class="inline-code">flex</span> units</td>
+			</tr>
+			<tr>
+				<td>2 of 5 = 40%</td>
+				<td>1 of 5 = 20%</td>
+				<td>1 of 5 = 20%</td>
+				<td>1 of 5 = 20%</td>
+			</tr>
+		</table>
+	</div>
+</div>
+<div class="sub-section">
+	<p class="label">Customization</p>
+	<div class="example">
+		<table class="playlist no-text-wrap">
+	    <tbody>
+	      <tr>
+	      	<th>Fav</th>
+	        <th>Song Title</th>
+	        <th>Artist</th>
+	        <th>Album</th>
+	        <th>Time</th>
+	      </tr>
+	      <tr>
+		      <td class="fav-song"></td>
+	        <td>After The Storm</td>
+	        <td>Mumford &amp; Sons</td>
+	        <td>Sigh No More</td>
+	        <td>4:07</td>
+	      </tr>
+	      <tr>
+		      <td></td>
+	        <td>Au Revoir</td>
+	        <td>OneRepublic</td>
+	        <td>Native (Deluxe) [+digital booklet]</td>
+	        <td>4:50</td>	
+	      </tr>
+	      <tr>
+		      <td class="fav-song"></td>
+	        <td>Bad Blood</td>
+	        <td>Bastille</td>
+	        <td>Bad Blood</td>
+	        <td>3:32</td>
+	      </tr>
+	      <tr>
+	      	<td></td>
+	        <td>Cheap Clothes</td>
+	        <td>Whitley</td>
+	        <td>The Submarine</td>
+	        <td>3:40</td>
+	      </tr>
+	      <tr>
+	      	<td class="fav-song"></td>
+	        <td>Don't Say A Word</td>
+	        <td>Ellie Goulding</td>
+	        <td>Halcyon</td>
+	        <td>4:07</td>
+	      </tr>
+	      <tr>
+	      	<td class="fav-song"></td>
+	        <td>Every Word (Album Version)</td>
+	        <td>Sade</td>
+	        <td>Lovers Rock</td>
+	        <td>4:04</td>
+	      </tr>
+	      <tr>
+	      	<td></td>
+	        <td>From Finner</td>
+	        <td>Of Monsters And Men</td>
+	        <td>My Head Is An Animal</td>
+	        <td>3:43</td>
+	      </tr>
+	      <tr>
+	      	<td class="fav-song"></td>
+	        <td>Hall of Fame</td>
+	        <td>The Script feat. will.i.am</td>
+	        <td>#3 [Explicit]</td>
+	        <td>3:22</td>
+	      </tr>
+	      <tr>
+	      	<td></td>
+	        <td>I Need Your Love (Bonus Track) [feat. Ellie Goulding]</td>
+	        <td>Calvin Harris</td>
+	        <td>Halcyon</td>
+	        <td>3:54</td>
+	      </tr>
+	      <tr>
+	      	<td class="fav-song"></td>
+	        <td>Ten Feet Tall [feat. Wrabel]</td>
+	        <td>Afrojack</td>
+	        <td>Forget The World [Explicit]</td>
+	        <td>3:49</td>
+	      </tr>
+	      <tr>
+	      	<td></td>
+	        <td>Titanium (Feat. Sia)</td>
+	        <td>David Guetta</td>
+	        <td class="ellipsis-one-line">Nothing But The Beat</td>
+	        <td>4:05</td>
+	      </tr>
+	      <tr>
+	      	<td class="fav-song"></td>
+	        <td>King And Lionheart</td>
+	        <td>Of Monsters And Men</td>
+	        <td>My Head Is An Animal</td>
+	        <td>4:33</td>
+	      </tr>
+	    </tbody>
+	  </table>
+	</div>
+	<p class="label"><small>Custom table class</small></p>
+	<p class="doc">Create a class to apply to the table element to allow for easier selection of table elements.</p>
+	<code contenteditable><pre>&lt;table <span class="orange-viv">class="playlist"</span>&gt;
+<span class="comment">// Table elements</span>
+&lt;/table&gt;</pre></code>
+	<p class="label"><small>custom column widths</small></p>
+	<p class="doc">To customize column widths, use :pseudo selectors to target rows by position, index or occurence. Then set the flex property as desired.</p>
+	<code contenteditable><pre><span class="comment">// Examples used in the playlist above
+
+// Selects the first and last column and sets the flex to 1</span>
+.playlist tr > :first-of-type,
+.playlist tr > :first-of-type {
+  flex: 1;
+}
+
+<span class="comment">// Selects the 2nd column and every column after and sets the flex to 3</span>
+table tr > :nth-child(n+2) {
+  flex: 3;
+}
+
+<span class="comment">// Select the 2nd column and set the flex property to 4</span>
+.playlist tr > :nth-child(2) {
+  flex: 4;
+}</pre></code>
+ <p class="label"><small>custom text and background styles</small></p>
+ <p class="doc">To select alternating rows, use the <span class="inline-code">:nth-child(even)</span> and <span class="inline-code">:nth-child(odd)</span> :pseudo selectors.</p>
+ <code contenteditable><pre><span class="comment">// Selects every even row and makes the background a tint of orange (default)</span>
+tr<span class="orange-viv">:nth-child(even)</span> {
+  background-color: rgba(255,211,140,.1);
+}
+
+<span class="comment">// Selects every odd row cell and makes the font bold (not shown)</span>
+tr<span class="orange-viv">:nth-child(odd)</span> td {
+  font-weight: 600;
+}
+ </pre></code>
+	<p class="label"><small>adding icons</small></p>
+	<div class="example">
+		<table class="playlist no-text-wrap">
+	    <tbody>
+	      <tr>
+	      	<th>Fav</th>
+	        <th>Song Title</th>
+	        <th>Artist</th>
+	        <th>Album</th>
+	        <th>Time</th>
+	      </tr>
+	      <tr>
+		      <td class="fav-song"></td>
+	        <td>After The Storm</td>
+	        <td>Mumford &amp; Sons</td>
+	        <td>Sigh No More</td>
+	        <td>4:07</td>
+	      </tr>
+	      <tr>
+		      <td></td>
+	        <td>Au Revoir</td>
+	        <td>OneRepublic</td>
+	        <td>Native (Deluxe) [+digital booklet]</td>
+	        <td>4:50</td>	
+	      </tr>
+	      <tr>
+		      <td class="playing"></td>
+	        <td>Bad Blood</td>
+	        <td>Bastille</td>
+	        <td>Bad Blood</td>
+	        <td>3:32</td>
+	      </tr>
+	      <tr>
+	      	<td class="dancing"></td>
+	        <td>Cheap Clothes</td>
+	        <td>Whitley</td>
+	        <td>The Submarine</td>
+	        <td>3:40</td>
+	      </tr>
+      </tbody>
+    </table>
+</div>
+	<p class="doc"><strong>HTML Symbols:</strong> To add an HTML symbol to a cell, add a class to the cell and use the <span class="inline-code">:before</span> :pseudo selector and <span class="inline-code">content</span> property. Symbols in CSS must use their Hex reference and be escaped with a leading "\".</p>
+	<code contenteditable><pre><span class="comment">// Selects the first cell in each row of the body of the table</span>
+<span class="comment">// and applies a tinted empty star symbol</span>
+.playlist tbody td:first-of-type:before {
+  <span class="orange-viv">content: "\2606";</span>
+  color: rgba(255,255,255,.2);
+}
+
+<span class="comment">// Selects the first cell in each row with class "fav-song"</span>
+<span class="comment">// and applies a solid orange star symbol</span>
+.playlist td:first-of-type.fav-song:before {
+  <span class="orange-viv">content: "\2605";</span>
+  color: #fe9c00;
+}</pre></code>
+
+<p class="doc"><strong>Background Images:</strong> To add a background image to a cell, apply a class and use the <span class="inline-code">background-image</span> property. Be sure to override any <span class="inline-code">content</span> symbols being added.</p>
+<code contenteditable><pre><span class="comment">// Adds a background gif to the cells with the class "playing" and "dancing"</span>
+.playing {
+  <span class="orange-viv">background-image: url(../images/eq.gif);</span>
+}
+
+.dancing {
+  <span class="orang-viv">background-image: url(../images/banana.gif);</span>
+  background-size: auto 100%;
+}
+
+.playing, .dancing {
+  background-repeat: no-repeat;
+  background-position: left center;
+}
+
+<span class="comment">// Overrides the default empty star from the previous example for cells with class "playing"</span>
+.playlist tbody td.dancing:before,
+.playlist tbody td.playing:before {
+  <span class="orange-viv">content: none;</span>
+}</pre></code>
+	</div>
+</div>
