@@ -2,7 +2,8 @@ var imports = {
   switches: document.getElementById('switches-snippets').import,
   structure: document.getElementById('structure-snippets').import,
   sliders: document.getElementById('sliders-snippets').import,
-  typography: document.getElementById('typography-snippets').import
+  typography: document.getElementById('typography-snippets').import,
+  buttons: document.getElementById('buttons-snippets').import
 }
 
 var snippets = {
@@ -27,7 +28,12 @@ var snippets = {
     horizButtonSlidersHTML: { templateId: "horiz-button-slider-html-snippet", targetId: "#button-sliders .html code" } 
   },
   typography: {
-    customClasses: { templateId: "custom-class-snippet", targetId: "#other-text #custom-classes" }
+    customClasses: { templateId: "custom-class-snippet", targetId: "#other-text #custom-classes" },
+    headingsHTML: { templateId: "headings-html-snippet", targetId: "#heading-content code" }
+  },
+  buttons: {
+    classButtonsHTML: { templateId: "button-class-html-snippet", targetId: "#button-class code" },
+    elementButtonsHTML: { templateId: "button-element-html-snippet", targetId: "#button-element code" }
   }
 };
 
@@ -62,7 +68,9 @@ var init = function() {
     $("#sliders").load("sliders.html", function() {
       loadSnippets( imports["sliders"], snippets["sliders"] );
     });
-    $("#buttons").load("buttons.html");
+    $("#buttons").load("buttons.html", function() {
+      loadSnippets( imports["buttons"], snippets["buttons"] );
+    });
     $("#switches").load("switches.html", function() {
       loadSnippets( imports["switches"], snippets["switches"] );
     });

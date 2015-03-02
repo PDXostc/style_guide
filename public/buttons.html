@@ -1,40 +1,46 @@
-<h3 class="sub-title doc">Buttons</h3>
-<p class="label">Anchor Buttons</p>
-<div class="example">
-  <a class="button">a.button</a>
-  <a class="button button-orange">a.button-orange</a>
-  <a class="button button-blue">a.button-blue</a>
-  <a class="button button-green">a.button-green</a>
-  <a class="button button-yellow">a.button-yellow</a>
-</div>
-<code contenteditable><pre>&lt;a <span class="orange-viv">class="button"</span>&gt;text&lt;a&gt;
-&lt;a <span class="orange-viv">class="button button-orange"</span>&gt;text&lt;a&gt;
-&lt;a <span class="orange-viv">class="button button-blue"</span>&gt;text&lt;a&gt;
-&lt;a <span class="orange-viv">class="button button-green"</span>&gt;text&lt;a&gt;
-&lt;a <span class="orange-viv">class="button button-yellow"</span>&gt;text&lt;a&gt;</pre></code>
-<p class="label">Form Buttons</p>
-<div class="example">
-  <form action="">
-    <button>button</button>
-    <button class="button-orange">button.button-orange</button>
-    <button class="button-blue">button.button-blue</button>
-    <button class="button-green">button.button-green</button>
-    <button class="button-yellow">button.button-yellow</button>
-  </form>
-</div>
-<code contenteditable><pre>&lt;form&gt;
-&lt;button&gt;text&lt;/button&gt;
-&lt;button <span class="orange-viv">class="button-orange"</span>&gt;text&lt;/button&gt;
-&lt;button <span class="orange-viv">class="button-blue"</span>&gt;text&lt;/button&gt;
-&lt;button <span class="orange-viv">class="button-green"</span>&gt;text&lt;/button&gt;
-&lt;button <span class="orange-viv">class="button-yellow"</span>&gt;text&lt;/button&gt;
-&lt;/form&gt;</pre></code>
-<p class="doc">All buttons have the following properties:</p>
-<ul class="doc">
-  <li>1px solid border</li>
-  <li>Inset box shadow with 10px blur and 0 offset</li>
-  <li>Matching border color and inset shadow color</li>
-  <li>White text</li>
-  <li>10px padding</li>
-  <li>20px margin</li>
-</ul>
+<h2 class="sub-title doc">Buttons</h2>
+<h3 class="doc">Button Class vs. Button element</h3>
+<h4 class="doc">Button Class</h4>
+<p class="doc">The <span class="inline-code">.button-</span> classes allow for <em>button styling</em> on elements other than the <span class="inline-code">button</span> element. This is particularly useful for styling anchor links as buttons.</p>
+<h4 class="doc">Button Element</h4>
+<p class="doc">The <span class="inline-code">button</span> element should be used exclusively within the <span class="inline-code">form</span> element for <em>triggering actions.</em></p>
+<h4 class="doc">General Rule</h4>
+<p class="doc">Use the button element within the form element when submitting information and triggering Javascript.</p>
+<p class="doc">Use <span class="inline-code">.button-</span> classes on links (if desired) and on other elements that do not trigger actions but where you still desire button styling.</p>
+<p class="doc"><a class="external-link" href="http://davidwalsh.name/html5-buttons">http://davidwalsh.name/html5-buttons</a></p>
+<p class="doc"><a class="external-link" href="https://css-tricks.com/use-button-element/">https://css-tricks.com/use-button-element/</a></p>
+<!-- The Button Class -->
+<section id="button-class">
+  <h3 class="doc">Button Class</h3>
+  <h4 class="doc">Button Variation: <span class="inline-code">inshadow</span></h4>
+  <div class="example">
+    <p class="doc white">Button</p>
+    <div class="flex-parent flex-column">
+      <div class="flex-item flex-center">
+      <span class="inline-code">.button-inshadow</span>
+      <a class="button-inshadow">button</a>
+      </div>
+      <div class="flex-item flex-center"><a class="button-inshadow button-orange">button</a></div>
+      <div class="flex-item flex-center"><a class="button-inshadow button-blue">button</a></div>
+      <div class="flex-item flex-center"><a class="button-inshadow button-green">button</a></div>
+      <div class="flex-item flex-center"><a class="button-inshadow button-yellow">button</a></div>
+    </div>
+  </div>
+  <code contenteditable></code>
+</section>
+
+<!-- The Button Element -->
+<section id="button-element">
+  <h3 class="doc">Button Element</h3>
+  <div class="example">
+    <p class="doc white">Button Element Buttons</p>
+    <form action="">
+      <button>button</button>
+      <button class="button-orange">button.button-orange</button>
+      <button class="button-blue">button.button-blue</button>
+      <button class="button-green">button.button-green</button>
+      <button class="button-yellow">button.button-yellow</button>
+    </form>
+  </div>
+  <code contenteditable></code>
+</section>

@@ -258,12 +258,16 @@ ol.doc, ol.doc li {
 }
 
 h2.doc {
-  font-size: 4.5rem;
+  font-size: 5rem;
 }
 
 h3.doc {
-  font-size: 3rem;
+  font-size: 4rem;
   font-weight: 600;
+}
+
+h4.doc {
+  font-size: 3rem;
 }
 
 .doc.white {
@@ -303,7 +307,7 @@ a {
 
 a.external-link {
   padding-bottom: 5px;
-  border-bottom: 1px solid rgba(255,255,255,0.25);
+  border-bottom: 1px dotted rgba(0,0,0,0.25);
 }
 
 .underline,
