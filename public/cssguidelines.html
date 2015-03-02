@@ -23,7 +23,7 @@
               <ul class="doc">
                 <li>Inline or embedding CSS should be avoided.</li>
                 <li>Default styles should not be overwritten.</li>
-                <li>The :hover selector should not be used as :hover does not apply to touchscreens.</li>
+                <li>The <span class="inline-code">:hover</span> selector should not be used as <span class="inline-code">:hover</span> does not apply to touchscreens.</li>
               </ul>
               <h6 class="doc">Containers</h6>
               <ul class="doc">
@@ -35,13 +35,15 @@
               </ul>
               <h6 class="doc">Z-indexing</h6>
               <ul class="doc">
-                <li>Z-index should start as a base value of "1" and move up in single incremented up by 1 as needed for each overlaying elements.</li>
+                <li>Z-index should ONLY be used to overlay elements on top of others in the direction of the user.</li>
+                <li>Z-index should ONLY be used when the stack order cannot be changed.</li>
                 <li>Infinite or arbitrary z-indexing should not be used. (eg. z-index: 9999)</li>
-                <li>Z-index should only be used when the stack order cannot be changed.</li>
-                <li>Z-index should only be used on two or more elements. Z-index on one element has no effect.</li>
+                <li>Z-index should only be used on two or more elements. Z-index on one element has no effect or value.</li>
+                <li>Z-index should start as a base value of "0" and move up in single incremented up by 1 as needed for each overlaying element.</li>
+                <li>Z-index should be used with absolute positioning.</li>
               </ul>
               <h6 class="doc">Inputs</h6>
               <ul class="doc">
-                <li>The flashing input caret should be used on :focus elements that accept keyboard events or other user inputs.</li>
+                <li>The flashing input caret should be used on <span class="inline-code">:focus</span> elements that accept keyboard events or other user inputs.</li>
               </ul>
             </div>
