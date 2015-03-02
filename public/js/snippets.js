@@ -25,7 +25,8 @@ var snippets = {
     vertSlidersHTML: { templateId: "vertical-slider-snippet", targetId: "#vertical-sliders .html code" }, 
     horizSlidersHTML: { templateId: "horizontal-slider-snippet", targetId: "#horizontal-sliders .html code" }, 
     vertSlidersCSS: { templateId: "vertical-slider-css-snippet", targetId: "#vertical-sliders .css code" }, 
-    horizButtonSlidersHTML: { templateId: "horiz-button-slider-html-snippet", targetId: "#button-sliders .html code" } 
+    horizButtonSlidersHTML: { templateId: "horiz-button-slider-html-snippet", targetId: "#button-sliders .html code" }, 
+    horizButtonSlidersCSS: { templateId: "horiz-button-slider-css-snippet", targetId: "#button-sliders .css code" } 
   },
   typography: {
     customClasses: { templateId: "custom-class-snippet", targetId: "#other-text #custom-classes" },

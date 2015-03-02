@@ -377,7 +377,7 @@ label,
   height:2em;
   font-size: 4em; /* Base size for scalability */
   line-height: 0;
-  flex-basis: 85%;
+  flex-basis: 82.5%;
   overflow:hidden;
   cursor: pointer;
   padding: .25em 0;
@@ -400,7 +400,6 @@ label,
   background-image: url(../images/hex_thumb_white_vert.png);
   -webkit-filter: drop-shadow(.05em .05em .05em rgba(0,0,0,.25));
 }
-
 
 /* Style the level bar */
 .slider-input::-webkit-slider-thumb:after{
@@ -433,6 +432,14 @@ label,
   justify-content: space-between;
 }
 
+.thin-slider .slider-input {
+  flex-basis: 90%;
+}
+
+.thick-slider .slider-input {
+  flex-basis: 75%;
+}
+
 .thin-slider {
   font-size: .5rem;
 }
@@ -444,15 +451,16 @@ label,
 .slider-button {
   width: 40px;
   height: 40px;
-  border: 1px solid rgba(255, 255, 255, .4);
+  display: flex;
+  font-size: 4em;
   text-align: center;
+  align-items: center;
+  justify-content: center;
   text-shadow: 1px 1px 3px #444;
+  border: 1px solid rgba(255, 255, 255, .4);
   box-shadow: inset 0px 0px 2px 1px #5a3800;
   background: linear-gradient(#db9604, #915a00);
   animation: bounceInDown 900ms 200ms ease-in-out both;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .thin-slider .slider-button {
@@ -476,6 +484,7 @@ label,
 .less-button::after,
 .more-button::after {
   color: white;
+  font-size: 1em;
 }
 
 /* Tabs */
