@@ -1,7 +1,8 @@
 var imports = {
   switches: document.getElementById('switches-snippets').import,
   structure: document.getElementById('structure-snippets').import,
-  sliders: document.getElementById('sliders-snippets').import
+  sliders: document.getElementById('sliders-snippets').import,
+  typography: document.getElementById('typography-snippets').import
 }
 
 var snippets = {
@@ -22,7 +23,11 @@ var snippets = {
   sliders: {
     vertSlidersHTML: { templateId: "vertical-slider-snippet", targetId: "#vertical-sliders .html code" }, 
     horizSlidersHTML: { templateId: "horizontal-slider-snippet", targetId: "#horizontal-sliders .html code" }, 
-    vertSlidersCSS: { templateId: "vertical-slider-css-snippet", targetId: "#vertical-sliders .css code" } 
+    vertSlidersCSS: { templateId: "vertical-slider-css-snippet", targetId: "#vertical-sliders .css code" }, 
+    horizButtonSlidersHTML: { templateId: "horiz-button-slider-html-snippet", targetId: "#button-sliders .html code" } 
+  },
+  typography: {
+    customClasses: { templateId: "custom-class-snippet", targetId: "#other-text #custom-classes" }
   }
 };
 
@@ -40,14 +45,18 @@ function loadSnippets(htmlImport, snippetObj) {
 }
 
 var init = function() {
-  $("#introduction").load("introduction.html");
+  $("#introduction").load("introduction.html", function() {
+    $("#table-of-contents").load("nav_primary.html");
+  });
   $("#structure").load("structure.html", function() {
     loadSnippets( imports["structure"], snippets["structure"] );
   });
   $("#boxes").load("boxes.html");
-  $("nav.primary").load("nav_primary.html");
+  $("nav.primary ul").load("nav_primary.html");
   $("nav.secondary").load("nav_secondary.html");
-  $("#typography").load("typography.html");
+  $("#typography").load("typography.html", function() {
+    loadSnippets( imports["typography"], snippets["typography"] );
+  });
   $("#colors").load("colors.html");
   $("#controls").load("controls.html", function() {
     $("#sliders").load("sliders.html", function() {

@@ -1,143 +1,3 @@
-/* Buttons ************************************************/
-
-.button-outline {
-  box-shadow: none;
-  border: 1px solid rgba(255, 255, 255, 0.5);
-}
-
-/* Boxes and Modules **************************************/
-
-.box-outline,
-.box-inshadow,
-.box-outshadow,
-.box-infill {
-  color: #fe9c00;
-  padding: 20px;
-  margin: 20px;
-  border-width: 1px;
-  border-style: solid;
-  border-color: rgba(255, 255, 255, 0.5);
-  background-color: rgba(0, 0, 0, .8);
-}
-
-.box-inshadow {
-  box-shadow: inset 0 0 20px rgba(255, 255, 255, .5);
-}
-
-.box-outshadow {
-  box-shadow: 0 0 20px rgba(255, 255, 255, .5);
-}
-
-.box-infill {
-  color: rgba(255, 255, 255, .8);
-  box-shadow: inset 0 0 20px rgba(0, 0, 0, 1), inset 0 0 6em 2em rgba(0, 0, 0, .5);
-}
-
-.box-header {
-  background-color: transparent;
-  padding: 20px;
-  margin: -20px -20px 10px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-  color: inherit;
-  border-color: inherit;
-}
-
-.box-content {
-  padding: 20px;
-  margin: -20px;
-}
-
-.box-title {
-  margin: 0;
-  color: inherit;
-}
-
-/* Yellow */
-
-.box-yellow,
-.box-in-yellow,
-.box-out-yellow {
-  color: #ffffb2;
-  border-color: rgba(255, 255, 178, 0.5);
-}
-
-.box-in-yellow {
-  box-shadow: inset 0 0 20px rgba(255, 255, 0, .5);
-}
-
-.box-out-yellow {
-  box-shadow: 0 0 20px rgba(255, 255, 0, .5);
-}
-
-.box-infill-yellow {
-  background-color: rgba(255, 255, 0, .8);
-}
-
-/* Orange */
-
-.box-orange,
-.box-in-orange,
-.box-out-orange {
-  color: #FE9C00;
-  border-color: rgba(254, 156, 0, 0.5);
-}
-
-.box-in-orange {
-  box-shadow: inset 0 0 20px rgba(254, 156, 0, .5);
-}
-
-.box-out-orange {
-  box-shadow: 0 0 20px rgba(254, 156, 0, .5);
-}
-
-.box-infill-orange {
-  background-color: rgba(254, 156, 0, .8);
-}
-
-
-/* Blue */
-
-.box-blue,
-.box-in-blue,
-.box-out-blue {
-  color: #b2f0ff;
-  border-color: rgba(178, 240, 255, 0.5);
-}
-
-.box-in-blue {
-  box-shadow: inset 0 0 20px rgba(178, 240, 255, .5);
-}
-
-.box-out-blue {
-  box-shadow: 0 0 20px rgba(178, 240, 255, .5);
-}
-
-.box-infill-blue {
-  background-color: rgba(83, 181, 206, .8);
-}
-
-
-/* Green */
-
-.box-green,
-.box-in-green,
-.box-out-green {
-  color: #cdffb2;
-  border-color: rgba(205, 255, 178, 0.5);
-}
-
-.box-in-green {
-  box-shadow: inset 0 0 20px rgba(205, 255, 178, .5);
-}
-
-.box-out-green {
-  box-shadow: 0 0 20px rgba(205, 255, 178, .5);
-}
-
-.box-infill-green {
-  background-color: rgba(89, 255, 0, .7);
-}
-
 /* Switches ***********************************************/
 
 .switch {
@@ -220,9 +80,8 @@
 
 .close-button::after {
   content: "\00d7";
-  width: 40px;
-  height: 40px;
-  padding: 40px;
+  width: 60px;
+  height: 60px;
   color: white;
   font-size: 5rem;
   cursor: pointer;
@@ -230,6 +89,7 @@
   top: 0;
   right: 0;
   display: flex;
+  line-height: 5rem;
   justify-content: center;
   align-items: center;
 }
@@ -307,131 +167,185 @@ label,
   box-shadow: 0 0 20px rgba(255, 211, 140, 0.8);
 }
 
-/* Sliders ************************************************/
+/* Sliders */
 
-/* Resets */
-
-.slider-input {
-  -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
-  width: 100%;
-  margin: 0;
-  padding: 0;
-}
-
-.slider-input::-webkit-slider-thumb {
-  -webkit-appearance: none; /* Hides the slider thumb so that custom thumb can be made */
-}
-
-.slider-input:focus {
-  outline: none; /* Removes the blue accessibility border. */
-}
-
-/* Slider Styles */
-
-.slider-input{
-  height:2em;
-  font-size: 4em; /* Base size for scalability */
-  line-height: 0;
-  flex-basis: 85%;
-  overflow:hidden;
-  cursor: pointer;
-  padding: .25em 0;
-  position: relative;
-  -webkit-appearance:none;
-  background: transparent;
-}
-
-.slider-input::-webkit-slider-thumb {
-  height: 1em;
-  width: .85em;
-  font-size: 2em;
-  margin: -.25em 0;
-  overflow: visible;
-  position:relative;
-  background-size: .85em;
-  -webkit-appearance:none;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-image: url(../images/hex_thumb_white_vert.png);
-  -webkit-filter: drop-shadow(.05em .05em .05em rgba(0,0,0,.25));
-}
-
-
-/* Style the level bar */
-.slider-input::-webkit-slider-thumb:after{
-  content:" ";
-  width:100vw;
-  right: 100%;
-  height: .5em;
-  margin: .25em 0;
-  position:absolute;
-  background: rgba(178, 240, 255, 0.8);
-  box-shadow: inset .125em .125em .5em rgba(255,255,255,.6),
-              inset -1em -1em .125em -1em rgba(0,0,0,.5);
-}
-
-/* Styles the track */
-.slider-input::-webkit-slider-runnable-track {
-  height: 1em;
-  background-color: transparent;
-  box-shadow: inset 0 0 0 .125em rgba(126,126,126,.25),
-              inset 0 0 .5em .125em rgba(0,0,0,.5);
-              
-}
-
-.vertical-slider,
-.horizontal-slider {
-  font-size: 1rem;
+.vertical-slider {
   display: flex;
+  margin: 40px 0;
   position: relative;
   align-items: center;
-  justify-content: space-between;
-}
-
-.thin-slider {
-  font-size: .5rem;
-}
-
-.thick-slider {
-  font-size: 1.5rem;
-}
-
-.slider-button {
-  width: 40px;
-  height: 40px;
-  border: 1px solid rgba(255, 255, 255, .4);
-  text-align: center;
-  text-shadow: 1px 1px 3px #444;
-  box-shadow: inset 0px 0px 2px 1px #5a3800;
-  background: linear-gradient(#db9604, #915a00);
-  animation: bounceInDown 900ms 200ms ease-in-out both;
-  display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: center;
 }
 
-.thin-slider .slider-button {
+.horizontal-slider {
+  display: flex;
+  margin: 0 40px;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+
+.vertical-slider.thin-slider {
+  margin: 20px 0;
+}
+
+.horizontal-slider.thin-slider {
+  margin: 0 20px;
+}
+
+.vertical-slider.thick-slider {
+  margin: 60px 0;
+}
+
+.horizontal-slider.thick-slider {
+  margin: 0 60px;
+}
+
+.slider-channel {
+  display: flex;
+  justify-content: flex-end;
+  box-shadow: inset 0 0 40px black;
+  border: 2px solid rgba(65, 65, 65, .5);
+}
+
+.top-down-slider .slider-channel {
+  justify-content: flex-start;
+}
+
+.vertical-slider .slider-channel {
+  width: 40px;
+  height: 100%;
+  flex-direction: inherit;
+}
+
+.horizontal-slider .slider-channel {
+  height: 40px;
+  width: 100%;
+  flex-direction: inherit;
+}
+
+.vertical-slider.thin-slider .slider-channel {
   width: 20px;
+  box-shadow: inset 0 0 20px black;
+}
+
+.horizontal-slider.thin-slider .slider-channel {
+  height: 20px;
+  box-shadow: inset 0 0 20px black;
+}
+
+.vertical-slider.thick-slider .slider-channel {
+  width: 60px;
+  box-shadow: inset 0 0 60px black;
+}
+
+.horizontal-slider.thick-slider .slider-channel {
+  height: 60px;
+  box-shadow: inset 0 0 60px black;
+}
+
+/* Slider level preperty flex-basis controls the height 
+   of the level bar and the contained slider handle */
+
+.slider-level {
+  display: flex;
+  flex-basis: 0%;
+  overflow: visible;
+  background-color: rgba(178, 240, 255, 0.8);
+  box-shadow: inset 2px 2px .5em rgba(255,255,255,.4), inset -2px -2px .5em rgba(0,0,0,.4)
+}
+
+
+.vertical-slider .slider-control {
+  flex-direction: column;
+  margin: -20% 0;
+  padding: 20% 0;
+}
+
+.horizontal-slider .slider-control {
+  margin: 0 -20%;
+  padding: 0 20%;
+}
+
+.slider-handle {
+  flex: 1;
+  position: relative;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-image: url(../images/slider_control.png);
+}
+
+.vertical-slider .slider-handle {
+  margin: -150% -100%;
+  background-position: top;
+}
+
+.horizontal-slider .slider-handle {
+  margin: -100% -150%;
+  background-position: left;
+}
+
+.top-down-slider .slider-handle {
+  background-position: bottom;
+}
+
+.slider {
   height: 20px;
 }
 
-.thick-slider .slider-button {
-  width: 60px;
-  height: 60px;
+.slider .slider-input {
 }
 
-.less-button::after {
-  content: "\02212";
+.slider-input {
+  overflow-x:hidden;
+  overflow-y: visible; 
+  margin: -1em 0;
+  height: 200%;
+  width: 100%;
+  background: transparent;
+  background-position: center;
+  -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+  width: 100%; /* Specific width is required for Firefox. */
 }
 
-.more-button::after {
-  content: "\0002b";
+.slider-input::-webkit-slider-thumb {
+  -webkit-appearance: none;
 }
 
-.less-button::after,
-.more-button::after {
-  color: white;
+.slider-input:focus {
+  outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
 }
+
+.slider-input::-webkit-slider-thumb {
+  -webkit-appearance: none; 
+  /*margin: -5px;*/
+  width: 40px; 
+  height: 40px; 
+  background: white; 
+  position: relative; 
+  /*z-index: 3; */
+}
+
+.slider-input::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  margin: -20px 0;
+  background: linear-gradient(to right, #111 0%, #111 100%); 
+}
+
+.slider-input::-webkit-slider-thumb:after {
+  content: " "; 
+  width: 100vw; 
+  height: 50%;
+  position: absolute; 
+  /*z-index: 1; */
+  right: 30px;
+  background-position: center;
+  background: linear-gradient(to right, #16a085 0%, #16a085 100%); 
+}
+
 
 /* Tabs */
 

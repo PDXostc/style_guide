@@ -116,28 +116,10 @@
               <h3 class="sub-title doc">Other Text Sizes</h3>
               <p class="doc">Below is a list of old common text-size variations and suggested replacements. When deciding how to size text, keep the following in mind:</p>
               <ul class="doc">
-                <li>Use the small element to reduce type. It is relative and will reduce font-size by approx. 1/6th</li>
-                <li>If you need a size not specified here, add a custom class <em class="orange-viv">to your app</em> that is stand-alone or modifies and existing style, egs:
-                <code><pre><span class="comment">/* stand-alone class */</span><br>.nav-large-text { ...<br><br><span class="comment">/* modifier class */</span><br>h4.nav { ...</pre></code></li>
-                <li>Any heading should only appear once in any single element.
-                  <ul>
-                    <li>To achieve the appearance of a heading on sibling elements:
-                      <ul>
-                        <li>create a custom class in your app that matches the heading properties</li>
-                        <li>apply the class to a non-heading text element, eg:</li>
-                        <code><pre>.matches-h1 {
-  font-size: 7rem;
-  color: #fc9e00;
-}
-
-<span class="comment">&lt;!-- like this but with a better name --&gt;</span>
-
-&lt;p class="matches-h1"&gt; ... &lt;p&gt;</pre></code>
-                      </ul>
-                    </li>
-                  </ul>
-                </li>
-                <li>If a style is missing that you believe should be in common.css, please let us know</li>
+                <li>Use the <span class="inline-code">small</span> element to reduce type by approximately 1/6th.</li>
+                <li>Use app-specific classes to add styles or modify existing styles
+                <code id="custom-classes"></code></li>
+                <li>If you have style rule that should be in common.css, please submit a Trac ticket.</li>
               </ul>
 
               <table class="font-styles-map">

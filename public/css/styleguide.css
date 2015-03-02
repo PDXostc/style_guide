@@ -5,35 +5,6 @@
   src: url(../fonts/SourceCodePro-Regular.ttf) format(truetype);
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-/* Flex */
-
-.flex-parent {
-  display: flex;
-}
-
-.flex-item {
-  flex: 1;
-}
-
-.flex-column {
-  flex-direction: column;
-}
-
-.space-between {
-  justify-content: space-between;
-}
-
-/* Structural Containers */
-
-.inner {
-  width: 80%;
-  margin: auto;
-  background-color: white;
-=======
-=======
->>>>>>> e1baf5b702971c2f27fc57f8d41ad592a916cf17
 
 /* Root */
 
@@ -72,10 +43,6 @@ body::-webkit-scrollbar {
   margin: 0 auto;
   padding: 0;
   /*background-color: rgba(255,255,255, 0.25);*/
-<<<<<<< HEAD
->>>>>>> Moves files to public folder
-=======
->>>>>>> e1baf5b702971c2f27fc57f8d41ad592a916cf17
   display: flex;
 }
 
@@ -85,20 +52,6 @@ body::-webkit-scrollbar {
   }
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-.side-panel {
-  background-color: #ededed;
-  flex: 1;
-  min-width: 200px;
-}
-
-.main {
-  padding: 5% 5% 0;
-  flex: 3;
-=======
-=======
->>>>>>> e1baf5b702971c2f27fc57f8d41ad592a916cf17
 #main {
   display: flex;
   flex: 1;
@@ -155,27 +108,10 @@ nav {
   background-color: rgba(255, 255, 255, 0.6);
   display: inline-block;
   min-width: 40px;
-<<<<<<< HEAD
->>>>>>> Moves files to public folder
-=======
->>>>>>> e1baf5b702971c2f27fc57f8d41ad592a916cf17
 }
 
 /* Content Containers */
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-.examples {
-  outline: 1px solid rgba(0,0,0,.25);
-  padding: 5%; 
-}
-
-.swatch {
-  background-color: #eee;
-  flex: 1;
-=======
-=======
->>>>>>> e1baf5b702971c2f27fc57f8d41ad592a916cf17
 .content > section {
   margin-top: 60px;
 }
@@ -239,7 +175,6 @@ article {
   flex-basis: 100%;
 }
 
-
 .example.no-title:before {
   display: none;
 }
@@ -259,21 +194,10 @@ article {
   display: flex;
   flex-direction: column;
   align-items: center;
-<<<<<<< HEAD
->>>>>>> Moves files to public folder
-=======
->>>>>>> e1baf5b702971c2f27fc57f8d41ad592a916cf17
   margin-bottom: 20px;
   padding: 20px;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-.swatch:not(:last-child) {
-  margin-right: 20px;
-=======
-=======
->>>>>>> e1baf5b702971c2f27fc57f8d41ad592a916cf17
 .notice {
   background-color: #ffd38c;
   color: black;
@@ -293,40 +217,15 @@ article {
   font-weight: 400;
   font-style: italic;
   padding: 10px;
-<<<<<<< HEAD
->>>>>>> Moves files to public folder
-=======
->>>>>>> e1baf5b702971c2f27fc57f8d41ad592a916cf17
+}
+
+#table-of-contents {
+  -webkit-columns: 4;
 }
 
 /* Styleguide Headings */
 
 .section-title {
-<<<<<<< HEAD
-<<<<<<< HEAD
-  border-bottom: 1px solid rgba(0,0,0,.5);
-  padding-bottom: 20px;
-}
-
-.section-title,
-.sub-title {
-  margin: 20px auto;
-}
-
-.heading:not(:first-child):before {
-  content: "";
-  border-bottom: 1px solid rgba(0,0,0,.25);
-  display: block;
-  margin: 10px 0;
-}
-
-.label {
-  font-weight: 700; 
-  text-transform: uppercase;
-  color: #ccc;
-=======
-=======
->>>>>>> e1baf5b702971c2f27fc57f8d41ad592a916cf17
   border-bottom: 1px solid rgba( 0, 0, 0, 0.25);
   margin-bottom: 15px;
   padding-bottom: 15px;
@@ -347,24 +246,24 @@ article {
   color: white;
   font-weight: 300;
   font-size: .75em;
-<<<<<<< HEAD
->>>>>>> Moves files to public folder
-=======
->>>>>>> e1baf5b702971c2f27fc57f8d41ad592a916cf17
 }
 
 /* Styleguide Text */
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> e1baf5b702971c2f27fc57f8d41ad592a916cf17
 p.doc, ul.doc, ul.doc li,
 ol.doc, ol.doc li {
   font-size: 2rem;
   font-weight: 400;
   line-height: 1.5em;
+}
+
+h2.doc {
+  font-size: 4.5rem;
+}
+
+h3.doc {
+  font-size: 3rem;
+  font-weight: 600;
 }
 
 .doc.white {
@@ -398,38 +297,10 @@ table .inline-code {
   background-color: rgba(0,0,0, 0.5);
 }
 
-<<<<<<< HEAD
->>>>>>> Moves files to public folder
-=======
->>>>>>> e1baf5b702971c2f27fc57f8d41ad592a916cf17
 a {
   text-decoration: none;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-pre {
-  background-color: #eee;
-  padding: 10px;
-  margin-bottom: 10px; 
-}
-
-pre, code {
-  font-size: .3rem;
-  color: #777;
-  font-family: SourceCodePro, serif;
-}
-
-.swatch .details {
-  text-align: center;
-  text-transform: uppercase;
-  font-weight: 400;
-  font-size: .5rem;
-  color: rgba(255,255,255, 0.75);
-  margin: 0;
-=======
-=======
->>>>>>> e1baf5b702971c2f27fc57f8d41ad592a916cf17
 a.external-link {
   padding-bottom: 5px;
   border-bottom: 1px solid rgba(255,255,255,0.25);
@@ -484,6 +355,7 @@ pre {
 
 pre, code {
   font-size: 1.4rem;
+  line-height: initial;
   color: #333;
   font-family: SourceCodePro, serif;
 }
@@ -543,35 +415,10 @@ li code {
   padding: 10px;
   margin: 0;
   background-color: white;
-<<<<<<< HEAD
->>>>>>> Moves files to public folder
-=======
->>>>>>> e1baf5b702971c2f27fc57f8d41ad592a916cf17
 }
 
 /* Lists */
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-li {
-  line-height: 1.5em;
-  font-weight: 600;
-}
-
-li li {
-  font-size: .9em;
-  font-weight: 400;
-}
-
-.contents-list {
-  position: fixed;
-  top: 0;
-  font-size: .5rem;
-  padding: 20px;
-}
-=======
-=======
->>>>>>> e1baf5b702971c2f27fc57f8d41ad592a916cf17
 nav li:not(:last-child) {
   margin-bottom: .25em;
 }
@@ -609,24 +456,39 @@ nav li li li {
   padding: 20px;
 }
 
-.contents-list {
+.nav-panel .contents-list {
   min-width: inherit;
   font-size: 3rem;
   color: #c4c4c4;
   list-style: none;
 }
 
-.contents-list > li > ul {
+.nav-panel .contents-list > li > ul {
   display: none;
 }
 
-nav li {
+nav li,
+#table-of-contents,
+#table-of-contents ul {
   list-style-type: none; 
+  margin-bottom: 0;
+}
+
+#table-of-contents > li {
+  margin-bottom: .25em;
+}
+
+#table-of-contents > li > ul > li {
+  margin: 0;
+}
+
+#table-of-contents ul li {
+  color: #666;
+  font-size: .6em;
 }
 
 #switch-list-demo ul {
   list-style-type: none;
-
 }
 
 #switch-list-demo li {
@@ -889,9 +751,4 @@ label.no-style {
 #add-another-icon p {
   font-size: 7rem;
   margin: 0;
-<<<<<<< HEAD
 }
->>>>>>> Moves files to public folder
-=======
-}
->>>>>>> e1baf5b702971c2f27fc57f8d41ad592a916cf17

@@ -1,16 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-$(document).ready(function(){
-  $('a').click(function(){
-      $('html, body').animate({
-          scrollTop: $( $.attr(this, 'href') ).offset().top
-      }, 500, "easeOutQuint");
-      return false;
-  });
-})
-=======
-=======
->>>>>>> e1baf5b702971c2f27fc57f8d41ad592a916cf17
 $(document).ready(function() {
 
   function jumpToAnchor(href) {
@@ -20,21 +7,15 @@ $(document).ready(function() {
   };
   
   // controls scrolling when clicking nav items or back-to-top icon
-  $(document).on("click", "nav a, .back-to-top a", function(e){
+  $(document).on("click", "nav a, .back-to-top a", function() {
     var documentName = $.attr(this, 'href');
     jumpToAnchor(documentName);
-    // var htmlFile = documentName +".html";
-    // e.preventDefault();
-    // $.ajax({url: htmlFile}).done(function() {
-    //   $("#main .content").load(htmlFile, function(){
-    //     loadSnippets( imports[documentName], snippets[documentName] );
-    //   });
-    // });
   });
 
   // controls toggling of nav sub-menus
   $(document).on("click", ".contents-list > li > a", function() {
   	$(this).next().slideToggle();
+    $(this).parent().siblings().find("ul").slideUp();
   });
 
   // switch control
@@ -86,17 +67,4 @@ $(document).ready(function() {
   $("#modal .close-button").on("click", function() {
     $("#modal").toggleClass("hidden");
   });
-
-  // Toggle section
-  $(document).on("click", ".toggle", function(e) {
-    e.stopPropagation();
-    $(this).siblings("article").slideToggle();
-    console.log($(this).text());
-    $(this).text() == "hide" ? $(this).text("show") : $(this).text("hide");
-  });
-<<<<<<< HEAD
 });
->>>>>>> Moves files to public folder
-=======
-});
->>>>>>> e1baf5b702971c2f27fc57f8d41ad592a916cf17
