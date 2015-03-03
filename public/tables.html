@@ -237,37 +237,20 @@
 
 	<section id="custom-column-widths">
 		<h3 class="doc">Custom Column Widths</h3>
+		<p class="doc">To customize column widths, use :pseudo selectors to target rows by position, index or occurence. Then set the flex property as desired.</p>
+		<section class="sub-section css">
+			<code contenteditable></code>
+		</section>
 	</section>
-	<p class="doc">To customize column widths, use :pseudo selectors to target rows by position, index or occurence. Then set the flex property as desired.</p>
-	<code contenteditable><pre><span class="comment">// Examples used in the playlist above
 
-// Selects the first and last column and sets the flex to 1</span>
-.playlist tr > :first-of-type,
-.playlist tr > :first-of-type {
-  flex: 1;
-}
-
-<span class="comment">// Selects the 2nd column and every column after and sets the flex to 3</span>
-table tr > :nth-child(n+2) {
-  flex: 3;
-}
-
-<span class="comment">// Select the 2nd column and set the flex property to 4</span>
-.playlist tr > :nth-child(2) {
-  flex: 4;
-}</pre></code>
- <p class="label"><small>custom text and background styles</small></p>
- <p class="doc">To select alternating rows, use the <span class="inline-code">:nth-child(even)</span> and <span class="inline-code">:nth-child(odd)</span> :pseudo selectors.</p>
- <code contenteditable><pre><span class="comment">// Selects every even row and makes the background a tint of orange (default)</span>
-tr<span class="orange-viv">:nth-child(even)</span> {
-  background-color: rgba(255,211,140,.1);
-}
-
-<span class="comment">// Selects every odd row cell and makes the font bold (not shown)</span>
-tr<span class="orange-viv">:nth-child(odd)</span> td {
-  font-weight: 600;
-}
- </pre></code>
+	<section id="custom-row-styles">
+	 <h3 class="doc">Custom Row Styles</h3>
+	 <p class="doc">To select alternating rows, use the <span class="inline-code">:nth-child(even)</span> and <span class="inline-code">:nth-child(odd)</span> :pseudo selectors.</p>
+	 <section class="sub-section css">
+		 <code contenteditable></code>
+	 </section>
+	</section>
+	
 	<p class="label"><small>adding icons</small></p>
 	<div class="example">
 		<table class="playlist no-text-wrap">

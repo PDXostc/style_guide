@@ -123,3 +123,32 @@ table.no-text-wrap td {
 <template id="custom-table-class-html-snippet"><pre>&lt;table <span class="orange-viv">class="playlist"</span>&gt;
 <span class="comment">// Table elements</span>
 &lt;/table&gt;</pre></template>
+
+<template id="custom-column-widths-css-snippet"><pre><span class="comment">// Examples used in the playlist above
+
+// Selects the first and last column and sets the flex to 1</span>
+.playlist tr > :first-of-type,
+.playlist tr > :first-of-type {
+  flex: 1;
+}
+
+<span class="comment">// Selects the 2nd column and every column after and sets the flex to 3</span>
+table tr > :nth-child(n+2) {
+  flex: 3;
+}
+
+<span class="comment">// Select the 2nd column and set the flex property to 4</span>
+.playlist tr > :nth-child(2) {
+  flex: 4;
+}</pre></template>
+
+<template id="custom-row-styles-css-snippet"><pre><span class="comment">// Selects every even row and makes the background a tint of orange (default)</span>
+  tr<span class="orange-viv">:nth-child(even)</span> {
+    background-color: rgba(255,211,140,.1);
+  }
+
+  <span class="comment">// Selects every odd row cell and makes the font bold (not shown)</span>
+  tr<span class="orange-viv">:nth-child(odd)</span> td {
+    font-weight: 600;
+  }
+   </pre></template>

@@ -54,7 +54,9 @@ var snippets = {
   tables: {
     basicHTML: { templateId: "basic-table-html-snippet", targetId: "#basic-table .html code" },
     basicCSS: { templateId: "basic-table-css-snippet", targetId: "#basic-table .css code" },
-    customClassHTML: { templateId: "custom-table-class-html-snippet", targetId: "#custom-tables-class .html code" }
+    customClassHTML: { templateId: "custom-table-class-html-snippet", targetId: "#custom-tables-class .html code" },
+    customColumnWidthCSS: { templateId: "custom-column-widths-css-snippet", targetId: "#custom-column-widths .css code" },
+    customrowStylesCSS: { templateId: "custom-row-styles-css-snippet", targetId: "#custom-row-styles .css code" }
   },
   forms: {
     stackedLabelInputHTML: { templateId: "stacked-labeled-input-html", targetId: "#stacked-labeled-inputs .html code" },
@@ -85,9 +87,9 @@ var init = function() {
   $("#introduction").load("introduction.html", function() {
     $("#table-of-contents").load("nav_primary.html");
   });
-  $("#structure").load("structure.html", function() {
-    loadSnippets( imports["structure"], snippets["structure"] );
-  });
+  // $("#structure").load("structure.html", function() {
+    // loadSnippets( imports["structure"], snippets["structure"] );
+  // });
   $("#boxes").load("boxes.html", function() {
     loadSnippets( imports["boxes"], snippets["boxes"] );
   });
@@ -108,10 +110,11 @@ var init = function() {
       loadSnippets( imports["switches"], snippets["switches"] );
     });
   });
-  $("#icons").load("icons.html");
+  // $("#icons").load("icons.html");
   $("#css-guidelines").load("cssguidelines.html");
   $("#html-guidelines").load("htmlguidelines.html");
   $("#supporting-documents").load("supportdocs.html");
+  $("#specifications").load("specifications.html");
   $("#forms").load("forms.html", function() {
       loadSnippets( imports["forms"], snippets["forms"] );
   });
