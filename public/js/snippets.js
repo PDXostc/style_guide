@@ -45,7 +45,9 @@ var snippets = {
     inshadowHTML: { templateId: "box-inshadow-html-snippet", targetId: "#box-inshadow .html code" },
     inshadowCSS: { templateId: "box-inshadow-css-snippet", targetId: "#box-inshadow .css code" },
     outshadowHTML: { templateId: "box-outshadow-html-snippet", targetId: "#box-outshadow .html code" },
-    outshadowCSS: { templateId: "box-outshadow-css-snippet", targetId: "#box-outshadow .css code" }
+    outshadowCSS: { templateId: "box-outshadow-css-snippet", targetId: "#box-outshadow .css code" },
+    infillHTML: { templateId: "box-infill-html-snippet", targetId: "#box-infill .html code" },
+    infillCSS: { templateId: "box-infill-css-snippet", targetId: "#box-infill .css code" }
   }
 };
 
