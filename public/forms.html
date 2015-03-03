@@ -2,26 +2,47 @@
 <p class="doc notice">This section is work-in-progress.</p>
 
 <section id="text-inputs">
-  <h3 class="sub-title doc">Text Inputs</h3>
+  <h2 class="doc">Text Inputs</h2>
   <p class="doc">Form text inputs provide an interface for receiving text-based input from the user. Such user interactions include user-provided names, comments, passwords, and other string-type data.</p>
-  <p class="doc">Text inputs include: <span class="inline-code">input[type="text"], input[type="password"], textarea</span></p>
-  <div class="sub-section">
-  	<p class="label"><small>Stacked Label/Input</small></p>
+  <p class="doc">Text inputs include:</p>
+  <code><pre>input[type="text"], input[type="password"], textarea</pre></code>
+
+  <div class="sub-section" id="stacked-labeled-inputs">
+  	<h3 class="doc">Stacked Label/Input</h3>
 	  <div class="example">
-		    <form action="">
-					<label for="text-input-demo">Input Label</label>
-					<input id="text-input-demo" type="text" class="text-input" size="45" placeholder="Placeholder text">
-					<div class="delete-button" type="reset"></div>					
-				</form>
+	    <form action="">
+				<label for="text-input-demo">Input Label</label>
+				<input id="text-input-demo" type="text" class="text-input" size="45" placeholder="Placeholder text">
+				<div class="delete-button" type="reset"></div>					
+			</form>
 	  </div>
-		<code contenteditable><pre>&lt;label <span class="blue-viv">for="id-of-input"</span>&gt; ... &lt;/label&gt;
-&lt;input <span class="blue-viv">id="id-of-input"</span> class="text-input" <span class="orange-viv">size="45"</span> placeholder="Placeholder text"&gt;</pre></code>
-	<p class="doc"><strong><span class="inline-code">label for</span> attribute:</strong> The <span class="inline-code">for</span> attribute binds the label to the associated <span class="inline-code">input</span> field. Its value should be equal to the value of the <span class="inline-code">input id</span>.</p>
+		
+		<div class="tabs-component">
+	    <!-- Tabs -->
+	    <div class="tabs-labels">
+	      <div class="tab-item active" data-content-id="html">HTML</div>
+	      <div class="tab-item" data-content-id="css">CSS</div>
+	    </div>
+	    <!-- Tabs content -->
+	    <div class="tabs-content">
+	      <section class="sub-section html" data-content-id="html">
+	        <p class="doc reverse-highlight"><small>Last updated: 3/04/15</small></p>
+	        <code contenteditable></code>
+	      </section>
+	      <section class="sub-section css hidden" data-content-id="css">
+	        <p class="doc reverse-highlight"><small>Last updated: 3/04/15</small></p>
+	        <code contenteditable></code>
+	      </section>
+	    </div>
+	  </div>
+
+		<p class="doc"><strong><span class="inline-code">label for</span> attribute:</strong> The <span class="inline-code">for</span> attribute binds the label to the associated <span class="inline-code">input</span> field. Its value should be equal to the value of the <span class="inline-code">input id</span>.</p>
   </div>
 	
   <div class="sub-section">
-		<p class="label"><small>Horizontal Label/Input</small></p>
+		<h3 class="doc">Horizontal Label/Input</h3>
 		<p class="doc">The <span class="inline-code">.input-group</span> class allows grouping of label and input fields for better alignment of mutli-input forms.</p>
+
 			<div class="example bad">
 			<p class="doc white"><span class="yellow-lt">Without grouping,</span> input fields appear immediately after their label. And <span class="inline-code">&lt;br&gt;</span> tags are required to prevent labels and inputs from displaying inline.</p>
 			<form action="">
@@ -33,6 +54,7 @@
 				<input type="text" class="text-input" id="input3"><br>
 			</form>
 		</div>
+
 		<div class="example good">
 			<p class="doc white"><span class="yellow-lt">With grouping</span>&#8212;and the help of flex properties&#8212;input labels and fields align and &lt;br&gt; tags aren't needed.</p>
 			<form action="">
@@ -52,8 +74,8 @@
 		</div>
 	</div>
 
-	<div class="sub-section">
-		<p class="label"><small>Right-Aligned Labels</small></p>
+	<div class="sub-section" id="right-aligned-labeled-inputs">
+		<h3 class="doc">Right-Aligned Labels</h3>
 		<div class="example">
 			<form>
 		    <div class="input-group">
@@ -63,16 +85,32 @@
 				</div>
 			</form>
 		</div>
-		<code contenteditable><pre>&lt;div class="input-group"&gt;
-  &lt;label <span class="orange-viv">for="id-of-input"</span>&gt; ... &lt;/label&gt;
-  &lt;input <span class="orange-viv">id="id-of-input"</span> class="text-input" <span class="orange-viv">size="45"</span> placeholder="Placeholder text"&gt;
-&lt;/div&gt;</pre></code>
-	<p class="doc"><strong><span class="inline-code">label for</span> attribute:</strong> The <span class="inline-code">for</span> attribute binds the label to the associated <span class="inline-code">input</span> field. Its value should be equal to the value of the <span class="inline-code">input id</span>.</p>
-	<p class="doc"><strong><span class="inline-code">input size</span> attribute:</strong> The <span class="inline-code">size</span> attribute sets the character length (i.e. width) of an <span class="inline-code">input</span> field. It is not a required attribute but it does have a default value of <span class="inline-code">20</span>. To standardize a width across all inputs, add a class with a width declaration to your app-specific CSS.</p>
+		
+		<div class="tabs-component">
+	    <!-- Tabs -->
+	    <div class="tabs-labels">
+	      <div class="tab-item active" data-content-id="html">HTML</div>
+	      <div class="tab-item" data-content-id="css">CSS</div>
+	    </div>
+	    <!-- Tabs content -->
+	    <div class="tabs-content">
+	      <section class="sub-section html" data-content-id="html">
+	        <p class="doc reverse-highlight"><small>Last updated: 3/04/15</small></p>
+	        <code contenteditable></code>
+	      </section>
+	      <section class="sub-section css hidden" data-content-id="css">
+	        <p class="doc reverse-highlight"><small>Last updated: 3/04/15</small></p>
+	        <code contenteditable></code>
+	      </section>
+	    </div>
+	  </div>
+
+		<p class="doc"><strong><span class="inline-code">label for</span> attribute:</strong> The <span class="inline-code">for</span> attribute binds the label to the associated <span class="inline-code">input</span> field. Its value should be equal to the value of the <span class="inline-code">input id</span>.</p>
+		<p class="doc"><strong><span class="inline-code">input size</span> attribute:</strong> The <span class="inline-code">size</span> attribute sets the character length (i.e. width) of an <span class="inline-code">input</span> field. It is not a required attribute but it does have a default value of <span class="inline-code">20</span>. To standardize a width across all inputs, add a class with a width declaration to your app-specific CSS.</p>
 	</div>
 
-	<div class="sub-section">
-		<p class="label"><small>Left-Aligned Labels</small></p>
+	<div class="sub-section" id="left-aligned-labeled-inputs">
+		<h3 class="doc">Left-Aligned Labels</h3>
 		<div class="example">
 			<form>
 		    <div class="input-group">
@@ -82,15 +120,31 @@
 				</div>
 			</form>
 		</div>
-		<code contenteditable><pre>&lt;div class="input-group"&gt;
-  &lt;label for="id-of-input" <span class="orange-viv">class="left-label"</span>&gt; ... &lt;/label&gt;
-  &lt;input id="id-of-input" class="text-input" size="45" placeholder="Placeholder text"&gt;
-&lt;/div&gt;</pre></code>
-	<p class="doc">Labels in an <span class="inline-code">.input-group</span> appear aligned to the right. Alignment is handled through the flex property <span class="inline-code">{justify-content: flex-end;}</span>. To align labels to the left, apply the class "left-label" to the label elements.</p>
+
+		<div class="tabs-component">
+	    <!-- Tabs -->
+	    <div class="tabs-labels">
+	      <div class="tab-item active" data-content-id="html">HTML</div>
+	      <div class="tab-item" data-content-id="css">CSS</div>
+	    </div>
+	    <!-- Tabs content -->
+	    <div class="tabs-content">
+	      <section class="sub-section html" data-content-id="html">
+	        <p class="doc reverse-highlight"><small>Last updated: 3/04/15</small></p>
+	        <code contenteditable></code>
+	      </section>
+	      <section class="sub-section css hidden" data-content-id="css">
+	        <p class="doc reverse-highlight"><small>Last updated: 3/04/15</small></p>
+	        <code contenteditable></code>
+	      </section>
+	    </div>
+	  </div>
+
+		<p class="doc">Labels in an <span class="inline-code">.input-group</span> appear aligned to the right. Alignment is handled through the flex property <span class="inline-code">{justify-content: flex-end;}</span>. To align labels to the left, apply the class "left-label" to the label elements.</p>
 	</div>
 
-	<div class="sub-section">
-		<p class="label"><small>Color Labels, Inputs, and :focus states</small></p>
+	<div class="sub-section" id="color-inputs">
+		<h3 class="doc">Color Labels, Inputs, and :focus states</h3>
 		<div class="example">
 			<form>
 				<div class="input-group">
@@ -112,29 +166,26 @@
 			</form>
 		</div>
 		<p class="doc">To draw attention to an input or differentiate it as important, use the following color classes on the label and input.</p>
-		<code contenteditable><pre>&lt;form&gt;
 
-  &lt;div class="input-group"&gt;
-    &lt;label for="color-input-yellow" <span class="orange-viv">class="yellow-lt"</span>&gt;Yellow Input&lt;/label&gt;
-    &lt;input type="text" class="text-input <span class="orange-viv">input-yellow</span>" id="color-input-yellow"&gt;
-  &lt;/div&gt;
+		<div class="tabs-component">
+	    <!-- Tabs -->
+	    <div class="tabs-labels">
+	      <div class="tab-item active" data-content-id="html">HTML</div>
+	      <div class="tab-item" data-content-id="css">CSS</div>
+	    </div>
+	    <!-- Tabs content -->
+	    <div class="tabs-content">
+	      <section class="sub-section html" data-content-id="html">
+	        <p class="doc reverse-highlight"><small>Last updated: 3/04/15</small></p>
+	        <code contenteditable></code>
+	      </section>
+	      <section class="sub-section css hidden" data-content-id="css">
+	        <p class="doc reverse-highlight"><small>Last updated:</small></p>
+	        <code contenteditable></code>
+	      </section>
+	    </div>
+	  </div>
 
-  &lt;div class="input-group"&gt;
-    &lt;label for="color-input-blue" <span class="orange-viv">class="blue-viv"</span>&gt;Blue Input&lt;/label&gt;
-    &lt;input type="text" class="text-input <span class="orange-viv">input-blue</span>" id="color-input-blue"&gt;
-  &lt;/div&gt;
-
-  &lt;div class="input-group"&gt;
-    &lt;label for="color-input-green" <span class="orange-viv">class="green-lt"</span>&gt;Green Input&lt;/label&gt;
-    &lt;input type="text" class="text-input <span class="orange-viv">input-green</span>" id="color-input-green"&gt;
-  &lt;/div&gt;
-
-  &lt;div class="input-group"&gt;
-    &lt;label for="color-input-orange"&gt;Orange Input&lt;/label&gt;
-    &lt;input type="text" class="text-input <span class="orange-viv">input-orange</span>" id="color-input-orange"&gt;
-  &lt;/div&gt;
-
-&lt;/form&gt;</pre></code>
 	<p class="doc">Default coloring of label text is <span class="orange-viv"><strong>orange</strong></span>. Default coloring of input text and <span class="inline-code">:focus</span> glow is <span class="reverse-highlight">white</span>.</p>
 	</div>
 

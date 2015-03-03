@@ -1,0 +1,136 @@
+<template id="stacked-labeled-input-html"><pre>&lt;label <span class="orange-viv">for="id-of-input"</span>&gt; ... &lt;/label&gt;
+&lt;input <span class="orange-viv">id="id-of-input"</span> class="text-input" <span class="orange-viv">size="45"</span> placeholder="Placeholder text"&gt;</pre></template>
+
+<template id="stacked-labeled-input-css"><pre><span class="comment">/* Base styling for text inputs */</span>
+
+.text-input {
+  font-size: 3rem; 
+  color: rgba(255,255,255,.8);
+  padding: 20px;
+  margin: 10px;
+  border: none;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+input,
+textarea,
+.text-input {
+  font-family: inherit;
+}
+
+::-webkit-input-placeholder {
+   color: #444;
+}
+
+label {
+  text-transform: uppercase;
+  color: #fe9c00;
+  display: block;
+}
+
+label,
+.text-input {
+  margin: 10px;
+}
+
+.text-input:focus {
+  outline: none;
+  color: white;
+  box-shadow: 0 0 20px rgba(255,255,255,.8);
+}</pre></template>
+
+<template id="right-aligned-labeled-input-html"><pre>&lt;div class="input-group"&gt;
+  &lt;label <span class="orange-viv">for="id-of-input"</span>&gt; ... &lt;/label&gt;
+  &lt;input <span class="orange-viv">id="id-of-input"</span> class="text-input" <span class="orange-viv">size="45"</span> placeholder="Placeholder text"&gt;
+&lt;/div&gt;</pre></template>
+
+<template id="right-aligned-labeled-input-css"><pre><span class="comment">/* Adds the following rules for input groups */</span>
+
+.input-group {
+  display: flex;
+  justify-content: space-between;
+} 
+
+.input-group label {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  text-align: right;
+}
+
+.input-group .text-input { 
+  flex: 2;
+}</pre></template>
+
+<template id="left-aligned-labeled-input-html"><pre>&lt;div class="input-group"&gt;
+  &lt;label for="id-of-input" <span class="orange-viv">class="left-label"</span>&gt; ... &lt;/label&gt;
+  &lt;input id="id-of-input" class="text-input" size="45" placeholder="Placeholder text"&gt;
+&lt;/div&gt;</pre></template>
+
+<template id="left-aligned-labeled-input-css"><pre><span class="comment">/* Adds the following rules for left-aligned label */</span>
+
+.input-group label<span class="orange-viv">.left-label</span> {
+  justify-content: flex-start;
+}</pre></template>
+
+<template id="color-labeled-inputs-html"><pre>&lt;form&gt;
+  &lt;div class="input-group"&gt;
+    &lt;label for="color-input-yellow" <span class="orange-viv">class="yellow-lt"</span>&gt;Yellow Input&lt;/label&gt;
+    &lt;input type="text" class="text-input <span class="orange-viv">input-yellow</span>" id="color-input-yellow"&gt;
+  &lt;/div&gt;
+
+  &lt;div class="input-group"&gt;
+    &lt;label for="color-input-blue" <span class="orange-viv">class="blue-viv"</span>&gt;Blue Input&lt;/label&gt;
+    &lt;input type="text" class="text-input <span class="orange-viv">input-blue</span>" id="color-input-blue"&gt;
+  &lt;/div&gt;
+
+  &lt;div class="input-group"&gt;
+    &lt;label for="color-input-green" <span class="orange-viv">class="green-lt"</span>&gt;Green Input&lt;/label&gt;
+    &lt;input type="text" class="text-input <span class="orange-viv">input-green</span>" id="color-input-green"&gt;
+  &lt;/div&gt;
+
+  &lt;div class="input-group"&gt;
+    &lt;label for="color-input-orange"&gt;Orange Input&lt;/label&gt;
+    &lt;input type="text" class="text-input <span class="orange-viv">input-orange</span>" id="color-input-orange"&gt;
+  &lt;/div&gt;
+
+&lt;/form&gt;</pre></template>
+
+<template id="color-labeled-inputs-css"><pre><span class="comment">/* Adds the following rules for colorized inputs */</span>
+
+.input-yellow {
+  color: rgba(255, 255, 178, 0.8);
+}
+
+.input-yellow:focus {
+  color: #ffffb2;
+  box-shadow: 0 0 20px rgba(255, 255, 178, 0.8);
+}
+
+.input-blue {
+  color: rgba(178, 240, 255, 0.8);
+}
+
+.input-blue:focus {
+  color: #b2f0ff;
+  box-shadow: 0 0 20px rgba(178, 240, 255, 0.8);
+}
+
+.input-green {
+  color: rgba(205, 255, 178, 0.8);
+}
+
+.input-green:focus {
+  color: #cdffb2;
+  box-shadow: 0 0 20px rgba(205, 255, 178, 0.8);
+}
+
+.input-orange {
+  color: rgba(255, 211, 140, 0.8);
+}
+
+.input-orange:focus {
+  color: #ffd38c;
+  box-shadow: 0 0 20px rgba(255, 211, 140, 0.8);
+}</pre></template>

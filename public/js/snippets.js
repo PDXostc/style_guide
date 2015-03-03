@@ -5,7 +5,8 @@ var imports = {
   typography: document.getElementById('typography-snippets').import,
   buttons: document.getElementById('buttons-snippets').import,
   boxes: document.getElementById('boxes-snippets').import,
-  tables: document.getElementById('tables-snippets').import
+  tables: document.getElementById('tables-snippets').import,
+  forms: document.getElementById('forms-snippets').import
 }
 
 var snippets = {
@@ -54,6 +55,16 @@ var snippets = {
     basicHTML: { templateId: "basic-table-html-snippet", targetId: "#basic-table .html code" },
     basicCSS: { templateId: "basic-table-css-snippet", targetId: "#basic-table .css code" },
     customClassHTML: { templateId: "custom-table-class-html-snippet", targetId: "#custom-tables-class .html code" }
+  },
+  forms: {
+    stackedLabelInputHTML: { templateId: "stacked-labeled-input-html", targetId: "#stacked-labeled-inputs .html code" },
+    stackedLabelInputCSS: { templateId: "stacked-labeled-input-css", targetId: "#stacked-labeled-inputs .css code" },
+    rightLabelInputHTML: { templateId: "right-aligned-labeled-input-html", targetId: "#right-aligned-labeled-inputs .html code" },
+    rightLabelInputCSS: { templateId: "right-aligned-labeled-input-css", targetId: "#right-aligned-labeled-inputs .css code" },
+    leftLabelInputHTML: { templateId: "left-aligned-labeled-input-html", targetId: "#left-aligned-labeled-inputs .html code" },
+    leftLabelInputCSS: { templateId: "left-aligned-labeled-input-css", targetId: "#left-aligned-labeled-inputs .css code" },
+    colorLabelInputHTML: { templateId: "color-labeled-inputs-html", targetId: "#color-inputs .html code" },
+    colorLabelInputCSS: { templateId: "color-labeled-inputs-css", targetId: "#color-inputs .css code" }
   }
 };
 
@@ -101,7 +112,9 @@ var init = function() {
   $("#css-guidelines").load("cssguidelines.html");
   $("#html-guidelines").load("htmlguidelines.html");
   $("#supporting-documents").load("supportdocs.html");
-  $("#forms").load("forms.html");
+  $("#forms").load("forms.html", function() {
+      loadSnippets( imports["forms"], snippets["forms"] );
+  });
   $("#tables").load("tables.html", function() {
       loadSnippets( imports["tables"], snippets["tables"] );
   });
