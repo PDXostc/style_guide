@@ -36,7 +36,7 @@ $(document).ready(function() {
     targetContent.siblings().addClass("hidden");
     targetContent.removeClass("hidden");
     $(this).siblings().removeClass("active");
-    $(this).toggleClass("active");
+    if (!$(this).hasClass("active")) $(this).toggleClass("active");
   });
 
   // settings expand

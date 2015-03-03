@@ -1,6 +1,10 @@
 <h1 class="section-title">Tables <span class="back-to-top"><a href="#top">&#9650;</a></span></h1>
 <p class="doc notice">This section is work-in-progress.</p>
-<div class="sub-section">
+<p class="doc">Tables provide an interface for displaying tabular data to the user in a grid. Such data should necessitate the use of columns, rows and possibly headings. Examples of tabular data include media player lists, gathered statistics, and contact lists. Tables should not be used purely as a means to layout document content or for simple lists.</p>
+
+<!-- Basic Table -->
+<div class="sub-section" id="basic-table">
+<h2 class="doc">Basic Table</h2>
 	<div class="example default">
 	<table>
 		<tbody>
@@ -67,13 +71,14 @@
 		</tbody>
 	</table>
 	</div>
-		<p class="doc">Column widths are set by way of the <span class="inline-code">flex</span> property. This allows for control over column width versus dynamic sizing based on text content.</p>
-		<p class="doc">The default flex settings for the <span class="inline-code">table</span> element have been set to:
+	<h3 class="doc">Flex-Based Column Widths</h3>
+	<p class="doc">Column widths are set by way of the <span class="inline-code">flex</span> property. This allows for control over column width versus dynamic sizing based on text content.</p>
+	<p class="doc">The default flex settings for the <span class="inline-code">table</span> element have been set to:
 	<ul class="doc">
-		<li class="doc"> 2 for the first column</li>
-		<li class="doc">1 for the remaining columns</li>
+		<li class="doc"><span class="inline-code">flex: 2</span> for the first column</li>
+		<li class="doc"><span class="inline-code">flex: 1</span> for the remaining columns</li>
 	</ul>
-	<p class="doc">In the example above, the columns are calculated like this:</p>
+	<p class="doc">In the example above, the column widths are calculated like this:</p>
 	<div class="example no-title">
 		<table>
 			<tr>
@@ -99,9 +104,31 @@
 			</tr>
 		</table>
 	</div>
+
+	<!-- Code section -->
+	<div class="tabs-component">
+    <!-- Tabs -->
+    <div class="tabs-labels">
+      <div class="tab-item active" data-content-id="html">HTML</div>
+      <div class="tab-item" data-content-id="css">CSS</div>
+    </div>
+    <!-- Tabs content -->
+    <div class="tabs-content">
+      <section class="sub-section html" data-content-id="html">
+        <p class="doc reverse-highlight"><small>Last updated: 3/03/15</small></p>
+        <code contenteditable></code>
+      </section>
+      <section class="sub-section css hidden" data-content-id="css">
+        <p class="doc reverse-highlight"><small>Last updated: 3/03/15</small></p>
+        <code contenteditable></code>
+      </section>
+    </div>
+  </div>
 </div>
-<div class="sub-section">
-	<p class="label">Customization</p>
+
+
+<div class="sub-section" id="custom-tables">
+	<h2 class="doc">Customizing Tables</h2>
 	<div class="example">
 		<table class="playlist no-text-wrap">
 	    <tbody>
@@ -199,12 +226,18 @@
 	    </tbody>
 	  </table>
 	</div>
-	<p class="label"><small>Custom table class</small></p>
-	<p class="doc">Create a class to apply to the table element to allow for easier selection of table elements.</p>
-	<code contenteditable><pre>&lt;table <span class="orange-viv">class="playlist"</span>&gt;
-<span class="comment">// Table elements</span>
-&lt;/table&gt;</pre></code>
-	<p class="label"><small>custom column widths</small></p>
+
+	<section id="custom-tables-class">
+		<h3 class="doc">Using a Table Class</h3>
+		<p class="doc">Create a class to apply to the table element to allow for easier selection and styling of table elements.</p>
+		<section class="sub-section html">
+			<code contenteditable></code>
+		</section>
+	</section>
+
+	<section id="custom-column-widths">
+		<h3 class="doc">Custom Column Widths</h3>
+	</section>
 	<p class="doc">To customize column widths, use :pseudo selectors to target rows by position, index or occurence. Then set the flex property as desired.</p>
 	<code contenteditable><pre><span class="comment">// Examples used in the playlist above
 
@@ -276,7 +309,7 @@ tr<span class="orange-viv">:nth-child(odd)</span> td {
 	      </tr>
       </tbody>
     </table>
-</div>
+	</div>
 	<p class="doc"><strong>HTML Symbols:</strong> To add an HTML symbol to a cell, add a class to the cell and use the <span class="inline-code">:before</span> :pseudo selector and <span class="inline-code">content</span> property. Symbols in CSS must use their Hex reference and be escaped with a leading "\".</p>
 	<code contenteditable><pre><span class="comment">// Selects the first cell in each row of the body of the table</span>
 <span class="comment">// and applies a tinted empty star symbol</span>
@@ -314,4 +347,24 @@ tr<span class="orange-viv">:nth-child(odd)</span> td {
   <span class="orange-viv">content: none;</span>
 }</pre></code>
 	</div>
+
+	<!-- Code section -->
+	<div class="tabs-component">
+    <!-- Tabs -->
+    <div class="tabs-labels">
+      <div class="tab-item active" data-content-id="html">HTML</div>
+      <div class="tab-item" data-content-id="css">CSS</div>
+    </div>
+    <!-- Tabs content -->
+    <div class="tabs-content">
+      <section class="sub-section html" data-content-id="html">
+        <p class="doc reverse-highlight"><small>Last updated: 3/03/15</small></p>
+        <code contenteditable></code>
+      </section>
+      <section class="sub-section css hidden" data-content-id="css">
+        <p class="doc reverse-highlight"><small>Last updated: 3/03/15</small></p>
+        <code contenteditable></code>
+      </section>
+    </div>
+  </div>
 </div>

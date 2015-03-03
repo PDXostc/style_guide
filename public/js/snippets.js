@@ -4,7 +4,8 @@ var imports = {
   sliders: document.getElementById('sliders-snippets').import,
   typography: document.getElementById('typography-snippets').import,
   buttons: document.getElementById('buttons-snippets').import,
-  boxes: document.getElementById('boxes-snippets').import
+  boxes: document.getElementById('boxes-snippets').import,
+  tables: document.getElementById('tables-snippets').import
 }
 
 var snippets = {
@@ -48,6 +49,11 @@ var snippets = {
     outshadowCSS: { templateId: "box-outshadow-css-snippet", targetId: "#box-outshadow .css code" },
     infillHTML: { templateId: "box-infill-html-snippet", targetId: "#box-infill .html code" },
     infillCSS: { templateId: "box-infill-css-snippet", targetId: "#box-infill .css code" }
+  },
+  tables: {
+    basicHTML: { templateId: "basic-table-html-snippet", targetId: "#basic-table .html code" },
+    basicCSS: { templateId: "basic-table-css-snippet", targetId: "#basic-table .css code" },
+    customClassHTML: { templateId: "custom-table-class-html-snippet", targetId: "#custom-tables-class .html code" }
   }
 };
 
@@ -96,7 +102,9 @@ var init = function() {
   $("#html-guidelines").load("htmlguidelines.html");
   $("#supporting-documents").load("supportdocs.html");
   $("#forms").load("forms.html");
-  $("#tables").load("tables.html");
+  $("#tables").load("tables.html", function() {
+      loadSnippets( imports["tables"], snippets["tables"] );
+  });
 }
 
 $(document).ready(init);
