@@ -187,8 +187,44 @@
           <code contenteditable><pre>.grey-bg, .grey</pre></code>
         </div>
       </div>
-      <div class="color-info"></div>
-      <div class="color-info"></div>
+      <div class="color-info">
+        <div class="swatch black-bg">
+          <p class="swatch-label">Black</p>
+        </div>
+        <div class="details">
+          <div class="hex-details">
+            <p class="doc"><strong>HEX</strong></p>
+            <p class="doc" contenteditable>#000000</p>
+          </div>
+          <div class="rgb-details">
+            <p class="doc"><strong>RGB</strong></p>
+            <p class="doc" contenteditable>0, 0, 0</p>
+          </div>
+          <p class="doc"><strong>Classes</strong></p>
+          <code contenteditable><pre>.black-bg, .black</pre></code>
+        </div>
+      </div>
+      <div class="color-info">
+        <div class="swatch" style="position: relative">
+          <div class="z-layer">
+            <div class="z-layer" style="background: url(images/JLR-Logo.png) top center no-repeat"></div>
+            <div class="z-layer overlay-bg"></div>
+          </div>
+          <p class="swatch-label" style="z-index:1">Overlay</p>
+        </div>
+        <div class="details">
+          <div class="hex-details">
+            <p class="doc"><strong>HEX</strong></p>
+            <p class="doc" contenteditable>NA</p>
+          </div>
+          <div class="rgb-details">
+            <p class="doc"><strong>RGBa</strong></p>
+            <p class="doc" contenteditable>0, 0, 0, .8</p>
+          </div>
+          <p class="doc"><strong>Classes</strong></p>
+          <code contenteditable><pre>.overlay-bg</pre></code>
+        </div>
+      </div>
     </div>
   </section>
 </section>
@@ -196,27 +232,15 @@
 <section id="color-guidelines">
   <h2 class="sub-title doc">Color Guidelines</h2>
   <div class="sub-section">
-    <h3 class="doc">Color Breakdown</h3>
     <ul class="doc">
       <li>The primary colors are orange and blue.</li>
       <li>The secondary colors are yellow and green.</li>
       <li>The neutral colors are grey, white, and black.</li>
-    </ul>
-    <h3 class="doc">Color Usage</h3>
-    <ul class="doc">
       <li>Primary and secondary colors are provided in light and vivid versions.</li>
-      <li class="line-through">The standard color is the light color.</li>
-      <li class="line-through">Vivid colors are used for highlighting, emphasis, button and form states, or where needed for contrast.</li>
-    </ul>
-    <h3 class="doc">Color Values</h3>
-      <ul class="doc">
-        <li>Hexadecimal values are preferred.</li>
-        <li>RGB values can be used for incorporating alpha values via RGBA.</li>
-      </ul>
-    <h3 class="doc">Neutral Usage</h3>
-    <ul class="doc">
+      <li>Hexadecimal values are preferred.</li>
+      <li>RGB values can be used for incorporating alpha values via RGBA.</li>
       <li>Black is used primarily as a background color or text on light backgrounds.</li>
-      <li>White and light grey are used as borders and text.</li>
+      <li>White and light grey are used primarily for borders and text.</li>
     </ul>
   </div>
 </section>

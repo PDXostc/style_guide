@@ -132,6 +132,11 @@ nav {
   margin-bottom: 20px;
 }
 
+.sub-section.inset {
+  padding: 20px;
+  border: 1px solid rgba(0,0,0,.25);
+}
+
 article {
   box-sizing: border-box;
   padding: 0;
@@ -233,6 +238,12 @@ article {
   -webkit-columns: 4;
 }
 
+#main-content #table-of-contents.doc li {
+  border-bottom: none;
+  line-height: 1.5em;
+  padding: initial;
+}
+
 #table-of-contents li a {
   display: block;
   border-bottom: 1px solid rgba(0,0,0,.25);
@@ -280,11 +291,11 @@ ol.doc, ol.doc li {
   line-height: 1.5em;
 }
 
-#main-content .doc li:not(:last-child) {
+#main-content .doc > li:not(:last-child) {
   border-bottom: 1px dashed rgba(255,255,255,1);
 }
 
-#main-content .doc li {
+#main-content .doc > li {
   line-height: initial;
   padding: 10px 0;
 }
@@ -323,6 +334,7 @@ h5.doc {
   background-color: transparent;
   border: 1px solid rgba(0,0,0,0.1);
   border-radius: 4px;
+  white-space: nowrap;
 }
 
 .reverse-highlight {
@@ -472,7 +484,7 @@ nav li ul {
   margin: .25em 0; 
 }
 
-ul ul, ol ul {
+ol ul {
   margin-bottom: .25em;
 }
 

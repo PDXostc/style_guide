@@ -5,22 +5,34 @@
   <article>
     <p class="doc">This HTML structure provides a flexible, layered layout for the entire application suite. It places the DOM elements in a specific stacking order based on agreed design. Each element in the document serves as a "housing" where specific components, content, and applications can be loaded.</p>
 
+    <div class="tabs-component">
+      <!-- Tabs -->
+      <div class="tabs-labels">
+        <div class="tab-item active" data-content-id="diagram">Diagram</div>
+        <div class="tab-item" data-content-id="html">HTML</div>
+        <div class="tab-item" data-content-id="css">CSS</div>
+      </div>
+      <!-- Tabs content -->
+      <div class="tabs-content">
+        <!-- Structure Diagram -->
+        <section class="sub-section html-diagram" data-content-id="diagram">
+          <img src="images/html_structure_diagram.jpg">
+        </section>
+        <!-- Structure HTML -->
+        <section class="sub-section html-complete hidden" data-content-id="html">
+          <p class="doc reverse-highlight"><small>Last updated: 3/03/15</small></p>
+          <code></code>
+        </section>
+        <!-- Structure CSS -->
+        <section class="sub-section css hidden" data-content-id="css">
+          <p class="doc notice">Needs update.</p>
+          <code contenteditable></code>
+        </section>
+      </div>
+    </div>
+
     <section id="structure-html" class="sub-section">
       <h2 class="sub-title doc">The HTML</h2>
-
-      <!-- Structure Diagram -->
-      <section>
-        <h3 class="doc">Structure Diagram</h3>
-        <img src="images/html_structure_diagram.jpg">
-      </section>
-
-      <!-- Structure HTML -->
-      <section>
-        <h3 class="doc">HTML Code</h3>
-        <div class="flex-parent flex-column">
-          <div class="flex-item html-complete"><code><pre></pre></code></div>
-        </div>
-      </section>
 
       <!-- Structure Body -->
       <section>
@@ -46,18 +58,12 @@
               <li>#app-layer</li>
               <li>#modal-layer</li>
               <li>#settings-layer</li>
-              <li>#app-grid-bar</li>
-              <li>#alerts-bar</li>
+              <li>#app-grid-layer</li>
+              <li>#alerts-layer</li>
             </ul>
           </div>
           <div><code></code></div>
         </div>
       </section>
-    </section>
-
-    <section id="structure-css" class="css sub-section">
-      <h3 class="sub-title doc">The CSS</h3>
-      <p class="doc notice">Needs update.</p>
-      <code contenteditable></code>
     </section>
   </article>

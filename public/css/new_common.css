@@ -342,26 +342,29 @@ input[type='button'] {
 
 /* Text Inputs */
 
+.text-input {
+  font-size: 3rem; 
+  color: rgba(255,255,255,.8);
+  padding: 20px;
+  margin: 10px;
+  border: none;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+input,
+textarea,
+.text-input {
+  font-family: inherit;
+}
+
+::-webkit-input-placeholder {
+   color: #444;
+}
+
 label {
   text-transform: uppercase;
   color: #fe9c00;
   display: block;
-}
-
-.input-group label.left-label {
-  justify-content: flex-start;
-}
-
-.input-group label {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  text-align: right;
-}
-
-.text-input {
-  border: none;
-  color: rgba(255,255,255,.8);
 }
 
 label,
@@ -374,6 +377,32 @@ label,
   color: white;
   box-shadow: 0 0 20px rgba(255,255,255,.8);
 }
+
+/* .input-group: A wrapper for grouping input fields, labels
+and other form content. Best used on block elements (eg. div) */ 
+
+.input-group label.left-label {
+  justify-content: flex-start;
+}
+
+.input-group label {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  text-align: right;
+}
+
+.input-group {
+  display: flex;
+  justify-content: space-between;
+} 
+
+.input-group .text-input { 
+  flex: 2;
+}
+
+/* Colorized text inputs*/
 
 .input-yellow {
   color: rgba(255, 255, 178, 0.8);
@@ -436,13 +465,16 @@ label,
   height:2em;
   font-size: 4em; /* Base size for scalability */
   line-height: 0;
-  flex-basis: 82.5%;
   overflow:hidden;
   cursor: pointer;
   padding: .25em 0;
   position: relative;
   -webkit-appearance:none;
   background: transparent;
+}
+
+.button-slider .slider-input {
+  flex-basis: 82.5%;
 }
 
 .slider-input::-webkit-slider-thumb {
@@ -491,11 +523,11 @@ label,
   justify-content: space-between;
 }
 
-.thin-slider .slider-input {
+.button-slider.thin-slider .slider-input {
   flex-basis: 90%;
 }
 
-.thick-slider .slider-input {
+.button-slider.thick-slider .slider-input {
   flex-basis: 75%;
 }
 
@@ -592,6 +624,16 @@ label,
 
 .flex-item-2 {
   flex: 2;
+}
+
+/* Positions within the first positioned parent */
+.z-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
 
 /* Already in common.css; here for cascading */
