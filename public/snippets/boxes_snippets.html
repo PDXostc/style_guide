@@ -1,0 +1,489 @@
+<template id="box-variations-html-snippet">
+	<pre><span class="comment">// box-outline with box-header and box-content</span>
+&lt;div <span class="orange-viv">class="box-outline"</span>&gt;
+  &lt;header <span class="orange-viv">class="box-header"</span>&gt;
+    &lt;h5&gt;box-outline&lt;/h5&gt;
+  &lt;/header&gt;
+  &lt;div <span class="orange-viv">class="box-content"</span>&gt;
+    &lt;p&gt;&lt;small&gt;Lorem ipsum dolor sit amet, consectetur&lt;/small&gt;&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+<span class="comment">// box-inshadow with box-header and box-content</span>
+&lt;div <span class="orange-viv">class="box-inshadow"</span>&gt;
+  &lt;header <span class="orange-viv">class="box-header"</span>&gt;
+    &lt;h5&gt;box-inshadow&lt;/h5&gt;
+  &lt;/header&gt;
+  &lt;div <span class="orange-viv">class="box-content"</span>&gt;
+    &lt;p&gt;&lt;small&gt;Lorem ipsum dolor sit amet, consectetur&lt;/small&gt;&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+<span class="comment">// box-outshadow with box-header and box-content</span>
+&lt;div <span class="orange-viv">class="box-outshadow"</span>&gt;
+  &lt;header <span class="orange-viv">class="box-header"</span>&gt;
+    &lt;h5&gt;box-outshadow&lt;/h5&gt;
+  &lt;/header&gt;
+  &lt;div <span class="orange-viv">class="box-content"</span>&gt;
+    &lt;p&gt;&lt;small&gt;Lorem ipsum dolor sit amet, consectetur&lt;/small&gt;&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+</template>
+
+<template id="box-variations-css-snippet"><pre><span class="comment">/* Complete CSS */</span>
+
+.box-outline,
+.box-inshadow,
+.box-outshadow,
+.box-infill {
+  color: #fe9c00;
+  padding: 20px;
+  margin: 20px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(0, 0, 0, .8);
+}
+
+.box-inshadow {
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, .5);
+}
+
+.box-outshadow {
+  box-shadow: 0 0 20px rgba(255, 255, 255, .5);
+}
+
+.box-infill {
+  color: rgba(255, 255, 255, .8);
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 1), inset 0 0 6em 2em rgba(0, 0, 0, .5);
+}
+
+.box-header {
+  background-color: transparent;
+  padding: 20px;
+  margin: -20px -20px 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  color: inherit;
+  border-color: inherit;
+}
+
+.box-content {
+  padding: 20px;
+  margin: -20px;
+}
+
+.box-title {
+  margin: 0;
+  color: inherit;
+}
+
+<span class="comment">/* Yellow */</span>
+
+.box-yellow,
+.box-in-yellow,
+.box-out-yellow {
+  color: #ffffb2;
+  border-color: rgba(255, 255, 178, 0.5);
+}
+
+.box-in-yellow {
+  box-shadow: inset 0 0 20px rgba(255, 255, 0, .5);
+}
+
+.box-out-yellow {
+  box-shadow: 0 0 20px rgba(255, 255, 0, .5);
+}
+
+.box-infill-yellow {
+  background-color: rgba(255, 255, 0, .8);
+}
+
+<span class="comment">/* Orange */</span>
+
+.box-orange,
+.box-in-orange,
+.box-out-orange {
+  color: #FE9C00;
+  border-color: rgba(254, 156, 0, 0.5);
+}
+
+.box-in-orange {
+  box-shadow: inset 0 0 20px rgba(254, 156, 0, .5);
+}
+
+.box-out-orange {
+  box-shadow: 0 0 20px rgba(254, 156, 0, .5);
+}
+
+.box-infill-orange {
+  background-color: rgba(254, 156, 0, .8);
+}
+
+
+<span class="comment">/* Blue */</span>
+
+.box-blue,
+.box-in-blue,
+.box-out-blue {
+  color: #b2f0ff;
+  border-color: rgba(178, 240, 255, 0.5);
+}
+
+.box-in-blue {
+  box-shadow: inset 0 0 20px rgba(178, 240, 255, .5);
+}
+
+.box-out-blue {
+  box-shadow: 0 0 20px rgba(178, 240, 255, .5);
+}
+
+.box-infill-blue {
+  background-color: rgba(83, 181, 206, .8);
+}
+
+
+<span class="comment">/* Green */</span>
+
+.box-green,
+.box-in-green,
+.box-out-green {
+  color: #cdffb2;
+  border-color: rgba(205, 255, 178, 0.5);
+}
+
+.box-in-green {
+  box-shadow: inset 0 0 20px rgba(205, 255, 178, .5);
+}
+
+.box-out-green {
+  box-shadow: 0 0 20px rgba(205, 255, 178, .5);
+}
+
+.box-infill-green {
+  background-color: rgba(89, 255, 0, .7);
+}
+</pre></template>
+
+<template id="box-outline-html-snippet"><pre>&lt;section <span class="orange-viv">class="box-outline box-yellow"</span>&gt;
+  &lt;header class="box-header"&gt;
+    &lt;p class="box-title"&gt;box-outline&lt;/p&gt;
+  &lt;/header&gt;
+  &lt;div class="box-content"&gt;
+    &lt;p&gt;&lt;small&gt;Lorem ipsum dolor sit amet, consectetur&lt;/small&gt;&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+
+&lt;section <span class="orange-viv">class="box-outline box-orange"</span>&gt;
+  &lt;header class="box-header"&gt;
+    &lt;p class="box-title"&gt;box-outline&lt;/p&gt;
+  &lt;/header&gt;
+  &lt;div class="box-content"&gt;
+    &lt;p&gt;&lt;small&gt;Lorem ipsum dolor sit amet, consectetur&lt;/small&gt;&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+
+&lt;section <span class="orange-viv">class="box-outline box-blue"</span>&gt;
+  &lt;header class="box-header"&gt;
+    &lt;p class="box-title"&gt;box-outline&lt;/p&gt;
+  &lt;/header&gt;
+  &lt;div class="box-content"&gt;
+    &lt;p&gt;&lt;small&gt;Lorem ipsum dolor sit amet, consectetur&lt;/small&gt;&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+
+&lt;section <span class="orange-viv">class="box-outline box-green"</span>&gt;
+  &lt;header class="box-header"&gt;
+    &lt;p class="box-title"&gt;box-outline&lt;/p&gt;
+  &lt;/header&gt;
+  &lt;div class="box-content"&gt;
+    &lt;p&gt;&lt;small&gt;Lorem ipsum dolor sit amet, consectetur&lt;/small&gt;&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/section&gt;</pre></template>
+
+<template id="box-outline-css-snippet"><pre><span class="comment">/* Box Outline CSS */</span>
+
+.box-outline {
+  color: #fe9c00;
+  padding: 20px;
+  margin: 20px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(0, 0, 0, .8);
+}
+
+.box-header {
+  background-color: transparent;
+  padding: 20px;
+  margin: -20px -20px 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  color: inherit;
+  border-color: inherit;
+}
+
+.box-content {
+  padding: 20px;
+  margin: -20px;
+}
+
+.box-title {
+  margin: 0;
+  color: inherit;
+}
+
+<span class="comment">/* Yellow */</span>
+
+.box-yellow {
+  color: #ffffb2;
+  border-color: rgba(255, 255, 178, 0.5);
+}
+
+<span class="comment">/* Orange */</span>
+
+.box-orange {
+  color: #FE9C00;
+  border-color: rgba(254, 156, 0, 0.5);
+}
+
+<span class="comment">/* Blue */</span>
+
+.box-blue {
+  color: #b2f0ff;
+  border-color: rgba(178, 240, 255, 0.5);
+}
+
+<span class="comment">/* Green */</span>
+
+.box-green {
+  color: #cdffb2;
+  border-color: rgba(205, 255, 178, 0.5);
+}
+</pre></template>
+
+<template id="box-inshadow-html-snippet"><pre>&lt;section <span class="orange-viv">class="box-inshadow box-in-yellow"</span>&gt;
+  &lt;header class="box-header"&gt;
+    &lt;p class="box-title"&gt;box-inshadow&lt;/p&gt;
+  &lt;/header&gt;
+  &lt;div class="box-content"&gt;
+    &lt;p&gt;Lorem ipsum dolor sit amet, consectetur&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+
+&lt;section <span class="orange-viv">class="box-inshadow box-in-orange"</span>&gt;
+  &lt;header class="box-header"&gt;
+    &lt;p class="box-title"&gt;box-inshadow&lt;/p&gt;
+  &lt;/header&gt;
+  &lt;div class="box-content"&gt;
+    &lt;p&gt;Lorem ipsum dolor sit amet, consectetur&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+
+&lt;section <span class="orange-viv">class="box-inshadow box-in-blue"</span>&gt;
+  &lt;header class="box-header"&gt;
+    &lt;p class="box-title"&gt;box-inshadow&lt;/p&gt;
+  &lt;/header&gt;
+  &lt;div class="box-content"&gt;
+    &lt;p&gt;Lorem ipsum dolor sit amet, consectetur&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+
+&lt;section <span class="orange-viv">class="box-inshadow box-in-green"</span>&gt;
+  &lt;header class="box-header"&gt;
+    &lt;p class="box-title"&gt;box-inshadow&lt;/p&gt;
+  &lt;/header&gt;
+  &lt;div class="box-content"&gt;
+    &lt;p&gt;Lorem ipsum dolor sit amet, consectetur&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+</pre></template>
+<template id="box-inshadow-css-snippet"><pre><span class="comment">/* Box Inshadow CSS */</span>
+.box-inshadow {
+  color: #fe9c00;
+  padding: 20px;
+  margin: 20px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(0, 0, 0, .8);
+}
+
+.box-inshadow {
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, .5);
+}
+
+.box-header {
+  background-color: transparent;
+  padding: 20px;
+  margin: -20px -20px 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  color: inherit;
+  border-color: inherit;
+}
+
+.box-content {
+  padding: 20px;
+  margin: -20px;
+}
+
+.box-title {
+  margin: 0;
+  color: inherit;
+}
+
+<span class="comment">/* Yellow */</span>
+
+.box-in-yellow {
+  color: #ffffb2;
+  border-color: rgba(255, 255, 178, 0.5);
+}
+
+.box-in-yellow {
+  box-shadow: inset 0 0 20px rgba(255, 255, 0, .5);
+}
+
+<span class="comment">/* Orange */</span>
+
+.box-in-orange {
+  color: #FE9C00;
+  border-color: rgba(254, 156, 0, 0.5);
+}
+
+.box-in-orange {
+  box-shadow: inset 0 0 20px rgba(254, 156, 0, .5);
+}
+
+<span class="comment">/* Blue */</span>
+
+.box-in-blue {
+  color: #b2f0ff;
+  border-color: rgba(178, 240, 255, 0.5);
+}
+
+.box-in-blue {
+  box-shadow: inset 0 0 20px rgba(178, 240, 255, .5);
+}
+
+<span class="comment">/* Green */</span>
+
+.box-in-green {
+  color: #cdffb2;
+  border-color: rgba(205, 255, 178, 0.5);
+}
+
+.box-in-green {
+  box-shadow: inset 0 0 20px rgba(205, 255, 178, .5);
+}</pre></template>
+
+<template id="box-outshadow-html-snippet"><pre>&lt;section <span class="orange-viv">class="box-outshadow box-out-yellow"</span>&gt;
+  &lt;header class="box-header"&gt;
+    &lt;p class="box-title"&gt;box-outshadow&lt;/p&gt;
+  &lt;/header&gt;
+  &lt;div class="box-content"&gt;
+    &lt;p&gt;Lorem ipsum dolor sit amet, consectetur&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+
+&lt;section <span class="orange-viv">class="box-outshadow box-out-orange"</span>&gt;
+  &lt;header class="box-header"&gt;
+    &lt;p class="box-title"&gt;box-outshadow&lt;/p&gt;
+  &lt;/header&gt;
+  &lt;div class="box-content"&gt;
+    &lt;p&gt;Lorem ipsum dolor sit amet, consectetur&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+
+&lt;section <span class="orange-viv">class="box-outshadow box-out-blue"</span>&gt;
+  &lt;header class="box-header"&gt;
+    &lt;p class="box-title"&gt;box-outshadow&lt;/p&gt;
+  &lt;/header&gt;
+  &lt;div class="box-content"&gt;
+    &lt;p&gt;Lorem ipsum dolor sit amet, consectetur&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+
+&lt;section <span class="orange-viv">class="box-outshadow box-out-green"</span>&gt;
+  &lt;header class="box-header"&gt;
+    &lt;p class="box-title"&gt;box-outshadow&lt;/p&gt;
+  &lt;/header&gt;
+  &lt;div class="box-content"&gt;
+    &lt;p&gt;Lorem ipsum dolor sit amet, consectetur&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/section&gt;</pre></template>
+
+<template id="box-outshadow-css-snippet"><pre><span class="comment">/* Box Outshadow CSS */</span>
+.box-outshadow {
+  color: #fe9c00;
+  padding: 20px;
+  margin: 20px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(0, 0, 0, .8);
+}
+
+.box-outshadow {
+  box-shadow: 0 0 20px rgba(255, 255, 255, .5);
+}
+
+.box-header {
+  background-color: transparent;
+  padding: 20px;
+  margin: -20px -20px 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  color: inherit;
+  border-color: inherit;
+}
+
+.box-content {
+  padding: 20px;
+  margin: -20px;
+}
+
+.box-title {
+  margin: 0;
+  color: inherit;
+}
+
+<span class="comment">/* Yellow */</span>
+
+.box-out-yellow {
+  color: #ffffb2;
+  border-color: rgba(255, 255, 178, 0.5);
+}
+
+.box-out-yellow {
+  box-shadow: 0 0 20px rgba(255, 255, 0, .5);
+}
+
+<span class="comment">/* Orange */</span>
+
+.box-out-orange {
+  color: #FE9C00;
+  border-color: rgba(254, 156, 0, 0.5);
+}
+
+.box-out-orange {
+  box-shadow: 0 0 20px rgba(254, 156, 0, .5);
+}
+
+<span class="comment">/* Blue */</span>
+
+.box-out-blue {
+  color: #b2f0ff;
+  border-color: rgba(178, 240, 255, 0.5);
+}
+
+.box-out-blue {
+  box-shadow: 0 0 20px rgba(178, 240, 255, .5);
+}
+
+<span class="comment">/* Green */</span>
+
+.box-out-green {
+  color: #cdffb2;
+  border-color: rgba(205, 255, 178, 0.5);
+}
+
+.box-out-green {
+  box-shadow: 0 0 20px rgba(205, 255, 178, .5);
+}</pre></template>

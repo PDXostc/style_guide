@@ -223,6 +223,15 @@ article {
   -webkit-columns: 4;
 }
 
+#table-of-contents li a {
+  display: block;
+  border-bottom: 1px solid rgba(0,0,0,.25);
+}
+
+#table-of-contents > li > a {
+  font-weight: 600;
+}
+
 /* Styleguide Headings */
 
 .section-title {

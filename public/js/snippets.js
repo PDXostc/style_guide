@@ -3,7 +3,8 @@ var imports = {
   structure: document.getElementById('structure-snippets').import,
   sliders: document.getElementById('sliders-snippets').import,
   typography: document.getElementById('typography-snippets').import,
-  buttons: document.getElementById('buttons-snippets').import
+  buttons: document.getElementById('buttons-snippets').import,
+  boxes: document.getElementById('boxes-snippets').import
 }
 
 var snippets = {
@@ -35,6 +36,16 @@ var snippets = {
   buttons: {
     classButtonsHTML: { templateId: "button-class-html-snippet", targetId: "#button-class code" },
     elementButtonsHTML: { templateId: "button-element-html-snippet", targetId: "#button-element code" }
+  },
+  boxes: {
+    variationsHTML: { templateId: "box-variations-html-snippet", targetId: "#box-variations .html code" },
+    variationsCSS: { templateId: "box-variations-css-snippet", targetId: "#box-variations .css code" },
+    outlineHTML: { templateId: "box-outline-html-snippet", targetId: "#box-outline .html code" },
+    outlineCSS: { templateId: "box-outline-css-snippet", targetId: "#box-outline .css code" },
+    inshadowHTML: { templateId: "box-inshadow-html-snippet", targetId: "#box-inshadow .html code" },
+    inshadowCSS: { templateId: "box-inshadow-css-snippet", targetId: "#box-inshadow .css code" },
+    outshadowHTML: { templateId: "box-outshadow-html-snippet", targetId: "#box-outshadow .html code" },
+    outshadowCSS: { templateId: "box-outshadow-css-snippet", targetId: "#box-outshadow .css code" }
   }
 };
 
@@ -58,7 +69,9 @@ var init = function() {
   $("#structure").load("structure.html", function() {
     loadSnippets( imports["structure"], snippets["structure"] );
   });
-  $("#boxes").load("boxes.html");
+  $("#boxes").load("boxes.html", function() {
+    loadSnippets( imports["boxes"], snippets["boxes"] );
+  });
   $("nav.primary ul").load("nav_primary.html");
   $("nav.secondary").load("nav_secondary.html");
   $("#typography").load("typography.html", function() {
