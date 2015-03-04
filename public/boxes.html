@@ -1,6 +1,15 @@
+<div class="ux-quote blue-viv-bg">
+  <p class="lead flex-parent">
+    <span class="lead">&ldquo;</span>
+    <span class="flex-item">If there&rsquo;s a &lsquo;trick&rsquo; to it, <br>the UI is broken.&rdquo;</span>
+  </p>
+  <p class="lead no-margin blue-lt"><small> - Douglas Anderson</small></p>
+</div>
+
 <h1 class="section-title">Boxes
-  <span class="back-to-top"><a href="#top">&#9650;</a></span>
+  <span class="back-to-top"><a href="#top" class="fa fa-chevron-up"></a></span>
 </h1>
+<p class="doc notice">Not yet implemented in <span class="inline-code">common.css</span></p>
 <p class="doc">"Boxes" are sections of content that can be individually styled. Applying a box style on a parent container will allow for easier styling of enclosed headers, headings, text, backgrounds, etc.</p>
 
 <section id="box-variations">
@@ -46,9 +55,9 @@
 			<p class="doc">Box variations:</p>
 			<ul class="doc">
 				<li><span class="inline-code">.box-outline</span></li>
+				<li><span class="inline-code">.box-infill</span></li>
 				<li><span class="inline-code">.box-inshadow</span></li>
         <li><span class="inline-code">.box-outshadow</span></li>
-				<li><span class="inline-code">.box-infill</span></li>
 			</ul>
 		</div>
 		<p class="doc">These variation styles should be used on the parent container of your content. If you have header content specific to your created section, you could use the <span class="inline-code">.box-header</span> class which applies a flush header area to the top of the box.</p>
@@ -142,6 +151,80 @@
       </section>
       <section class="sub-section css hidden" data-content-id="css">
         <p class="doc reverse-highlight"><small>Last updated: 3/02/15</small></p>
+        <code contenteditable></code>
+      </section>
+    </div>
+  </div>
+</section>
+
+<section id="box-infill">
+	<h2 class="doc">Box Variations: <span class="inline-code">infill</span></h2>
+	
+	<div class="example">
+		<div class="flex-parent">
+			<div class="flex-item">
+				<p class="doc white"><span class="inline-code">.box-infill .box-infill-yellow</span></p>		
+			  <section class="box-infill box-infill-yellow flex-item">
+					<header class="box-header">
+						<p class="box-title">box-infill</p>
+					</header>
+					<div class="box-content">
+						<p><small>Lorem ipsum dolor sit amet, consectetur</small></p>
+					</div>
+				</section>
+			</div>
+			<div class="flex-item">
+				<p class="doc white"><span class="inline-code">.box-infill box-infill-yellow</span></p>		
+				<section class="box-infill box-infill-orange flex-item">
+					<header class="box-header">
+						<p class="box-title">box-infill</p>
+					</header>
+					<div class="box-content">
+						<p><small>Lorem ipsum dolor sit amet, consectetur</small></p>
+					</div>
+				</section>
+			</div>
+		</div>
+		<div class="flex-parent">
+			<div class="flex-item">
+				<p class="doc white"><span class="inline-code">.box-infill box-infill-blue</span></p>		
+			  <section class="box-infill box-infill-blue flex-item">
+					<header class="box-header">
+						<p class="box-title">box-infill</p>
+					</header>
+					<div class="box-content">
+						<p><small>Lorem ipsum dolor sit amet, consectetur</small></p>
+					</div>
+				</section>
+			</div>
+			<div class="flex-item">
+				<p class="doc white"><span class="inline-code">.box-infill box-infill-green</span></p>		
+				<section class="box-infill box-infill-green flex-item">
+					<header class="box-header">
+						<p class="box-title">box-infill</p>
+					</header>
+					<div class="box-content">
+						<p><small>Lorem ipsum dolor sit amet, consectetur</small></p>
+					</div>
+				</section>
+			</div>
+		</div>
+	</div>
+
+	<div class="tabs-component">
+    <!-- Tabs -->
+    <div class="tabs-labels">
+      <div class="tab-item active" data-content-id="html">HTML</div>
+      <div class="tab-item" data-content-id="css">CSS</div>
+    </div>
+    <!-- Tabs content -->
+    <div class="tabs-content">
+      <section class="sub-section html" data-content-id="html">
+        <p class="doc reverse-highlight"><small>Last updated: 3/03/15</small></p>
+        <code contenteditable></code>
+      </section>
+      <section class="sub-section css hidden" data-content-id="css">
+        <p class="doc reverse-highlight"><small>Last updated: 3/03/15</small></p>
         <code contenteditable></code>
       </section>
     </div>
@@ -296,76 +379,3 @@
   </div>
 </section>
 	
-<section id="box-infill">
-	<h2 class="doc">Box Variations: <span class="inline-code">infill</span></h2>
-	
-	<div class="example">
-		<div class="flex-parent">
-			<div class="flex-item">
-				<p class="doc white"><span class="inline-code">.box-infill .box-infill-yellow</span></p>		
-			  <section class="box-infill box-infill-yellow flex-item">
-					<header class="box-header">
-						<p class="box-title">box-infill</p>
-					</header>
-					<div class="box-content">
-						<p><small>Lorem ipsum dolor sit amet, consectetur</small></p>
-					</div>
-				</section>
-			</div>
-			<div class="flex-item">
-				<p class="doc white"><span class="inline-code">.box-infill box-infill-yellow</span></p>		
-				<section class="box-infill box-infill-orange flex-item">
-					<header class="box-header">
-						<p class="box-title">box-infill</p>
-					</header>
-					<div class="box-content">
-						<p><small>Lorem ipsum dolor sit amet, consectetur</small></p>
-					</div>
-				</section>
-			</div>
-		</div>
-		<div class="flex-parent">
-			<div class="flex-item">
-				<p class="doc white"><span class="inline-code">.box-infill box-infill-blue</span></p>		
-			  <section class="box-infill box-infill-blue flex-item">
-					<header class="box-header">
-						<p class="box-title">box-infill</p>
-					</header>
-					<div class="box-content">
-						<p><small>Lorem ipsum dolor sit amet, consectetur</small></p>
-					</div>
-				</section>
-			</div>
-			<div class="flex-item">
-				<p class="doc white"><span class="inline-code">.box-infill box-infill-green</span></p>		
-				<section class="box-infill box-infill-green flex-item">
-					<header class="box-header">
-						<p class="box-title">box-infill</p>
-					</header>
-					<div class="box-content">
-						<p><small>Lorem ipsum dolor sit amet, consectetur</small></p>
-					</div>
-				</section>
-			</div>
-		</div>
-	</div>
-
-	<div class="tabs-component">
-    <!-- Tabs -->
-    <div class="tabs-labels">
-      <div class="tab-item active" data-content-id="html">HTML</div>
-      <div class="tab-item" data-content-id="css">CSS</div>
-    </div>
-    <!-- Tabs content -->
-    <div class="tabs-content">
-      <section class="sub-section html" data-content-id="html">
-        <p class="doc reverse-highlight"><small>Last updated: 3/03/15</small></p>
-        <code contenteditable></code>
-      </section>
-      <section class="sub-section css hidden" data-content-id="css">
-        <p class="doc reverse-highlight"><small>Last updated: 3/03/15</small></p>
-        <code contenteditable></code>
-      </section>
-    </div>
-  </div>
-</section>
