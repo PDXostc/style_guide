@@ -100,7 +100,7 @@ nav {
   margin: 0; 
 }
 
-#main .content {
+#main-content {
   padding: 20px;
   flex: 5;
 }
@@ -269,11 +269,24 @@ article {
 
 /* Styleguide Text */
 
+#main-content ul.doc {
+  list-style-type: square;
+}
+
 p.doc, ul.doc, ul.doc li,
 ol.doc, ol.doc li {
   font-size: 2rem;
   font-weight: 400;
   line-height: 1.5em;
+}
+
+#main-content .doc li:not(:last-child) {
+  border-bottom: 1px dashed rgba(255,255,255,1);
+}
+
+#main-content .doc li {
+  line-height: initial;
+  padding: 10px 0;
 }
 
 h2.doc {
@@ -287,6 +300,11 @@ h3.doc {
 
 h4.doc {
   font-size: 3rem;
+}
+
+h5.doc {
+  font-size: 2rem;
+  font-weight: 600;
 }
 
 .doc.white {
@@ -616,8 +634,8 @@ table .highlight-cell {
 
 /* Header and Footer */
 
-#main > .content > header {
-  border: 1px solid rgba(255,255,255, .25);
+#main-content > header {
+  /*border: 1px solid rgba(255,255,255, .25);*/
 }
 
 /* Modifiers */
@@ -722,4 +740,10 @@ label.no-style {
 
 .line-through {
   text-decoration: line-through;
+}
+
+#intro-quote {
+  background-color: #53b5ce;
+  padding: 40px;
+  margin-top: 40px;
 }

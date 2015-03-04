@@ -12,7 +12,7 @@ var snippets = {
   structure: {
     structureHTML: { templateId: "structure-html", targetId: "#structure .html-complete code" },
     structureHTMLBody: { templateId: "structure-html-body", targetId: "#structure .html-body code" },
-    structureHTMLBase: { templateId: "structure-html-base", targetId: "#structure .html-base code" },
+    structureHTMLBase: { templateId: "structure-html-center-panel", targetId: "#structure .html-center-panel code" },
     structureHTMLContent: { templateId: "structure-html-content", targetId: "#structure .html-content code" },
     structureCSS: { templateId: "structure-css", targetId: "#structure .css code" }
   },
