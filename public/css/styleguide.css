@@ -776,11 +776,10 @@ label.no-style {
   flex: 3;
 }
 
-#scrolling-content .h300 {
+.h300 {
   height: 300px;
 }
 
-#scrolling-content .h300 .*-y {
-  height: 100%;
-  box-sizing: border-box;
+.h500 {
+  height: 500px;
 }

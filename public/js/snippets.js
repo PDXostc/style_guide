@@ -6,7 +6,8 @@ var imports = {
   buttons: document.getElementById('buttons-snippets').import,
   boxes: document.getElementById('boxes-snippets').import,
   tables: document.getElementById('tables-snippets').import,
-  forms: document.getElementById('forms-snippets').import
+  forms: document.getElementById('forms-snippets').import,
+  scrolling: document.getElementById('scrolling-snippets').import
 }
 
 var snippets = {
@@ -67,6 +68,10 @@ var snippets = {
     leftLabelInputCSS: { templateId: "left-aligned-labeled-input-css", targetId: "#left-aligned-labeled-inputs .css code" },
     colorLabelInputHTML: { templateId: "color-labeled-inputs-html", targetId: "#color-inputs .html code" },
     colorLabelInputCSS: { templateId: "color-labeled-inputs-css", targetId: "#color-inputs .css code" }
+  },
+  scrolling: {
+    scrollingHTML: { templateId: "scrolling-html-snippet", targetId: "#scrolling-content .html code" },
+    scrollingCSS: { templateId: "scrolling-css-snippet", targetId: "#scrolling-content .css code" }
   }
 };
 
@@ -111,7 +116,9 @@ var init = function() {
     });
   });
   // $("#icons").load("icons.html");
-  $("#scrolling-content").load("scrolling_content.html");
+  $("#scrolling-content").load("scrolling_content.html", function() {
+      loadSnippets( imports["scrolling"], snippets["scrolling"] );
+  });
   $("#css-guidelines").load("cssguidelines.html");
   $("#html-guidelines").load("htmlguidelines.html");
   $("#supporting-documents").load("supportdocs.html");
