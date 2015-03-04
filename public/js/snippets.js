@@ -114,11 +114,11 @@ var init = function() {
     $("#switches").load("switches.html", function() {
       loadSnippets( imports["switches"], snippets["switches"] );
     });
+    $("#scrolling-content").load("scrolling_content.html", function() {
+        loadSnippets( imports["scrolling"], snippets["scrolling"] );
+    });
   });
   // $("#icons").load("icons.html");
-  $("#scrolling-content").load("scrolling_content.html", function() {
-      loadSnippets( imports["scrolling"], snippets["scrolling"] );
-  });
   $("#css-guidelines").load("cssguidelines.html");
   $("#html-guidelines").load("htmlguidelines.html");
   $("#supporting-documents").load("supportdocs.html");

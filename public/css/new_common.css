@@ -60,6 +60,9 @@ table.no-text-wrap td {
 
 button,
 .button-inshadow,
+.button-outshadow,
+.button-outline,
+.button-infill,
 input[type='button'] {
   color: white;
   position: relative;
@@ -74,6 +77,30 @@ input[type='button'] {
   background-color: rgba(0, 0, 0, .8);
   border-color: rgba(255, 255, 255, 0.5);
 }
+
+/* Button Colors */
+
+.button-orange {
+  color: #FE9C00;
+  border-color: rgba(254, 156, 0, 0.5);
+}
+
+.button-blue {
+  color: #b2f0ff;
+  border-color: rgba(178, 240, 255, 0.5);
+}
+
+.button-green {
+  color: #cdffb2;
+  border-color: rgba(205, 255, 178, 0.5);
+}
+
+.button-yellow {
+  color: #ffffb2;
+  border-color: rgba(255, 255, 178, 0.5); 
+}
+
+/* Button Inshadow */
 
 .button-inshadow {
   box-shadow: inset 0 0 20px rgba(255, 255, 255, .5);
@@ -98,6 +125,54 @@ input[type='button'] {
   border-color: rgba(255, 255, 178, 0.5);
   box-shadow: inset 0 0 20px rgba(255, 255, 0, 0.5);
 }
+
+/* Button Outshadow */
+
+.button-outshadow {
+  box-shadow: 0 0 20px rgba(255, 255, 255, .5);
+}
+
+.button-outshadow.button-orange {
+  box-shadow: 0 0 20px rgba(254, 156, 0, .5);
+}
+
+.button-outshadow.button-blue {
+  box-shadow: 0 0 20px rgba(178, 240, 255, .5);
+}
+
+.button-outshadow.button-green {
+  box-shadow: 0 0 20px rgba(89, 255, 0, 0.5);
+}
+
+.button-outshadow.button-yellow {
+  box-shadow: 0 0 20px rgba(255, 255, 0, .5);
+}
+
+/* Button Infill */
+
+.button-infill.button-yellow {
+  background-color: rgba(255, 255, 0, .8);
+}
+
+.button-infill.button-orange {
+  background-color: rgba(254, 156, 0, .8);
+}
+
+.button-infill.button-blue {
+  background-color: rgba(83, 181, 206, .8);
+}
+
+.button-infill.button-green {
+  background-color: rgba(89, 255, 0, .7);
+}
+
+.button-infill {
+  color: rgba(255, 255, 255, .8);
+  background-color: rgba(128, 128, 128, .8);
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 1), inset 0 0 6em 2em rgba(0, 0, 0, .5);
+}
+
+/* Clear Button */
 
 .clear-button::after { 
   margin-left: -50px; 
@@ -198,7 +273,6 @@ input[type='button'] {
   background-color: rgba(254, 156, 0, .8);
 }
 
-
 /* Blue */
 
 .box-blue,
@@ -219,7 +293,6 @@ input[type='button'] {
 .box-infill-blue {
   background-color: rgba(83, 181, 206, .8);
 }
-
 
 /* Green */
 
