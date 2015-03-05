@@ -767,3 +767,11 @@ label.no-style {
   padding: 40px;
   margin-top: 40px;
 }
+
+#scrolling-content table tr > :nth-child(1n) {
+  flex: 1;
+}
+
+#scrolling-content table tr > :nth-child(n+2) {
+  flex: 3;
+}

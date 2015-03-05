@@ -111,6 +111,7 @@ var init = function() {
     });
   });
   // $("#icons").load("icons.html");
+  $("#scrolling-content").load("scrolling_content.html");
   $("#css-guidelines").load("cssguidelines.html");
   $("#html-guidelines").load("htmlguidelines.html");
   $("#supporting-documents").load("supportdocs.html");

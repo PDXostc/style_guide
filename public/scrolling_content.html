@@ -1,0 +1,43 @@
+<h1 class="section-title">Scrolling Content</h1>
+<h2 class="doc">Touch Action</h2>
+<p class="doc">The <span class="inline-code">touch-action</span> CSS property specifies whether and how a given region can be manipulated by the user (for instance, by panning or zooming).<sup><small>1</small></sup></p>
+<p class="doc">The <span class="inline-code">touch-action</span> property has been set to <span class="inline-code">none</span> across the app suite via the <span class="inline-code">body</span> element. This was implemented to prevent unwanted zooming and scrolling of the viewport area. The side-effect is that it disables the ability to scroll overflow content.</p>
+<p class="doc">The <span class="inline-code">ul</span> element (unordered list) and the <span class="inline-code">ol</span> element (ordered list) have been updated to allow for scrolling.</p>
+<p class="doc">To enable scrolling on any other element, use any of the following classes:</p>
+
+<div class="example no-title">
+  <table>
+    <tbody>
+      <tr>
+        <th>Class</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td><span class="inline-code">.scrollable-x</span></td>
+        <td><span>Allows horizontal scrolling <em>without a scrollbar</em></span></td>
+      </tr>
+      <tr>
+        <td><span class="inline-code">.scrollable-y</span></td>
+        <td><span>Allows vertical scrolling <em>without a scrollbar</em></span></td>
+      </tr>
+      <tr>
+        <td><span class="inline-code">.scrollable-xy</span></td>
+        <td><span>Allows horizontal and vertical scrolling <em>without a scrollbar</em></span></td>
+      </tr>
+      <tr>
+        <td><span class="inline-code">.scrollbar-x</span></td>
+        <td><span>Allows horizontal scrolling <em>with a scrollbar</em></span></td>
+      </tr>
+      <tr>
+        <td><span class="inline-code">.scrollbar-y</span></td>
+        <td><span>Allows vertical scrolling <em>with a scrollbar</em></span></td>
+      </tr>
+      <tr>
+        <td><span class="inline-code">.scrollbar-xy</span></td>
+        <td><span>Allows horizontal and vertical scrolling <em>with a scrollbar</em></span></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<p class="doc"><small><sup>1</sup> https://developer.mozilla.org/en-US/docs/Web/CSS/touch-action</small></p>

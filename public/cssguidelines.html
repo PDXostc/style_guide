@@ -1,28 +1,29 @@
-<h1 class="section-title doc">CSS Guidelines <span class="back-to-top"><a href="#top">&#9650;</a></span></h1>
-<p class="doc notice">This section is work-in-progress.</p>
-<h2 class="doc">General Guidelines</h2>
+<h1 class="section-title">CSS Guidelines <span class="back-to-top"><a href="#top">&#9650;</a></span></h1>
+<h2 class="doc sub-title">General Guidelines</h2>
 <ul class="doc">
   <li>Write style rules in CSS files. Avoid writing embedded, or inline CSS.</li>
   <li>Load app-specific style sheet last in the stack.</li>
   <li>The <span class="inline-code">:hover</span> selector should not be used as <span class="inline-code">:hover</span> does not apply to touchscreens.</li>
-  <li>Use flex properties to dynamically size content to available space.</li>
-  <li>Use relative units over absolute units in property values.</li>
+  <li>Use flex properties, where applicable, to dynamically size content to available space.</li>
+  <li>Use relative units, where possible, over absolute units in property values.</li>
 </ul>
 
 <h2 class="doc">Z-indexing</h2>
-<p class="doc">Z-index is a property that allows for stacking elements in the direction of the user. It is not a fix for poorly designed document flow. The primary use in UI design for z-index is to display elements as overlapping.</p>
+<p class="doc">Z-index is a property that allows for stacking elements in the direction of the user. The primary use in UI design for z-index is to display overlapping elements.</p>
 <ul class="doc">
   <li>Only use to overlay elements on top of others on the z-axis.</li>
   <li>Only use when the document flow order cannot be changed.</li>
   <li>Infinite or arbitrary z-indexing should not be used. (eg. z-index: 9999)</li>
-  <li>Only use on two or more elements. Z-index on one element has no effect or value.</li>
-  <li>Start with a base value of "0" and move up in increments of 1 as needed.</li>
-  <li>Z-indexing should be combined with absolute positioning (absolute, fixed).</li>
+  <li>Start with a base value of "1" and move up in increments of 1 as needed.</li>
+  <li>Z-indexing should be combined with absolute positioning (absolute, fixed) on one of the elements within the group of overlapping elements.</li>
 </ul>
+<h5 class="doc">Reference:</h5>
+<p class="doc"><a href="http://philipwalton.com/articles/what-no-one-told-you-about-z-index/" class="external-link">philipwalton.com/articles/what-no-one-told-you-about-z-index/</a></p>
+<p class="doc"><a href="http://webdesign.tutsplus.com/articles/what-you-may-not-know-about-the-z-index-property--webdesign-16892" class="external-link">webdesign.tutsplus.com/articles/what-you-may-not-know-about-the-z-index-property</a></p>
 
 <h2 class="doc">Class and ID Naming</h2>
-<h3 class="doc">Hyphenate Class and ID names.</p>
-<p class="doc">Separate words in ID and class names by a hyphen. Do not concatenate words and abbreviations in selectors by any characters (including none at all) other than hyphens, in order to improve understanding and scannability</p>
+<p class="doc">Excerpted from <a class="orange-viv" href="https://google-styleguide.googlecode.com/svn/trunk/htmlcssguide.xml#ID_and_Class_Name_Delimiters">Google HTML/CSS Style Guide > ID and Class Name Delimiters</a></p>
+<p class="doc"><strong>Separate words in ID and class names by a hyphen.</strong> Do not concatenate words and abbreviations in selectors by any characters (including none at all) other than hyphens, in order to improve understanding and scannability.</p>
 <code class="bad"><pre><span class="comment">/* Not recommended: does not separate the words “demo” and “image” */</span>
 .demoimage {}
 
@@ -35,8 +36,16 @@
 #video-id {}
 .ads-sample {}</pre></code>
 
-<h2 class="doc">CSS Formatting</h2>
+<h2 class="doc sub-title">CSS Formatting</h2>
+<p class="doc">Excerpted from <a class="orange-viv" href="https://google-styleguide.googlecode.com/svn/trunk/htmlcssguide.xml#CSS_Formatting_Rules">Google HTML/CSS Style Guide > CSS Formatting Rulles</a></p>
+
 <ul class="doc">
+  <li>Use only lowercase
+  <code class="bad"><pre><span class="comment">/* Not recommended */</span>
+color: #E5E5E5;</pre></code>
+<code class="good"><pre><span class="comment">/* Recommended */</span>
+color: #e5e5e5;</pre></code>
+  </li>
   <li>Alphabetize declarations
     <code class="good"><pre>background: fuchsia;
 border: 1px solid;
@@ -69,9 +78,53 @@ color: #444;
   height: 100px;
 }</pre></code>
   </li>
-  <li>Use a space after a property name’s colon</li>
-  <li>Use a space between the last selector and the declaration block</li>
-  <li>Separate selectors and declarations by new lines</li>
-  <li>Always start a new line for each selector and declaration</li>
-  <li>Separate rules by new lines</li>
+  <li>Use a space after a property name’s colon
+  <code class="bad"><pre><span class="comment">/* Not recommended */</span>
+h3 {
+  font-weight:bold;
+}</pre></code>
+<code class="good"><pre><span class="comment">/* Recommended */</span>
+h3 {
+  font-weight: bold;
+}</pre></code>
+  </li>
+  <li>Use a space between the last selector and the declaration block
+    <code class="bad"><pre><span class="comment">/* Not recommended: missing space */</span>
+#video{
+  margin-top: 1em;
+}
+
+<span class="comment">/* Not recommended: unnecessary line break */</span>
+#video
+{
+  margin-top: 1em;
+}</pre></code>
+    <code class="good"><pre><span class="comment">/* Recommended */</span>
+#video {
+  margin-top: 1em;
+}</pre></code>
+  </li>
+  <li>Separate selectors and declarations by new lines, and</li>
+  <li>Always start a new line for each selector and declaration
+  <code class="bad"><pre><span class="comment">/* Not recommended */</span>
+a:focus, a:active {
+  position: relative; top: 1px;
+}</pre></code>
+  <code class="good"><pre><span class="comment">/* Recommended */</span>
+h1,
+h2,
+h3 {
+  font-weight: normal;
+  line-height: 1.2;
+}</pre></code>
+  </li>
+  <li>Separate rules by new lines
+  <code class="good"><pre>html {
+  background: #fff;
+}
+
+body {
+  margin: auto;
+  width: 50%;
+}</pre></code></li>
 </ul>
