@@ -591,6 +591,7 @@ ul, ol {
 .scrollbar-x { 
   overflow-x: auto;
   touch-action: pan-x;
+  white-space: nowrap;
 } 
 
 .scrollbar-y {
@@ -611,6 +612,7 @@ ul, ol {
 .scrollable-x { 
   overflow-x: auto; 
   touch-action: pan-x;
+  white-space: nowrap;
 }
 
 .scrollable-y {
@@ -621,6 +623,7 @@ ul, ol {
 .scrollable-xy {
   overflow: auto;
   touch-action: pan-x pan-y;
+  white-space: nowrap;
 }
 
 .scrollable-x::-webkit-scrollbar,

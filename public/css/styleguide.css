@@ -775,3 +775,12 @@ label.no-style {
 #scrolling-content table tr > :nth-child(n+2) {
   flex: 3;
 }
+
+#scrolling-content .h300 {
+  height: 300px;
+}
+
+#scrolling-content .h300 .*-y {
+  height: 100%;
+  box-sizing: border-box;
+}
