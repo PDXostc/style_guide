@@ -26,67 +26,40 @@
 </section>
 
 <!-- Vertical Sliders -->
-<!-- <section class="sub-section" id="vertical-sliders"> -->
-  <!-- <h3 class="doc">Vertical Sliders</h3> -->
-  <!-- <div class="flex-parent space-between"> -->
-    <!-- <div class="example"> -->
-      <!-- Vertical Thin Slider -->
-      <!-- <div class="flex-item flex-parent flex-column"> -->
-        <!-- <p class="doc white"><span class="inline-code">.vertical-slider .thin-slider</span></p> -->
-        <!-- <div id="demo-vertical-thin-slider" class="vertical-slider thin-slider flex-item"> -->
-          <!-- <div class="slider-channel"> -->
-            <!-- <div class="slider-level level-25"> -->
-                <!-- <div class="slider-handle"></div> -->
-            <!-- </div> -->
-          <!-- </div> -->
-        <!-- </div> -->
-      <!-- </div> -->
-    <!-- </div> -->
+<section class="sub-section" id="vertical-sliders">
+  <h3 class="doc">Vertical Sliders</h3>
+  <div class="flex-parent">
+    <div class="example flex-parent flex-column">
+      <p class="doc white">Thin Slider</p>
+      <p class="doc white"><span class="inline-code">.vertical-slider.thin-slider</span></p>
+      <div class="vertical-slider thin-slider">
+        <input class="slider-input" type="range" value="100" onchange="sliderverticalthinvalue.value=value"/>
+      </div>
 
-    <!-- <div class="example"> -->
-      <!-- Vertical Medium Slider -->
-      <!-- <div class="flex-item flex-parent flex-column"> -->
-        <!-- <p class="doc white"><span class="inline-code">.vertical-slider</span></p> -->
-        <!-- <div id="demo-vertical-slider" class="vertical-slider flex-item"> -->
-          <!-- <div class="slider-channel"> -->
-            <!-- <div class="slider-level level-50"> -->
-                <!-- <div class="slider-handle"></div> -->
-            <!-- </div> -->
-          <!-- </div> -->
-        <!-- </div> -->
-      <!-- </div> -->
-    <!-- </div> -->
-  <!-- </div> -->
-  
-  <!-- <div class="flex-parent space-between"> -->
-    <!-- <div class="example"> -->
-      <!-- Vertical Thick Slider -->
-      <!-- <div class="flex-item flex-parent flex-column"> -->
-        <!-- <p class="doc white"><span class="inline-code">.vertical-slider .thick-slider</span></p> -->
-        <!-- <div id="demo-vertical-thick-slider" class="vertical-slider thick-slider flex-item"> -->
-          <!-- <div class="slider-channel"> -->
-            <!-- <div class="slider-level level-100"> -->
-                <!-- <div class="slider-handle"></div> -->
-            <!-- </div> -->
-          <!-- </div> -->
-        <!-- </div> -->
-      <!-- </div> -->
-    <!-- </div> -->
+      <output id="sliderverticalthinvalue" class="orange-viv center">100</output>
+    </div>
 
-    <!-- <div class="example"> -->
-      <!-- Vertical Top-Down Thin Slider -->
-      <!-- <div class="flex-item flex-parent flex-column"> -->
-        <!-- <p class="doc white"><span class="inline-code">.vertical-slider .top-down-slider</span></p> -->
-        <!-- <div id="demo-vertical-topdown-slider" class="vertical-slider thin-slider top-down-slider"> -->
-          <!-- <div class="slider-channel"> -->
-            <!-- <div class="slider-level level-25"> -->
-                <!-- <div class="slider-handle"></div> -->
-            <!-- </div> -->
-          <!-- </div> -->
-        <!-- </div> -->
-      <!-- </div> -->
-    <!-- </div> -->
-  <!-- </div> -->
+    <div class="example flex-parent flex-column">
+      <p class="doc white">Standard Slider</p>
+      <p class="doc white"><span class="inline-code">.vertical-slider</span></p>
+      <div class="vertical-slider">
+        <input class="slider-input" type="range" value="100" onchange="sliderverticalvalue.value=value"/>
+      </div>
+
+      <output id="sliderverticalvalue" class="orange-viv center">100</output>
+    </div>
+
+    <div class="example flex-parent flex-column">
+      <p class="doc white">Standard Slider</p>
+      <p class="doc white"><span class="inline-code">.vertical-slider.thick-slider</span></p>
+      <div class="vertical-slider thick-slider">
+        <input class="slider-input" type="range" value="100" onchange="sliderverticalthickvalue.value=value"/>
+        <!-- <div class="slider-thumb"></div> -->
+      </div>
+
+      <output id="sliderverticalthickvalue" class="orange-viv center">100</output>
+    </div>
+  </div>
 
   <!-- <div class="tabs-component"> -->
     <!-- Tabs -->
@@ -110,7 +83,7 @@
       <!-- </section> -->
     <!-- </div> -->
   <!-- </div> -->
-<!-- </section> -->
+</section>
 
 <!-- Horizontal Sliders -->
 <section class="sub-section" id="horizontal-sliders">

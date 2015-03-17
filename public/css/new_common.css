@@ -517,13 +517,6 @@ and other form content. Best used on block elements (eg. div) */
 
 /* Resets */
 
-.slider-input {
-  -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
-  width: 100%;
-  margin: 0;
-  padding: 0;
-}
-
 .slider-input::-webkit-slider-thumb {
   -webkit-appearance: none; /* Hides the slider thumb so that custom thumb can be made */
 }
@@ -534,16 +527,26 @@ and other form content. Best used on block elements (eg. div) */
 
 /* Slider Styles */
 
-.slider-input{
-  height:2em;
+.slider-input {
+  -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+  background: transparent;
+  cursor: pointer;
+  flex: 1;
   font-size: 4em; /* Base size for scalability */
   line-height: 0;
+  margin: 0;
   overflow:hidden;
-  cursor: pointer;
-  padding: .25em 0;
   position: relative;
-  -webkit-appearance:none;
-  background: transparent;
+}
+
+.horizontal-slider .slider-input {
+  padding: .25em 0;
+  height: 2em;
+}
+
+.vertical-slider .slider-input {
+  width: 2em;
+  -webkit-appearance: slider-vertical;
 }
 
 .button-slider .slider-input {
@@ -551,40 +554,105 @@ and other form content. Best used on block elements (eg. div) */
 }
 
 .slider-input::-webkit-slider-thumb {
-  height: 1em;
-  width: .85em;
   font-size: 2em;
-  margin: -.25em 0;
   overflow: visible;
   position:relative;
-  background-size: .85em;
-  -webkit-appearance:none;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-image: url(../images/hex_thumb_white_vert.png);
+}
+
+.horizontal-slider .slider-input::-webkit-slider-thumb {
   -webkit-filter: drop-shadow(.05em .05em .05em rgba(0,0,0,.25));
+  background-image: url(../images/hex_thumb_white_vert.png);
+  background-repeat: no-repeat;
+  background-size: .85em;
+  background-position: center;
+  height: 1em;
+  margin: -.25em 0;
+  width: .85em;
+}
+
+.vertical-slider .slider-input::-webkit-slider-thumb {
+  
 }
 
 /* Style the level bar */
 .slider-input::-webkit-slider-thumb:after{
   content:" ";
-  width:100vw;
-  right: 100%;
-  height: .5em;
-  margin: .25em 0;
-  position:absolute;
-  background: rgba(178, 240, 255, 0.8);
+  position: absolute;
+  background: rgba(178, 240, 255, 1);
   box-shadow: inset .125em .125em .5em rgba(255,255,255,.6),
               inset -1em -1em .125em -1em rgba(0,0,0,.5);
 }
 
+.horizontal-slider .slider-input::-webkit-slider-thumb:after {
+  width: 100vw;
+  right: 100%;
+  height: .5em;
+  margin: .25em 0;
+}
+
+.vertical-slider .slider-input::-webkit-slider-thumb:after {
+  height: 100vh;
+  top: 100%;
+  width: .5em;
+  margin: 0;
+}
+
+.vertical-slider .slider-thumb {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 4em;
+  outline: 1px solid red;
+  background-image: url(../images/hex_thumb_white_horz.png);
+  -webkit-filter: drop-shadow(.05em .05em .05em rgba(0,0,0,.25));
+  background-repeat: no-repeat;
+  background-size: 4em;
+  background-position: center;
+}
+
+.vertical-slider .slider-input::-webkit-slider-thumb:before {
+  position: absolute;
+  content: " ";
+  bottom: 0;
+  width: 1.5em;
+  height: 100vh;
+  margin: 0 -.5em;
+  background-image: url(../images/hex_thumb_white_horz.png);
+  -webkit-filter: drop-shadow(.05em .05em .05em rgba(0,0,0,.25));
+  background-repeat: no-repeat;
+  background-size: 1em;
+  background-position: center bottom;
+  z-index: 1;
+}
+
 /* Styles the track */
-.slider-input::-webkit-slider-runnable-track {
+.horizontal-slider .slider-input::-webkit-slider-runnable-track {
   height: 1em;
   background-color: transparent;
   box-shadow: inset 0 0 0 .125em rgba(126,126,126,.25),
               inset 0 0 .5em .125em rgba(0,0,0,.5);
               
+}
+
+.vertical-slider .slider-input::-webkit-slider-runnable-track {
+  width: 1em;
+  padding-top: 1.4em;
+  background: #222;
+  box-shadow: inset 0 0 .5em .125em rgba(0,0,0,.5);
+  overflow-y: visible; 
+}
+
+.vertical-slider.thin-slider .slider-input::-webkit-slider-runnable-track {
+  padding-top: 1.2em;
+}
+
+.vertical-slider.thick-slider .slider-input::-webkit-slider-runnable-track {
+  padding-top: 1.5em;
+}
+
+.vertical-slider {
+  flex-direction: column;
 }
 
 .vertical-slider,

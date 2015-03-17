@@ -8,6 +8,7 @@
 /* Root Elements ******************************************/
 
 #main {
+  display: -moz-box-flex;
   display: flex;
   flex: 1;
   min-width: 1080px;
@@ -39,6 +40,7 @@ body::-webkit-scrollbar {
 }
 
 .inner {
+  display: -moz-box-flex;
   display: flex;
   margin: 0 auto;
   padding: 0;
@@ -250,6 +252,7 @@ article {
 
 .swatch {
   flex: 1;
+  display: -moz-box-flex;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -269,6 +272,7 @@ article {
 .hex-details,
 .rgb-details {
   border-bottom: 1px solid rgba(0,0,0,0.25);
+  display: -moz-box-flex;
   display: flex;
   justify-content: space-between;
   padding: 5px 0;
@@ -709,4 +713,8 @@ label.no-style {
 #add-another-icon p {
   font-size: 7rem;
   margin: 0;
+}
+
+.example .vertical-slider {
+  height: 720px;
 }
