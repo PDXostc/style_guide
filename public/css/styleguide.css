@@ -2,13 +2,75 @@
 
 @font-face {
   font-family: SourceCodePro;
-  src: url(../fonts/SourceCodePro-Regular.ttf) format(truetype);
+  src: url("../fonts/SourceCodePro/TTF/SourceCodePro-Regular.ttf") format("truetype");
+  /*src: url("../fonts/SourceCodePro/WOFF/SourceCodePro-Regular.ttf.woff") format("woff");*/
+}
+
+/* Adobe Source Sans */
+/* SIL OPEN FONT LICENSE Version 1.1 - 26 February 2007 */
+/* http://scripts.sil.org/OFL */
+
+@font-face {
+  font-family: SourceSansPro;
+  src: url("../fonts/SourceSansPro/TTF/SourceSansPro-ExtraLight.ttf") format("truetype");
+  /*src: url("../fonts/SourceSansPro/WOFF/SourceSansPro-ExtraLight.ttf.woff") format("woff");*/
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: SourceSansPro;
+  src: url("../fonts/SourceSansPro/TTF/SourceSansPro-Light.ttf") format("truetype");
+  /*src: url("../fonts/SourceSansPro/WOFF/SourceSansPro-Light.ttf.woff") format("woff");*/
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: SourceSansPro;
+  src: url("../fonts/SourceSansPro/TTF/SourceSansPro-LightItalic.ttf") format("truetype");
+  /*src: url("../fonts/SourceSansPro/WOFF/SourceSansPro-LightItalic.ttf.woff") format("woff");*/
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: SourceSansPro;
+  src: url("../fonts/SourceSansPro/TTF/SourceSansPro-Regular.ttf") format("truetype");
+  /*src: url("../fonts/SourceSansPro/WOFF/SourceSansPro-Regular.ttf.woff") format("woff");*/
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: SourceSansPro;
+  src: url("../fonts/SourceSansPro/TTF/SourceSansPro-Italic.ttf") format("truetype");
+  /*src: url("../fonts/SourceSansPro/WOFF/SourceSansPro-Italic.ttf.woff") format("woff");*/
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: SourceSansPro;
+  src: url("../fonts/SourceSansPro/TTF/SourceSansPro-Semibold.ttf") format("truetype");
+  /*src: url("../fonts/SourceSansPro/WOFF/SourceSansPro-Semibold.ttf.woff") format("woff");*/
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: SourceSansPro;
+  src: url("../fonts/SourceSansPro/TTF/SourceSansPro-Bold.ttf") format("truetype");
+  /*src: url("../fonts/SourceSansPro/WOFF/SourceSansPro-Bold.ttf.woff") format("woff");*/
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: SourceSansPro;
+  src: url("../fonts/SourceSansPro/TTF/SourceSansPro-Black.ttf") format("truetype");
+  /*src: url("../fonts/SourceSansPro/WOFF/SourceSansPro-Black.ttf.woff") format("woff");*/
+  font-weight: 900;
 }
 
 /* Root Elements ******************************************/
 
 #main {
-  display: -moz-box-flex;
   display: flex;
   flex: 1;
   min-width: 1080px;
@@ -40,7 +102,6 @@ body::-webkit-scrollbar {
 }
 
 .inner {
-  display: -moz-box-flex;
   display: flex;
   margin: 0 auto;
   padding: 0;
@@ -54,6 +115,7 @@ body::-webkit-scrollbar {
 }
 
 #main-content {
+  max-width: 780px;
   padding: 20px;
   flex: 5;
 }
@@ -78,6 +140,7 @@ nav {
 
 #table-of-contents {
   -webkit-columns: 4;
+  -moz-columns: 4;
 }
 
 #main-content #table-of-contents.doc li {
@@ -126,10 +189,12 @@ nav li li li {
 }
 
 .nav-menus {
+  width: 240px;
   box-sizing: border-box;
   padding: 20px;
   position: fixed;
   top: 0;
+  left: 0;
 }
 
 .nav-panel .contents-list {
@@ -252,7 +317,6 @@ article {
 
 .swatch {
   flex: 1;
-  display: -moz-box-flex;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -272,7 +336,6 @@ article {
 .hex-details,
 .rgb-details {
   border-bottom: 1px solid rgba(0,0,0,0.25);
-  display: -moz-box-flex;
   display: flex;
   justify-content: space-between;
   padding: 5px 0;

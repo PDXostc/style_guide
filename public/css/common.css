@@ -732,7 +732,7 @@ ul, ol {
   overflow: hidden;
   text-overflow: ellipsis;
   word-wrap: break-word;
-  display: -webkit-box;
+  /*display: -webkit-box;*/
   -webkit-box-orient: vertical;
 }
 
@@ -816,7 +816,7 @@ ul, ol {
   overflow: hidden;
   text-overflow: ellipsis;
   word-wrap: break-word;
-  display: -webkit-box;
+  /*display: -webkit-box;*/
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 1;
 }
@@ -826,7 +826,7 @@ ul, ol {
   overflow: hidden;
   text-overflow: ellipsis;
   word-wrap: break-word;
-  display: -webkit-box;
+  /*display: -webkit-box;*/
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
 }
@@ -836,7 +836,7 @@ ul, ol {
   overflow: hidden;
   text-overflow: ellipsis;
   word-wrap: break-word;
-  display: -webkit-box;
+  /*display: -webkit-box;*/
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;
 }
