@@ -1,255 +1,134 @@
 <template id="vertical-slider-snippet">
-  <pre><span class="comment">// Thin Slider</span>
-&lt;div id="custom-id" <span class="orange-viv">class="vertical-slider thin-slider"</span>&gt;
-  &lt;div class="slider-channel"&gt;
-    &lt;div class="slider-level"&gt;
-      &lt;div class="slider-handle"&gt;&lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
+  <pre><span class="comment">&lt;-- vertical Thin Slider --&gt;</span>
+&lt;div class="<span class="orange-viv">vertical-slider thin-slider</span>"&gt;
+  &lt;input class="slider-input" type="range" value="50" /&gt;
 &lt;/div&gt;
 
-<span class="comment">// Base Slider</span>
-&lt;div id="custom-id" <span class="orange-viv">class="vertical-slider"</span>&gt;
-  &lt;div class="slider-channel"&gt;
-    &lt;div class="slider-level"&gt;
-      &lt;div class="slider-handle"&gt;&lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
+<span class="comment">&lt;-- vertical Standard Slider --&gt;</span>
+&lt;div class="<span class="orange-viv">vertical-slider</span>"&gt;
+  &lt;input class="slider-input" type="range" value="50" /&gt;
 &lt;/div&gt;
 
-<span class="comment">// Thick Slider</span>
-&lt;div id="custom-id" <span class="orange-viv">class="vertical-slider thick-slider"</span>&gt;
-  &lt;div class="slider-channel"&gt;
-    &lt;div class="slider-level"&gt;
-      &lt;div class="slider-handle"&gt;&lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
+<span class="comment">&lt;-- vertical Thick Slider --&gt;</span>
+&lt;div class="<span class="orange-viv">vertical-slider thick-slider</span>"&gt;
+  &lt;input class="slider-input" type="range" value="50" /&gt;
 &lt;/div&gt;</pre>
 </template>
 
 <template id="horizontal-slider-snippet">
-  <pre><span class="comment">// Thin Slider</span>
-&lt;div id="custom-id" <span class="orange-viv">class="horizontal-slider thin-slider"</span>&gt;
-  &lt;div class="slider-channel"&gt;
-    &lt;div class="slider-level"&gt;
-      &lt;div class="slider-handle"&gt;&lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
+  <pre><span class="comment">&lt;-- Horizontal Thin Slider --&gt;</span>
+&lt;div class="<span class="orange-viv">horizontal-slider thin-slider</span>"&gt;
+  &lt;input class="slider-input" type="range" value="50" /&gt;
 &lt;/div&gt;
 
-<span class="comment">// Base Slider</span>
-&lt;div id="custom-id" <span class="orange-viv">class="horizontal-slider"</span>&gt;
-  &lt;div class="slider-channel"&gt;
-    &lt;div class="slider-level"&gt;
-      &lt;div class="slider-handle"&gt;&lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
+<span class="comment">&lt;-- Horizontal Standard Slider --&gt;</span>
+&lt;div class="<span class="orange-viv">horizontal-slider</span>"&gt;
+  &lt;input class="slider-input" type="range" value="50" /&gt;
 &lt;/div&gt;
 
-<span class="comment">// Thick Slider</span>
-&lt;div id="custom-id" <span class="orange-viv">class="horizontal-slider thick-slider"</span>&gt;
-  &lt;div class="slider-channel"&gt;
-    &lt;div class="slider-level"&gt;
-      &lt;div class="slider-handle"&gt;&lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
+<span class="comment">&lt;-- Horizontal Thick Slider --&gt;</span>
+&lt;div class="<span class="orange-viv">horizontal-slider thick-slider</span>"&gt;
+  &lt;input class="slider-input" type="range" value="50" /&gt;
 &lt;/div&gt;</pre>
 </template>
 
 <template id="vertical-slider-css-snippet">
-<pre><span class="comment">/* Sliders */</span>
-
-.vertical-slider,
-.horizontal-slider {
-  display: flex;
-  position: relative;
-  align-items: center;
-  justify-content: center;
-}
-
-.vertical-slider {
-  margin: 40px 0;
-  flex-direction: column;
-}
-
-.vertical-slider.thin-slider {
-  margin: 20px 0;
-}
-
-.vertical-slider.thick-slider {
-  margin: 60px 0;
-}
-
-.slider-channel {
-  display: flex;
-  flex-direction: inherit;
-  justify-content: flex-end;
-  box-shadow: inset 0 0 40px black;
-  border: 2px solid rgba(65, 65, 65, .5);
-}
-
-.top-down-slider .slider-channel {
-  justify-content: flex-start;
-}
-
-.vertical-slider .slider-channel {
-  width: 40px;
-  height: 100%;
-}
-
-.thin-slider .slider-channel {
-  box-shadow: inset 0 0 20px black;
-}
-
-.vertical-slider.thin-slider .slider-channel {
-  width: 20px;
-}
-
-.thick-slider .slider-channel {
-  box-shadow: inset 0 0 60px black;
-}
-
-.vertical-slider.thick-slider .slider-channel {
-  width: 60px;
-}
-
-.horizontal-slider.thick-slider .slider-channel {
-  height: 60px;
-}
-
-<span class="comment">/* Slider level preperty flex-basis controls the height 
-   of the level bar and the contained slider handle */</span>
-
-.slider-level {
-  display: flex;
-  flex-basis: 0%;
-  overflow: visible;
-  background-color: rgba(178, 240, 255, 0.8);
-  box-shadow: inset 2px 2px .5em rgba(255,255,255,.4), inset -2px -2px .5em rgba(0,0,0,.4);
-  transition: flex-basis .5s;
-}
-
-.slider-handle {
-  flex: 1;
-  position: relative;
-  margin: -150% -100%;
-  background-size: 100%;
-  background-position: top;
-  background-repeat: no-repeat;
-  background-image: url(../images/slider_control.png);
-}
-
-.top-down-slider .slider-handle {
-  background-position: bottom;
-}</pre>
-</template>
-
-<template id="horiz-button-slider-html-snippet">
-  <pre><span class="comment">&lt;-- Horizontal Thin Slider with Buttons --&gt;</span>
-&lt;div class="<span class="orange-viv">horizontal-slider thin-slider</span>"&gt;
-  &lt;div class="slider-button less-button"&gt;&lt;/div&gt;
-  &lt;input class="slider-input" type="range" value="50" /&gt;
-  &lt;div class="slider-button more-button"&gt;&lt;/div&gt;
-&lt;/div&gt;
-
-<span class="comment">&lt;-- Horizontal Slider with Buttons --&gt;</span>
-&lt;div class="<span class="orange-viv">horizontal-slider</span>"&gt;
-  &lt;div class="slider-button less-button"&gt;&lt;/div&gt;
-  &lt;input class="slider-input" type="range" value="50" /&gt;
-  &lt;div class="slider-button more-button"&gt;&lt;/div&gt;
-&lt;/div&gt;
-
-<span class="comment">&lt;-- Horizontal Thick Slider with Buttons --&gt;</span>
-&lt;div class="<span class="orange-viv">horizontal-slider thick-slider</span>"&gt;
-  &lt;div class="slider-button less-button"&gt;&lt;/div&gt;
-  &lt;input class="slider-input" type="range" value="50" /&gt;
-  &lt;div class="slider-button more-button"&gt;&lt;/div&gt;
-&lt;/div&gt;</pre>
-</template>
-
-<template id="horiz-button-slider-css-snippet"><pre><span class="comment">/* Resets */</span>
-
-.slider-input {
-  -webkit-appearance: none; <span class="comment">/* Hides the slider so that custom slider can be made */</span>
-  width: 100%;
-  margin: 0;
-  padding: 0;
-}
-
-.slider-input::-webkit-slider-thumb {
-  -webkit-appearance: none; <span class="comment">/* Hides the slider thumb so that custom thumb can be made */</span>
+<pre>.slider-input::-webkit-slider-thumb {
+  -webkit-appearance: none;
 }
 
 .slider-input:focus {
-  outline: none; <span class="comment">/* Removes the blue accessibility border. */</span>
+  outline: none;
 }
 
-<span class="comment">/* Slider Styles */</span>
-
-.slider-input{
-  height:2em;
+.slider-input {
+  -webkit-appearance: none; 
+  background: transparent;
+  cursor: pointer;
+  flex: 1;
   font-size: 4em; <span class="comment">/* Base size for scalability */</span>
   line-height: 0;
-  flex-basis: 82.5%;
+  margin: 0;
   overflow:hidden;
-  cursor: pointer;
-  padding: .25em 0;
   position: relative;
-  -webkit-appearance:none;
-  background: transparent;
+}
+
+.vertical-slider,
+.horizontal-slider {
+  align-items: center;
+  display: flex;
+  font-size: 1rem;
+  justify-content: space-between;
+  position: relative;
+}
+
+.vertical-slider {
+  flex-direction: column;
+}
+
+.vertical-slider .slider-input {
+  -webkit-appearance: slider-vertical;
+  width: 2em;
 }
 
 .slider-input::-webkit-slider-thumb {
-  height: 1em;
-  width: .85em;
   font-size: 2em;
-  margin: -.25em 0;
   overflow: visible;
   position:relative;
-  background-size: .85em;
-  -webkit-appearance:none;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-image: url(../images/hex_thumb_white_vert.png);
-  -webkit-filter: drop-shadow(.05em .05em .05em rgba(0,0,0,.25));
 }
 
 <span class="comment">/* Style the level bar */</span>
 .slider-input::-webkit-slider-thumb:after{
-  content:" ";
-  width:100vw;
-  right: 100%;
-  height: .5em;
-  margin: .25em 0;
-  position:absolute;
-  background: rgba(178, 240, 255, 0.8);
+  background: rgba(178, 240, 255, 1);
   box-shadow: inset .125em .125em .5em rgba(255,255,255,.6),
               inset -1em -1em .125em -1em rgba(0,0,0,.5);
+  content:" ";
+  position: absolute;
+}
+
+.vertical-slider .slider-input::-webkit-slider-thumb:after {
+  height: 100vh;
+  margin: 0;
+  top: 100%;
+  width: .5em;
+}
+
+<span class="comment">/* styles the vertical thumb */</span>
+.vertical-slider .slider-input::-webkit-slider-thumb:before {
+  -webkit-filter: drop-shadow(.05em .05em .05em rgba(0,0,0,.25));
+  background-image: url(../images/hex_thumb_white_horz.png);
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: 1em;
+  bottom: 0;
+  content: " ";
+  height: 100vh;
+  margin: 0 -.5em;
+  position: absolute;
+  width: 1.5em;
+  z-index: 1;
+}
+
+<span class="comment">/* prevents thumb from getting cropped out at ends */</span>
+.vertical-slider.thin-slider .slider-input::-webkit-slider-runnable-track {
+  padding-top: 1.2em;
+}
+
+.vertical-slider.thick-slider .slider-input::-webkit-slider-runnable-track {
+  padding-top: 1.5em;
 }
 
 <span class="comment">/* Styles the track */</span>
 .slider-input::-webkit-slider-runnable-track {
-  height: 1em;
-  background-color: transparent;
-  box-shadow: inset 0 0 0 .125em rgba(126,126,126,.25),
+  background-color: #222;
+  box-shadow: inset 0 0 0 .125em rgba(110,110,110,.25),
               inset 0 0 .5em .125em rgba(0,0,0,.5);
-              
 }
 
-.horizontal-slider {
-  font-size: 1rem;
-  display: flex;
-  position: relative;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.thin-slider .slider-input {
-  flex-basis: 90%;
-}
-
-.thick-slider .slider-input {
-  flex-basis: 75%;
+.vertical-slider .slider-input::-webkit-slider-runnable-track {
+  overflow-y: visible; 
+  padding-top: 1.4em;
+  width: 1em;
 }
 
 .thin-slider {
@@ -258,22 +137,134 @@
 
 .thick-slider {
   font-size: 1.5rem;
+}</pre>
+</template>
+
+<template id="horizontal-slider-css-snippet">
+<pre>.slider-input::-webkit-slider-thumb {
+  -webkit-appearance: none;
 }
 
-<span class="comment">/* Style the less and more buttons */</span>
-.slider-button {
-  width: 40px;
-  height: 40px;
-  display: flex;
-  font-size: 4em;
-  text-align: center;
+.slider-input:focus {
+  outline: none;
+}
+
+.slider-input {
+  -webkit-appearance: none; 
+  background: transparent;
+  cursor: pointer;
+  flex: 1;
+  font-size: 4em; <span class="comment">/* Base size for scalability */</span>
+  line-height: 0;
+  margin: 0;
+  overflow:hidden;
+  position: relative;
+}
+
+.vertical-slider,
+.horizontal-slider {
   align-items: center;
-  justify-content: center;
-  text-shadow: 1px 1px 3px #444;
+  display: flex;
+  font-size: 1rem;
+  justify-content: space-between;
+  position: relative;
+}
+
+.horizontal-slider .slider-input {
+  height: 2em;
+  padding: .25em 0;
+}
+
+.slider-input::-webkit-slider-thumb {
+  font-size: 2em;
+  overflow: visible;
+  position:relative;
+}
+
+<span class="comment">/* Style the level bar */</span>
+.slider-input::-webkit-slider-thumb:after{
+  background: rgba(178, 240, 255, 1);
+  box-shadow: inset .125em .125em .5em rgba(255,255,255,.6),
+              inset -1em -1em .125em -1em rgba(0,0,0,.5);
+  content:" ";
+  position: absolute;
+}
+
+.horizontal-slider .slider-input::-webkit-slider-thumb:after {
+  height: .5em;
+  margin: .25em 0;
+  right: 100%;
+  width: 100vw;
+}
+
+<span class="comment">/* styles the horizontal thumb */</span>
+.horizontal-slider .slider-input::-webkit-slider-thumb {
+  -webkit-filter: drop-shadow(.05em .05em .05em rgba(0,0,0,.25));
+  background-image: url(../images/hex_thumb_white_vert.png);
+  background-repeat: no-repeat;
+  background-size: .85em;
+  background-position: center;
+  height: 1em;
+  margin: -.25em 0;
+  width: .85em;
+}
+
+<span class="comment">/* Styles the track */</span>
+.slider-input::-webkit-slider-runnable-track {
+  background-color: #222;
+  box-shadow: inset 0 0 0 .125em rgba(110,110,110,.25),
+              inset 0 0 .5em .125em rgba(0,0,0,.5);
+}
+
+.horizontal-slider .slider-input::-webkit-slider-runnable-track {
+  height: 1em;            
+}
+
+.thin-slider {
+  font-size: .5rem;
+}
+
+.thick-slider {
+  font-size: 1.5rem;
+}</pre>
+</template>
+
+<template id="horiz-button-slider-html-snippet">
+  <pre><span class="comment">&lt;-- Horizontal Thin Slider with Buttons --&gt;</span>
+&lt;div class="horizontal-slider thin-slider"&gt;
+  &lt;div class="<span class="orange-viv">slider-button less-button</span>"&gt;&lt;/div&gt;
+  &lt;input class="slider-input" type="range" value="50" /&gt;
+  &lt;div class="<span class="orange-viv">slider-button more-button</span>"&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+<span class="comment">&lt;-- Horizontal Slider with Buttons --&gt;</span>
+&lt;div class="horizontal-slider"&gt;
+  &lt;div class="<span class="orange-viv">slider-button less-button</span>"&gt;&lt;/div&gt;
+  &lt;input class="slider-input" type="range" value="50" /&gt;
+  &lt;div class="<span class="orange-viv">slider-button more-button</span>"&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+<span class="comment">&lt;-- Horizontal Thick Slider with Buttons --&gt;</span>
+&lt;div class="horizontal-slider thick-slider"&gt;
+  &lt;div class="<span class="orange-viv">slider-button less-button</span>"&gt;&lt;/div&gt;
+  &lt;input class="slider-input" type="range" value="50" /&gt;
+  &lt;div class="<span class="orange-viv">slider-button more-button</span>"&gt;&lt;/div&gt;
+&lt;/div&gt;</pre>
+</template>
+
+<template id="horiz-button-slider-css-snippet"><pre>.slider-button {
+  align-items: center;
+  animation: bounceInDown 900ms 200ms ease-in-out both;
+  background: linear-gradient(#db9604, #915a00);
   border: 1px solid rgba(255, 255, 255, .4);
   box-shadow: inset 0px 0px 2px 1px #5a3800;
-  background: linear-gradient(#db9604, #915a00);
-  animation: bounceInDown 900ms 200ms ease-in-out both;
+  display: flex;
+  font-size: 4em;
+  height: 40px;
+  justify-content: center;
+  text-align: center;
+  text-shadow: 1px 1px 3px #444;
+  width: 40px;
 }
 
 .thin-slider .slider-button {
@@ -298,5 +289,17 @@
 .more-button::after {
   color: white;
   font-size: 1em;
+}
+
+.button-slider .slider-input {
+  flex: 0 0 82.5%;
+}
+
+.button-slider.thin-slider .slider-input {
+  flex: 0 0 90%;
+}
+
+.button-slider.thick-slider .slider-input {
+  flex: 0 0 75%;
 }</pre>
 </template>

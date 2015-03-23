@@ -23,9 +23,41 @@ $(document).ready(function() {
   	$(this).closest(".switch").toggleClass("on off");
   });
 
-  // Button Slider control
-  
+  // Slider Output control
+  function updateOutput(input, value) {
+    var output = input.parent().siblings("output");
+    output.val(value);
+  };
 
+  $(document).on("input", ".slider-input", function() {
+    var input = $(this);
+    var inputVal = input.val();
+    updateOutput(input, inputVal);
+  });
+
+  // Button Slider control
+  function decreaseValue(input) {
+    var inputVal = parseInt(input.val());
+    input.val(inputVal -= 1);
+    updateOutput(input, inputVal);
+  };
+
+  function increaseValue(input) {
+    var inputVal = parseInt(input.val());
+    input.val(inputVal += 1);
+    updateOutput(input, inputVal);
+  };
+
+  $(document).on("click", ".less-button, .more-button", function() {
+    var button = $(this);
+    var input = button.siblings(".slider-input"); 
+    if ( button.hasClass("less-button") ) {
+      decreaseValue(input);
+    } else {
+      increaseValue(input);
+    };
+  });
+  
   // tabs control
   $(document).on("click", ".tab-item", function() {
     var contentId = $(this).data("content-id");
