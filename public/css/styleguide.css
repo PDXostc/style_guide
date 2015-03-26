@@ -382,6 +382,7 @@ article {
 
 h2.doc {
   font-size: 5rem;
+  margin-top: 1em;
 }
 
 h3.doc {
@@ -782,10 +783,12 @@ label.no-style {
   height: 720px;
 }
 
-#sliders table tr > :nth-child(1n) {
+#sliders table tr > :nth-child(1n),
+#modifiers table tr > :nth-child(1n) {
   flex: 1;
 }
 
-#sliders table tr > :nth-child(3) {
+#sliders table tr > :nth-child(3),
+#modifiers table tr > :nth-child(2) {
   flex: 2;
 }

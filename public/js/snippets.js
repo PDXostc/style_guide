@@ -105,6 +105,7 @@ var init = function() {
     loadSnippets( imports["typography"], snippets["typography"] );
   });
   $("#colors").load("colors.html");
+  $("#modifiers").load("modifiers.html");
   $("#controls").load("controls.html", function() {
     $("#sliders").load("sliders.html", function() {
       loadSnippets( imports["sliders"], snippets["sliders"] );
