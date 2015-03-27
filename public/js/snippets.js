@@ -16,11 +16,9 @@ var snippets = {
     structureHTMLBody: { templateId: "structure-html-body", targetId: "#structure .html-body code" },
     structureHTMLBase: { templateId: "structure-html-center-panel", targetId: "#structure .html-center-panel code" },
     structureHTMLContent: { templateId: "structure-html-content", targetId: "#structure .html-content code" },
-    structureCSS: { templateId: "structure-css", targetId: "#structure .css code" }
   },
   switches: {
     switchesHTML: { templateId: "switches-html", targetId: "#switches .html code" },
-    switchesCSS: { templateId: "switches-css", targetId: "#switches .css code" },
     switchesJS: { templateId: "switches-js", targetId: "#switches .js code" },
     switchesHTMLHighlights: { templateId: "switches-html-highlights", targetId: "#switches .html code.highlights" },
     switchesJSHighlights: { templateId: "switches-js-highlights", targetId: "#switches .js code.highlights" }
@@ -43,32 +41,24 @@ var snippets = {
   },
   boxes: {
     variationsHTML: { templateId: "box-variations-html-snippet", targetId: "#box-variations .html code" },
-    variationsCSS: { templateId: "box-variations-css-snippet", targetId: "#box-variations .css code" },
     outlineHTML: { templateId: "box-outline-html-snippet", targetId: "#box-outline .html code" },
-    outlineCSS: { templateId: "box-outline-css-snippet", targetId: "#box-outline .css code" },
     inshadowHTML: { templateId: "box-inshadow-html-snippet", targetId: "#box-inshadow .html code" },
-    inshadowCSS: { templateId: "box-inshadow-css-snippet", targetId: "#box-inshadow .css code" },
     outshadowHTML: { templateId: "box-outshadow-html-snippet", targetId: "#box-outshadow .html code" },
-    outshadowCSS: { templateId: "box-outshadow-css-snippet", targetId: "#box-outshadow .css code" },
     infillHTML: { templateId: "box-infill-html-snippet", targetId: "#box-infill .html code" },
-    infillCSS: { templateId: "box-infill-css-snippet", targetId: "#box-infill .css code" }
   },
   tables: {
     basicHTML: { templateId: "basic-table-html-snippet", targetId: "#basic-table .html code" },
-    basicCSS: { templateId: "basic-table-css-snippet", targetId: "#basic-table .css code" },
     customClassHTML: { templateId: "custom-table-class-html-snippet", targetId: "#custom-tables-class .html code" },
     customColumnWidthCSS: { templateId: "custom-column-widths-css-snippet", targetId: "#custom-column-widths .css code" },
-    customrowStylesCSS: { templateId: "custom-row-styles-css-snippet", targetId: "#custom-row-styles .css code" }
+    customrowStylesCSS: { templateId: "custom-row-styles-css-snippet", targetId: "#custom-row-styles .css code" },
+    customGraphicSymbolsCSS: { templateId: "custom-graphic-symbols-css-snippet", targetId: "#custom-cell-graphics #html-symbols code" },
+    customGraphicImagesCSS: { templateId: "custom-graphic-images-css-snippet", targetId: "#custom-cell-graphics #cell-images code" }
   },
   forms: {
     stackedLabelInputHTML: { templateId: "stacked-labeled-input-html", targetId: "#stacked-labeled-inputs .html code" },
-    stackedLabelInputCSS: { templateId: "stacked-labeled-input-css", targetId: "#stacked-labeled-inputs .css code" },
     rightLabelInputHTML: { templateId: "right-aligned-labeled-input-html", targetId: "#right-aligned-labeled-inputs .html code" },
-    rightLabelInputCSS: { templateId: "right-aligned-labeled-input-css", targetId: "#right-aligned-labeled-inputs .css code" },
     leftLabelInputHTML: { templateId: "left-aligned-labeled-input-html", targetId: "#left-aligned-labeled-inputs .html code" },
-    leftLabelInputCSS: { templateId: "left-aligned-labeled-input-css", targetId: "#left-aligned-labeled-inputs .css code" },
     colorLabelInputHTML: { templateId: "color-labeled-inputs-html", targetId: "#color-inputs .html code" },
-    colorLabelInputCSS: { templateId: "color-labeled-inputs-css", targetId: "#color-inputs .css code" }
   },
   scrolling: {
     scrollingHTML: { templateId: "scrolling-html-snippet", targetId: "#scrolling-content .html code" },

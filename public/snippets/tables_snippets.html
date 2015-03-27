@@ -63,63 +63,6 @@
     &lt;/tbody&gt;
 &lt;/table&gt;</pre></template>
 
-<template id="basic-table-css-snippet"><pre>table {
-  width: 100%;
-  background-color: transparent;
-  border-collapse: collapse;
-}
-
-th, td {
-  color: white;
-  font-size: 2rem;
-  text-align: left;
-  margin: 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-th.no-flex,
-td.no-flex {
-  display: table-cell;
-}
-
-th {
-  font-weight: 100;
-  justify-content: flex-end;
-}
-
-td {
-  font-weight: 100;
-  justify-content: flex-start;
-}
-
-table tr {
-  display: flex;
-}
-
-tr:nth-child(even) {
-  background-color: rgba(255,211,140,.1);
-}
-
-table tr > :nth-child(1n) {
-  flex: 2;
-}
-
-table tr > :nth-child(n+2) {
-  flex: 1;
-}
-
-table.no-text-wrap td {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  word-wrap: break-word;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 1;
-}
-</pre></template>
-
 <template id="custom-table-class-html-snippet"><pre>&lt;table <span class="orange-viv">class="playlist"</span>&gt;
 <span class="comment">// Table elements</span>
 &lt;/table&gt;</pre></template>
@@ -150,5 +93,39 @@ table tr > :nth-child(n+2) {
   <span class="comment">// Selects every odd row cell and makes the font bold (not shown)</span>
   tr<span class="orange-viv">:nth-child(odd)</span> td {
     font-weight: 600;
-  }
-   </pre></template>
+  }</pre></template>
+
+<template id="custom-graphic-symbols-css-snippet"><pre><span class="comment">// Selects the first cell in each row of the body of the table</span>
+<span class="comment">// and applies a tinted empty star symbol</span>
+.playlist tbody td:first-of-type:before {
+  <span class="orange-viv">content: "\2606";</span>
+  color: rgba(255,255,255,.2);
+}
+
+<span class="comment">// Selects the first cell in each row with class "fav-song"</span>
+<span class="comment">// and applies a solid orange star symbol</span>
+.playlist td:first-of-type.fav-song:before {
+  <span class="orange-viv">content: "\2605";</span>
+  color: #fe9c00;
+}</pre></template>
+
+<template id="custom-graphic-images-css-snippet"><pre><span class="comment">// Adds a background gif to the cells with the class "playing" and "dancing"</span>
+.playing {
+  <span class="orange-viv">background-image: url(../images/eq.gif);</span>
+}
+
+.dancing {
+  <span class="orang-viv">background-image: url(../images/banana.gif);</span>
+  background-size: auto 100%;
+}
+
+.playing, .dancing {
+  background-repeat: no-repeat;
+  background-position: left center;
+}
+
+<span class="comment">// Overrides the default empty star from the previous example for cells with class "playing"</span>
+.playlist tbody td.dancing:before,
+.playlist tbody td.playing:before {
+  <span class="orange-viv">content: none;</span>
+}</pre></template>

@@ -112,27 +112,11 @@
 		</table>
 	</div>
 
-	<!-- Code section -->
-	<div class="tabs-component">
-    <!-- Tabs -->
-    <div class="tabs-labels">
-      <div class="tab-item active" data-content-id="html">HTML</div>
-      <div class="tab-item" data-content-id="css">CSS</div>
-    </div>
-    <!-- Tabs content -->
-    <div class="tabs-content">
-      <section class="sub-section html" data-content-id="html">
-        <p class="doc reverse-highlight"><small>Last updated: 3/03/15</small></p>
-        <code contenteditable></code>
-      </section>
-      <section class="sub-section css hidden" data-content-id="css">
-        <p class="doc reverse-highlight"><small>Last updated: 3/03/15</small></p>
-        <code contenteditable></code>
-      </section>
-    </div>
-  </div>
+  <section class="sub-section html" data-content-id="html">
+    <p class="doc reverse-highlight"><small>Last updated: 3/03/15</small></p>
+    <code contenteditable></code>
+  </section>
 </div>
-
 
 <div class="sub-section" id="custom-tables">
 	<h2 class="doc sub-title">Customizing Tables</h2>
@@ -258,83 +242,57 @@
 	 </section>
 	</section>
 	
-	<h3 class="doc">Adding Cell Graphics</h3>
-	<div class="example">
-		<table class="playlist no-text-wrap">
-	    <tbody>
-	      <tr>
-	      	<th>Fav</th>
-	        <th>Song Title</th>
-	        <th>Artist</th>
-	        <th>Album</th>
-	        <th>Time</th>
-	      </tr>
-	      <tr>
-		      <td class="fav-song"></td>
-	        <td>After The Storm</td>
-	        <td>Mumford &amp; Sons</td>
-	        <td>Sigh No More</td>
-	        <td>4:07</td>
-	      </tr>
-	      <tr>
-		      <td></td>
-	        <td>Au Revoir</td>
-	        <td>OneRepublic</td>
-	        <td>Native (Deluxe) [+digital booklet]</td>
-	        <td>4:50</td>	
-	      </tr>
-	      <tr>
-		      <td class="playing"></td>
-	        <td>Bad Blood</td>
-	        <td>Bastille</td>
-	        <td>Bad Blood</td>
-	        <td>3:32</td>
-	      </tr>
-	      <tr>
-	      	<td class="dancing"></td>
-	        <td>Cheap Clothes</td>
-	        <td>Whitley</td>
-	        <td>The Submarine</td>
-	        <td>3:40</td>
-	      </tr>
-      </tbody>
-    </table>
-	</div>
-	<p class="doc"><strong>HTML Symbols:</strong> To add an HTML symbol to a cell, add a class to the cell and use the <span class="inline-code">:before</span> :pseudo selector and <span class="inline-code">content</span> property. Symbols in CSS must use their Hex reference and be escaped with a leading "\".</p>
-	<code contenteditable><pre><span class="comment">// Selects the first cell in each row of the body of the table</span>
-<span class="comment">// and applies a tinted empty star symbol</span>
-.playlist tbody td:first-of-type:before {
-  <span class="orange-viv">content: "\2606";</span>
-  color: rgba(255,255,255,.2);
-}
+	<section id="custom-cell-graphics">
+		<h3 class="doc">Adding Cell Graphics</h3>
+		<div class="example">
+			<table class="playlist no-text-wrap">
+		    <tbody>
+		      <tr>
+		      	<th>Fav</th>
+		        <th>Song Title</th>
+		        <th>Artist</th>
+		        <th>Album</th>
+		        <th>Time</th>
+		      </tr>
+		      <tr>
+			      <td class="fav-song"></td>
+		        <td>After The Storm</td>
+		        <td>Mumford &amp; Sons</td>
+		        <td>Sigh No More</td>
+		        <td>4:07</td>
+		      </tr>
+		      <tr>
+			      <td></td>
+		        <td>Au Revoir</td>
+		        <td>OneRepublic</td>
+		        <td>Native (Deluxe) [+digital booklet]</td>
+		        <td>4:50</td>	
+		      </tr>
+		      <tr>
+			      <td class="playing"></td>
+		        <td>Bad Blood</td>
+		        <td>Bastille</td>
+		        <td>Bad Blood</td>
+		        <td>3:32</td>
+		      </tr>
+		      <tr>
+		      	<td class="dancing"></td>
+		        <td>Cheap Clothes</td>
+		        <td>Whitley</td>
+		        <td>The Submarine</td>
+		        <td>3:40</td>
+		      </tr>
+	      </tbody>
+	    </table>
+		</div>
+		<section id="html-symbols">
+			<p class="doc"><strong>HTML Symbols:</strong> To add an HTML symbol to a cell, add a class to the cell and use the <span class="inline-code">:before</span> :pseudo selector and <span class="inline-code">content</span> property. Symbols in CSS must use their Hex reference and be escaped with a leading "\".</p>
+			<code contenteditable></code>
+		</section>
 
-<span class="comment">// Selects the first cell in each row with class "fav-song"</span>
-<span class="comment">// and applies a solid orange star symbol</span>
-.playlist td:first-of-type.fav-song:before {
-  <span class="orange-viv">content: "\2605";</span>
-  color: #fe9c00;
-}</pre></code>
-
-<p class="doc"><strong>Background Images:</strong> To add a background image to a cell, apply a class and use the <span class="inline-code">background-image</span> property. Be sure to override any <span class="inline-code">content</span> symbols being added.</p>
-<code contenteditable><pre><span class="comment">// Adds a background gif to the cells with the class "playing" and "dancing"</span>
-.playing {
-  <span class="orange-viv">background-image: url(../images/eq.gif);</span>
-}
-
-.dancing {
-  <span class="orang-viv">background-image: url(../images/banana.gif);</span>
-  background-size: auto 100%;
-}
-
-.playing, .dancing {
-  background-repeat: no-repeat;
-  background-position: left center;
-}
-
-<span class="comment">// Overrides the default empty star from the previous example for cells with class "playing"</span>
-.playlist tbody td.dancing:before,
-.playlist tbody td.playing:before {
-  <span class="orange-viv">content: none;</span>
-}</pre></code>
-	</div>
+		<section id="cell-images">
+			<p class="doc"><strong>Background Images:</strong> To add a background image to a cell, apply a class and use the <span class="inline-code">background-image</span> property. Be sure to override any <span class="inline-code">content</span> symbols being added.</p>
+			<code contenteditable></code>
+		</section>
+	</section>
 </div>
