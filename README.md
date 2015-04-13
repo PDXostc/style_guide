@@ -5,7 +5,7 @@ CSS and HTML templating for commonly used elements along with guidelines for web
 
 ## Releases
 
-### release-1.1
+### release-1.1.0
 
 ##### New
 
@@ -22,7 +22,7 @@ CSS and HTML templating for commonly used elements along with guidelines for web
 * Fixes display issues in Firefox with fonts and flexboxes
 * Adds documentation regarding imports not loading in Firefox
 
-### release-1.0
+### release-1.0.0
 
 ##### New
 
