@@ -1,21 +1,44 @@
 $(document).ready(function() {
 
-  function jumpToAnchor(href) {
-    $('html, body').animate({
-      scrollTop: $(href).offset().top
+  function jumpToAnchor(anchor) {
+    var scrollPos = $("#main-content").scrollTop();
+    var offset = $(anchor).offset().top;
+    var topNavHeight = document.getElementById("sg-top-bar").offsetHeight;
+    var scrollAmount = scrollPos + offset - topNavHeight - 20;
+    $('#main-content').animate({
+      scrollTop: scrollAmount
     }, 500, "easeOutQuint");
   };
   
   // controls scrolling when clicking nav items or back-to-top icon
-  $(document).on("click", "nav a, .back-to-top a", function() {
+  $(document).on("click", "nav a", function(e) {
+    e.preventDefault();
     var documentName = $.attr(this, 'href');
     jumpToAnchor(documentName);
+  });
+
+  // controls scrolling when clicking back-to-top icon
+  $(document).on("click", ".back-to-top a", function(e) {
+    e.preventDefault();
+    var documentName = $.attr(this, 'href');
+    $('#main-content').animate({
+      scrollTop: 0
+    }, 500, "easeOutQuint");
   });
 
   // controls toggling of nav sub-menus
   $(document).on("click", ".contents-list > li > a", function() {
   	$(this).next().slideToggle();
     $(this).parent().siblings().find("ul").slideUp();
+  });
+
+  // Controls drop shadow display of #sg-top-bar
+  $("#main-content").scroll(function() {
+    if ($(this).scrollTop() > 0) {
+      $("#sg-top-bar").addClass("scrolled");
+    } else {
+      $("#sg-top-bar").removeClass("scrolled");
+    }
   });
 
   // switch control
@@ -75,15 +98,6 @@ $(document).ready(function() {
   $("#settings-button").on("click", function() {
     $("#settings").toggleClass("collapsed");
   });
-
-  // $(document).on("mousedown", ".slider-channel", function() {
-  //   $(this).on("mousemove", function(){
-  //     var sliderVal = $(this).val();
-  //     console.log(sliderVal);
-  //     var fillBar;
-  //     $(".slider-channel::-webkit-slider-runnable-track::before").css("width", sliderVal);
-  //   });
-  // });
 
   // close settings
   $("#settings .close-button").on("click", function() {
