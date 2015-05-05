@@ -72,17 +72,21 @@
 
 #main {
   display: flex;
+  display: -webkit-flex;
   flex: 1;
+  -webkit-flex: 1;
   min-width: 1080px;
 }
 
 /* Flex Modifiers *****************************************/
 
 .flex-pattern-1-2 :nth-child(1) {
+  -webkit-flex: 1;
   flex: 1;
 }
 
 .flex-pattern-1-2 :nth-child(2) {
+  -webkit-flex: 2;
   flex: 2;
 }
 
@@ -103,6 +107,9 @@ body::-webkit-scrollbar {
 
 .inner {
   display: flex;
+  display: -webkit-flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
   margin: 0 auto;
   padding: 0;
   width: inherit;
@@ -118,6 +125,7 @@ body::-webkit-scrollbar {
   max-width: 780px;
   padding: 20px;
   flex: 5;
+  -webkit-flex: 5;
 }
 
 hr {
@@ -141,6 +149,7 @@ nav {
 #table-of-contents {
   -webkit-columns: 4;
   -moz-columns: 4;
+  columns: 4;
 }
 
 #main-content #table-of-contents.doc li {
@@ -185,6 +194,7 @@ nav li li li {
 
 .nav-panel {
   flex: 1;
+  -webkit-flex: 1;
   min-width: 240px;
 }
 
@@ -303,29 +313,37 @@ article {
 
 .level-25 {
   flex-basis: 25%;
+  -webkit-flex-basis: 25%;
 }
 
 .level-50 {
   flex-basis: 50%;
+  -webkit-flex-basis: 50%;
 }
 
 .level-100 {
   flex-basis: 100%;
+  -webkit-flex-basis: 100%;
 }
 
 /* Colors *************************************************/
 
 .swatch {
   flex: 1;
+  -webkit-flex: 1;
   display: flex;
+  display: -webkit-flex;
   flex-direction: column;
+  -webkit-flex-direction: column;
   justify-content: flex-end;
+  -webkit-justify-content: flex-end;
   margin-bottom: 20px;
   height: 200px;
 }
 
 .color-info {
   flex: 0 1 23%;
+  -webkit-flex: 0 1 23%;
 }
 
 .color-info p {
@@ -337,7 +355,9 @@ article {
 .rgb-details {
   border-bottom: 1px solid rgba(0,0,0,0.25);
   display: flex;
+  display: -webkit-flex;
   justify-content: space-between;
+  -webkit-justify-content: space-between;
   padding: 5px 0;
 }
 
@@ -579,16 +599,19 @@ table .highlight-cell {
 
 .playlist tr > th,
 .playlist tr > td {
-  flex:3;
+  flex: 3;
+  -webkit-flex: 3;
 }
 
 .playlist tr > :nth-child(2) {
-  flex:4;
+  flex: 4;
+  -webkit-flex: 4;
 }
 
 .playlist tr > :first-of-type,
 .playlist tr > :last-of-type {
   flex: 1;
+  -webkit-flex: 1;
 }
 
 .dkgrey-bg {
@@ -605,6 +628,7 @@ table .highlight-cell {
 
 .font-styles-map tr :first-child {
   flex: 1;
+  -webkit-flex: 1;
 }
 
 .font-styles-map td,
@@ -654,10 +678,12 @@ table .highlight-cell {
 
 #scrolling-content table tr > :nth-child(1n) {
   flex: 1;
+  -webkit-flex: 1;
 }
 
 #scrolling-content table tr > :nth-child(n+2) {
   flex: 3;
+  -webkit-flex: 3;
 }
 
 /* Modifiers **********************************************/
@@ -687,6 +713,7 @@ label.no-style {
 
 #vertical-sliders .example {
   flex-basis: 48%;
+  -webkit-flex-basis: 48%;
 }
 
 #demo-vertical-slider,
@@ -716,12 +743,15 @@ label.no-style {
 
 #settings-layer {
   align-items: center;
+  -webkit-align-items: center;
   justify-content: center;
+  -webkit-justify-content: center;
 }
 
 #app-grid-layer:after, 
 #settings-layer:after {
   -webkit-transform: rotate(0deg);
+  transform: rotate(0deg);
   color: rgba(255, 255, 255, .5);
   font-size: 7rem;
   text-transform: uppercase;
@@ -772,6 +802,7 @@ label.no-style {
 
 #add-another-icon {
   justify-content: center;
+  -webkit-justify-content: center;
 }
 
 #add-another-icon p {
