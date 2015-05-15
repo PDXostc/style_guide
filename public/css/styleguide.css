@@ -130,6 +130,7 @@ body::-webkit-scrollbar {
   padding: 20px;
   flex: 5;
   -webkit-flex: 5;
+  overflow-y: auto; 
 }
 
 hr {
