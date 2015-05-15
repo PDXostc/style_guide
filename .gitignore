@@ -1,2 +1,4 @@
 
-public/images
+public/images/*
+
+!public/images/repo_images/
