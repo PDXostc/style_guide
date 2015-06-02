@@ -846,6 +846,8 @@ label.no-style {
   justify-content: space-between;
   -webkit-align-items: flex-end;
   align-items: flex-end;
+  flex: 0 0 100%;
+  -webkit-flex: 0 0 100%;
 }
 
 #sg-top-bar h1 {
