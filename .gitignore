@@ -1,4 +1,14 @@
-
 public/images/*
 
-!public/images/repo_images/
+!public/images/banana.gif
+!public/images/eq.gif
+!public/images/ftype_incontrol.jpg
+!public/images/hex_thumb_white_horz.png
+!public/images/hex_thumb_white_vert.png
+!public/images/scroll_button_down_arrow_white.png
+!public/images/scroll_button_left_arrow_white.png
+!public/images/scroll_button_right_arrow_white.png
+!public/images/scroll_button_up_arrow_white.png
+!public/images/switchplate_control.svg
+!public/images/switchplate_off.svg
+!public/images/switchplate_on.svg
