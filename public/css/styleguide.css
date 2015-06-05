@@ -207,6 +207,8 @@ nav li li li {
 .nav-panel {
   flex: 0 0 240px;
   -webkit-flex: 0 0 240px;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .nav-menus {
@@ -222,7 +224,7 @@ nav li li li {
   min-width: inherit;
 }
 
-.nav-panel .contents-list > li > ul {
+.nav-panel .contents-list > li ul {
   display: none;
 }
 
