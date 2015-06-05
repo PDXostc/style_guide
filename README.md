@@ -1,50 +1,21 @@
 StyleGuide
 ==========
 
-CSS and HTML templating for commonly used elements along with guidelines for web standards.
+## Introduction
+---
+The Style Guide provides design guidelines, code, and best practices for implementing a consistent user interface across the AGL open application suite.
 
-## Releases
+## Maintainers
+---
+The primary maintainer of the project is Marco Morales.
+He can be contacted at mmorale1@jaguarlandrover.com
 
-### release-1.1.0
+## Dependencies
+---
+To run the software, the project requires the following:
+* A local webserver ([WAMP (WIN)](http://www.wampserver.com/en/), [MAMP(OSX)](https://www.mamp.info/en/), [Pow (OSX)](http://pow.cx/))
+* A browser (Chrome browser preferred)
 
-##### New
-
-* Adds Modifier Classes Section
-* Adds vertical sliders
-* Adds button-controlled version of vertical sliders
-
-##### Updates
-
-* Removes CSS snippets that have been merged into the codebase
-
-##### Fixes
-
-* Fixes display issues in Firefox with fonts and flexboxes
-* Adds documentation regarding imports not loading in Firefox
-
-### release-1.0.0
-
-##### New
-
-Initial release includes the following sections:
-* About This Guide
-* How-to-use-this-guide Section
-* Typography
-* Colors
-* Boxes (module variations)
-* Controls with:
-  * Buttons
-  * Horizontal Sliders
-  * Button-controlled Sliders
-  * Vertical Sliders
-  * Switches (toggles)
-* Forms (text inputs only)
-* Tables
-* Scrolling Content
-* Touch-Action behavior
-* CSS and HTML coding guidelines
-* HTML demo
-
-Also includes:
-* JS content and snippet loader
-* Source Sans Pro and Source Code Pro fonts
+## Contributing
+------------
+If you would like to contribute to the project, please fork into your github account. Develop your code changes, test and commit. Issue a pull request to the [pdxostc/style_guide](https://github.com/PDXostc/style_guide). The pull request will go through the review process at GerritHub and merged, or rejected if necessary.
