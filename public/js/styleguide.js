@@ -27,8 +27,9 @@ $(document).ready(function() {
   });
 
   // controls toggling of nav sub-menus
-  $(document).on("click", ".contents-list > li > a", function() {
+  $(document).on("click", ".contents-list li > a", function() {
   	$(this).next().slideToggle();
+    $(this).parent().find("ul ul").slideUp();
     $(this).parent().siblings().find("ul").slideUp();
   });
 
