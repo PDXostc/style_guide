@@ -374,7 +374,7 @@ input[type='button'] {
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100% 100%;
-  background-image: url(../images/switchplate_control.svg);
+  background-image: url('../images/switchplate_control.svg');
 } 
 
 /* On/Off Styles for Background Plate */
@@ -382,14 +382,14 @@ input[type='button'] {
 .off .switch-plate {
   padding-left: 10%;
   padding-right: 0 !important; 
-  background-image: url(../images/switchplate_off.svg);
+  background-image: url('../images/switchplate_off.svg');
   justify-content: flex-start;
 }
 
 .on .switch-plate {
   padding-right: 10%;
   padding-left: 0 !important; 
-  background-image: url(../images/switchplate_on.svg);
+  background-image: url('../images/switchplate_on.svg');
   justify-content: flex-end;
 }
 
@@ -571,7 +571,7 @@ and other form content. Best used on block elements (eg. div) */
 
 .horizontal-slider .slider-input::-webkit-slider-thumb {
   -webkit-filter: drop-shadow(.05em .05em .05em rgba(0,0,0,.25));
-  background-image: url(../images/hex_thumb_white_vert.png);
+  background-image: url('../images/hex_thumb_white_vert.png');
   background-repeat: no-repeat;
   background-size: .85em;
   background-position: center;
@@ -605,7 +605,7 @@ and other form content. Best used on block elements (eg. div) */
 
 .vertical-slider .slider-input::-webkit-slider-thumb:before {
   -webkit-filter: drop-shadow(.05em .05em .05em rgba(0,0,0,.25));
-  background-image: url(../images/hex_thumb_white_horz.png);
+  background-image: url('../images/hex_thumb_white_horz.png');
   background-position: center bottom;
   background-repeat: no-repeat;
   background-size: 1em;
@@ -863,22 +863,22 @@ ul, ol {
 
 .scrollbar-x::-webkit-scrollbar-button:start,
 .scrollbar-xy::-webkit-scrollbar-button:horizontal:start {
-  background-image: url(../images/scroll_button_left_arrow_white.png);
+  background-image: url('../images/scroll_button_left_arrow_white.png');
 }
 
 .scrollbar-x::-webkit-scrollbar-button:end,
 .scrollbar-xy::-webkit-scrollbar-button:horizontal:end {
-  background-image: url(../images/scroll_button_right_arrow_white.png);
+  background-image: url('../images/scroll_button_right_arrow_white.png');
 }
 
 .scrollbar-y::-webkit-scrollbar-button:start,
 .scrollbar-xy::-webkit-scrollbar-button:vertical:start {
-  background-image: url(../images/scroll_button_up_arrow_white.png);
+  background-image: url('../images/scroll_button_up_arrow_white.png');
 }
 
 .scrollbar-y::-webkit-scrollbar-button:end,
 .scrollbar-xy::-webkit-scrollbar-button:vertical:end {
-  background-image: url(../images/scroll_button_down_arrow_white.png);
+  background-image: url('../images/scroll_button_down_arrow_white.png');
 }
 
 .scrollable-x::-webkit-scrollbar-corner,  
