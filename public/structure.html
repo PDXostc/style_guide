@@ -1,0 +1,69 @@
+  <h1 class="section-title">Structure
+    <span class="back-to-top"><a href="#top" class="fa fa-chevron-up"></a></span>
+  </h1>
+  <p class="doc notice">This section is work in progress.</p>
+  <article>
+    <p class="doc">This HTML structure provides a flexible, layered layout for the entire application suite. It places the DOM elements in a specific stacking order based on agreed design. Each element in the document serves as a "housing" where specific components, content, and applications can be loaded.</p>
+
+    <div class="tabs-component">
+      <!-- Tabs -->
+      <div class="tabs-labels">
+        <div class="tab-item active" data-content-id="diagram">Diagram</div>
+        <div class="tab-item" data-content-id="html">HTML</div>
+        <div class="tab-item" data-content-id="css">CSS</div>
+      </div>
+      <!-- Tabs content -->
+      <div class="tabs-content">
+        <!-- Structure Diagram -->
+        <section class="sub-section html-diagram" data-content-id="diagram">
+          <img src="images/html_structure_diagram.jpg">
+        </section>
+        <!-- Structure HTML -->
+        <section class="sub-section html-complete hidden" data-content-id="html">
+          <p class="doc reverse-highlight"><small>Last updated: 3/03/15</small></p>
+          <code></code>
+        </section>
+        <!-- Structure CSS -->
+        <section class="sub-section css hidden" data-content-id="css">
+          <p class="doc notice">Needs update.</p>
+          <code contenteditable></code>
+        </section>
+      </div>
+    </div>
+
+    <section id="structure-html" class="sub-section">
+      <h2 class="sub-title doc">The HTML</h2>
+
+      <!-- Structure Body -->
+      <section>
+        <p class="doc">The HTML body is divided into 3 primary containers:</p>
+        <div class="flex-parent flex-pattern-1-2 html-body">
+          <div>
+            <ul class="doc">
+              <li>#top-bar</li>
+              <li>#center-panel</li>
+              <li>#bottom-bar</li>
+            </ul>
+          </div>
+          <div><code></code></div>
+        </div>
+      </section>
+
+      <!-- Structure Center Panel -->
+      <section>
+        <p class="doc">The #center-panel contains:</p>
+        <div class="flex-parent flex-pattern-1-2 html-center-panel">
+          <div>
+            <ul class="doc">
+              <li>#app-layer</li>
+              <li>#modal-layer</li>
+              <li>#settings-layer</li>
+              <li>#app-grid-layer</li>
+              <li>#alerts-layer</li>
+            </ul>
+          </div>
+          <div><code></code></div>
+        </div>
+      </section>
+    </section>
+  </article>

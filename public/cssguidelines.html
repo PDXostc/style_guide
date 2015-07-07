@@ -1,0 +1,410 @@
+<h1 class="section-title">CSS Guidelines <span class="back-to-top"><a href="#top" class="fa fa-chevron-up"></a></span></h1>
+<h2 class="doc sub-title">General Guidelines</h2>
+<ul class="doc">
+  <li>Write style rules in CSS files. Avoid writing embedded, or inline CSS.</li>
+  <li>Load app-specific style sheet last in the stack.</li>
+  <li>The <span class="inline-code">:hover</span> selector should not be used as <span class="inline-code">:hover</span> does not apply to touchscreens.</li>
+  <li>Use flex properties, where applicable, to dynamically size content to available space.</li>
+  <li>Use relative units, where possible, over absolute units in property values.</li>
+</ul>
+
+<h2 class="doc">Z-indexing</h2>
+<p class="doc">Z-index is a property that allows for stacking elements in the direction of the user. The primary use in UI design for z-index is to display overlapping elements.</p>
+<ul class="doc">
+  <li>Only use to overlay elements on top of others on the z-axis.</li>
+  <li>Only use when the document flow order cannot be changed.</li>
+  <li>Infinite or arbitrary z-indexing should not be used. (eg. z-index: 9999)</li>
+  <li>Start with a base value of "1" and move up in increments of 1 as needed.</li>
+  <li>Z-indexing should be combined with absolute positioning (absolute, fixed) on one of the elements within the group of overlapping elements.</li>
+</ul>
+<h5 class="doc">Reference:</h5>
+<p class="doc"><a href="http://philipwalton.com/articles/what-no-one-told-you-about-z-index/" class="external-link">philipwalton.com/articles/what-no-one-told-you-about-z-index/</a></p>
+<p class="doc"><a href="http://webdesign.tutsplus.com/articles/what-you-may-not-know-about-the-z-index-property--webdesign-16892" class="external-link">webdesign.tutsplus.com/articles/what-you-may-not-know-about-the-z-index-property</a></p>
+
+<h2 class="doc">Class and ID Naming</h2>
+<p class="doc">Excerpted from <a class="orange-viv" href="https://google-styleguide.googlecode.com/svn/trunk/htmlcssguide.xml#ID_and_Class_Name_Delimiters">Google HTML/CSS Style Guide > ID and Class Name Delimiters</a></p>
+<p class="doc"><strong>Separate words in ID and class names by a hyphen.</strong> Do not concatenate words and abbreviations in selectors by any characters (including none at all) other than hyphens, in order to improve understanding and scannability.</p>
+<code class="bad"><pre><span class="comment">/* Not recommended: does not separate the words “demo” and “image” */</span>
+.demoimage {}
+
+<span class="comment">/* Not recommended: uses underscore instead of hyphen */</span>
+.error_status {}
+
+<span class="comment">/* Not recommended: uses camelCase instead of hyphen, hard to read */</span>
+.hexSliderButton {}</pre></code>
+<code class="good"><pre><span class="comment">/* Recommended */</span>
+#video-id {}
+.ads-sample {}</pre></code>
+
+<h2 class="doc sub-title">CSS Formatting</h2>
+<p class="doc">Excerpted from <a class="orange-viv" href="https://google-styleguide.googlecode.com/svn/trunk/htmlcssguide.xml#CSS_Formatting_Rules">Google HTML/CSS Style Guide > CSS Formatting Rulles</a></p>
+
+<ul class="doc">
+  <li>Use only lowercase
+  <code class="bad"><pre><span class="comment">/* Not recommended */</span>
+color: #E5E5E5;</pre></code>
+<code class="good"><pre><span class="comment">/* Recommended */</span>
+color: #e5e5e5;</pre></code>
+  </li>
+  <li>Sorting declarations
+    <code><pre><span class="comment">/* Fonts & Text */</span>
+    "font",
+    "font-family",
+    "font-size",
+    "font-weight",
+    "font-style",
+    "font-variant",
+    "font-size-adjust",
+    "font-stretch",
+    "font-effect",
+    "font-emphasize",
+    "font-emphasize-position",
+    "font-emphasize-style",
+    "font-smooth",
+    "src",
+    "color",
+    "line-height",
+    "text-align",
+    "-webkit-text-align-last",
+    "-moz-text-align-last",
+    "text-align-last",
+    "white-space",
+    "text-decoration",
+    "text-emphasis",
+    "text-emphasis-color",
+    "text-emphasis-style",
+    "text-emphasis-position",
+    "text-indent",
+    "text-justify",
+    "letter-spacing",
+    "word-spacing",
+    "text-shadow"
+    "text-outline",
+    "text-transform",
+    "text-wrap",
+    "text-overflow",
+    "text-overflow-ellipsis",
+    "text-overflow-mode",
+    "word-wrap",
+    "word-break",
+    "-webkit-box-orient",
+    "-webkit-line-clamp",
+
+<span class="comment">/* Positioning */</span>
+    "position",
+    "z-index",
+    "top",
+    "right",
+    "float",
+    "clear",
+    "clip",
+
+<span class="comment">/* Display & Box Model */</span>
+    "width",
+    "min-width",
+    "max-width",
+    "height",
+    "min-height",
+    "max-height",
+    "margin",
+    "margin-top",
+    "margin-right",
+    "margin-bottom",
+    "margin-left",
+    "padding",
+    "padding-top",
+    "padding-right",
+    "padding-bottom",
+    "padding-left",
+    "top",
+    "right",
+    "bottom",
+    "left",
+    "display",
+    "-webkit-box-sizing",
+    "-moz-box-sizing",
+    "box-sizing",
+    "-webkit-appearance",
+    "visibility",
+    "opacity",
+    "zoom",
+
+<span class="comment">/ * Appearance */</span>
+    "border",
+    "border-width",
+    "border-style",
+    "border-color",
+    "border-top",
+    "border-top-width",
+    "border-top-style",
+    "border-top-color",
+    "border-right",
+    "border-right-width",
+    "border-right-style",
+    "border-right-color",
+    "border-bottom",
+    "border-bottom-width",
+    "border-bottom-style",
+    "border-bottom-color",
+    "border-left",
+    "border-left-width",
+    "border-left-style",
+    "border-left-color",
+    "-webkit-border-radius",
+    "-moz-border-radius",
+    "border-radius",
+    "-webkit-border-top-left-radius",
+    "-moz-border-radius-topleft",
+    "border-top-left-radius",
+    "-webkit-border-top-right-radius",
+    "-moz-border-radius-topright",
+    "border-top-right-radius",
+    "-webkit-border-bottom-right-radius",
+    "-moz-border-radius-bottomright",
+    "border-bottom-right-radius",
+    "-webkit-border-bottom-left-radius",
+    "-moz-border-radius-bottomleft",
+    "border-bottom-left-radius",
+    "-webkit-border-image",
+    "-moz-border-image",
+    "-o-border-image",
+    "border-image",
+    "-webkit-border-image-source",
+    "-moz-border-image-source",
+    "-o-border-image-source",
+    "border-image-source",
+    "-webkit-border-image-slice",
+    "-moz-border-image-slice",
+    "-o-border-image-slice",
+    "border-image-slice",
+    "-webkit-border-image-width",
+    "-moz-border-image-width",
+    "-o-border-image-width",
+    "border-image-width",
+    "-webkit-border-image-outset",
+    "-moz-border-image-outset",
+    "-o-border-image-outset",
+    "border-image-outset",
+    "-webkit-border-image-repeat",
+    "-moz-border-image-repeat",
+    "-o-border-image-repeat",
+    "border-image-repeat",
+    "background",
+    "background-color",
+    "background-image",
+    "background-repeat",
+    "background-attachment",
+    "background-position",
+    "background-position-x",
+    "background-position-y",
+    "-webkit-background-clip",
+    "-moz-background-clip",
+    "background-clip",
+    "background-origin",
+    "-webkit-background-size",
+    "-moz-background-size",
+    "background-size",
+    "outline",
+    "outline-width",
+    "outline-style",
+    "outline-color",
+    "outline-offset",
+    "box-decoration-break",
+    "-webkit-box-shadow",
+    "-moz-box-shadow",
+    "box-shadow",
+
+<span class="comment">/* Scrolling */</span>
+    "overflow",
+    "overflow-x",
+    "overflow-y",
+    "-ms-overflow-x",
+    "-ms-overflow-y",
+    "touch-action",
+
+<span class="comment">/* Flexible Box Layout */</span>
+    "-webkit-flex",
+    "flex",
+    "-webkit-flex-grow",
+    "flex-grow",
+    "-webkit-flex-shrink",
+    "flex-shrink",
+    "-webkit-flex-basis",
+    "flex-basis",
+    "-webkit-flex-direction",
+    "flex-direction",
+    "-webkit-flex-order",
+    "flex-order",
+    "-webkit-flex-pack",
+    "flex-pack",
+    "-webkit-flex-align",
+    "flex-align",
+    "-webkit-flex-wrap",
+    "flex-wrap",
+    "-webkit-justify-content",
+    "justify-content",
+    "-webkit-align-items",
+    "align-items",
+    "-webkit-align-self",
+    "align-self",
+
+<span class="comment">/* Tables */</span>
+    "table-layout",
+    "empty-cells",
+    "caption-side",
+    "border-spacing",
+    "border-collapse",
+
+<span class="comment">/* Lists */</span>
+    "list-style",
+    "list-style-position",
+    "list-style-type",
+    "list-style-image",
+
+<span class="comment">/* Interaction */</span>
+    "cursor",
+    "-webkit-user-select",
+    "-moz-user-select",
+    "-ms-user-select",
+    "user-select",
+    "nav-index",
+    "nav-up",
+    "nav-right",
+    "nav-down",
+    "nav-left",
+
+<span class="comment">/* Transitions & Animations */</span>
+    "-webkit-transition",
+    "-moz-transition",
+    "transition",
+    "-webkit-transition-delay",
+    "-moz-transition-delay",
+    "transition-delay",
+    "-webkit-transition-timing-function",
+    "-moz-transition-timing-function",
+    "transition-timing-function",
+    "-webkit-transition-duration",
+    "-moz-transition-duration",
+    "transition-duration",
+    "-webkit-transition-property",
+    "-moz-transition-property",
+    "transition-property",
+    "-webkit-transform",
+    "-moz-transform",
+    "transform",
+    "-webkit-transform-origin",
+    "-moz-transform-origin",
+    "transform-origin",
+    "-webkit-animation",
+    "-moz-animation",
+    "animation",
+    "-webkit-animation-name",
+    "-moz-animation-name",
+    "animation-name",
+    "-webkit-animation-duration",
+    "-moz-animation-duration",
+    "animation-duration",
+    "-webkit-animation-play-state",
+    "-moz-animation-play-state",
+    "animation-play-state",
+    "-webkit-animation-timing-function",
+    "-moz-animation-timing-function",
+    "animation-timing-function",
+    "-webkit-animation-delay",
+    "-moz-animation-delay",
+    "animation-delay",
+    "-webkit-animation-iteration-count",
+    "-moz-animation-iteration-count",
+    "animation-iteration-count",
+    "-webkit-animation-direction",
+    "-moz-animation-direction",
+    "animation-direction",
+
+<span class="comment">/* Other */</span>
+    "content",
+    "quotes",
+    "counter-reset",
+    "counter-increment",
+    "resize",
+    "-moz-tab-size",
+    "-o-tab-size",
+    "tab-size",
+    "-webkit-hyphens",
+    "-moz-hyphens",
+    "hyphens",
+    "pointer-events",
+    "-webkit-filter",
+    "filter"</pre></code>
+  </li>
+  <li>Indent all block content
+  <code class="bad"><pre>html {
+background: #fff;
+color: #444;
+}</pre></code>
+  <code class="good"><pre>html {
+  background: #fff;
+  color: #444;
+}</pre></code>
+  </li>
+  <li>Use a semicolon after every declaration
+  <code class="bad"><pre><span class="comment">/* Not recommended */</span>
+.test {
+  display: block;
+  height: 100px
+}</pre></code>
+<code class="good"><pre><span class="comment">/* Recommended */</span>
+.test {
+  display: block;
+  height: 100px;
+}</pre></code>
+  </li>
+  <li>Use a space after a property name’s colon
+  <code class="bad"><pre><span class="comment">/* Not recommended */</span>
+h3 {
+  font-weight:bold;
+}</pre></code>
+<code class="good"><pre><span class="comment">/* Recommended */</span>
+h3 {
+  font-weight: bold;
+}</pre></code>
+  </li>
+  <li>Use a space between the last selector and the declaration block
+    <code class="bad"><pre><span class="comment">/* Not recommended: missing space */</span>
+#video{
+  margin-top: 1em;
+}
+
+<span class="comment">/* Not recommended: unnecessary line break */</span>
+#video
+{
+  margin-top: 1em;
+}</pre></code>
+    <code class="good"><pre><span class="comment">/* Recommended */</span>
+#video {
+  margin-top: 1em;
+}</pre></code>
+  </li>
+  <li>Separate selectors and declarations by new lines, and</li>
+  <li>Always start a new line for each selector and declaration
+  <code class="bad"><pre><span class="comment">/* Not recommended */</span>
+a:focus, a:active {
+  position: relative; top: 1px;
+}</pre></code>
+  <code class="good"><pre><span class="comment">/* Recommended */</span>
+h1,
+h2,
+h3 {
+  font-weight: normal;
+  line-height: 1.2;
+}</pre></code>
+  </li>
+  <li>Separate rules by new lines
+  <code class="good"><pre>html {
+  background: #fff;
+}
+
+body {
+  margin: auto;
+  width: 50%;
+}</pre></code></li>
+</ul>

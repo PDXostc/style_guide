@@ -1,0 +1,922 @@
+/* Tables *************************************************/
+
+table {
+  width: 100%;
+  background-color: transparent;
+  border-collapse: collapse;
+}
+
+th, td {
+  color: white;
+  font-size: 2rem;
+  text-align: left;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+th.no-flex,
+td.no-flex {
+  display: table-cell;
+}
+
+th {
+  font-weight: 100;
+  justify-content: flex-end;
+}
+
+td {
+  font-weight: 100;
+  justify-content: flex-start;
+}
+
+table tr {
+  display: flex;
+}
+
+tr:nth-child(even) {
+  background-color: rgba(255,211,140,.1);
+}
+
+table tr > :nth-child(1n) {
+  flex: 2;
+}
+
+table tr > :nth-child(n+2) {
+  flex: 1;
+}
+
+table.no-text-wrap td {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  /*display: -webkit-box;*/
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}
+
+/* Buttons ************************************************/
+
+button,
+.button-inshadow,
+.button-outshadow,
+.button-outline,
+.button-infill,
+input[type='button'] {
+  color: white;
+  position: relative;
+  display: inline-block;
+  font-size: 3rem;
+  font-weight: 600;
+  font-family: inherit;
+  padding: 8px 20px 12px;
+  margin: 20px;
+  border-width: 1px;
+  border-style: solid;
+  background-color: rgba(0, 0, 0, .8);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Button Colors */
+
+.button-orange {
+  color: #FE9C00;
+  border-color: rgba(254, 156, 0, 0.5);
+}
+
+.button-blue {
+  color: #b2f0ff;
+  border-color: rgba(178, 240, 255, 0.5);
+}
+
+.button-green {
+  color: #cdffb2;
+  border-color: rgba(205, 255, 178, 0.5);
+}
+
+.button-yellow {
+  color: #ffffb2;
+  border-color: rgba(255, 255, 178, 0.5); 
+}
+
+/* Button Inshadow */
+
+.button-inshadow {
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, .5);
+}
+
+.button-inshadow.button-orange {
+  border-color: rgba(254, 156, 0, 0.5);
+  box-shadow: inset 0 0 20px rgba(254, 156, 0, 0.5);
+}
+
+.button-inshadow.button-blue {
+  border-color: rgba(178, 240, 255, 0.5);
+  box-shadow: inset 0 0 20px rgba(178, 240, 255, 0.5);
+}
+
+.button-inshadow.button-green {
+  border-color: rgba(205, 255, 178, 0.5);
+  box-shadow: inset 0 0 20px rgba(89, 255, 0, 0.5);
+}
+
+.button-inshadow.button-yellow {
+  border-color: rgba(255, 255, 178, 0.5);
+  box-shadow: inset 0 0 20px rgba(255, 255, 0, 0.5);
+}
+
+/* Button Outshadow */
+
+.button-outshadow {
+  box-shadow: 0 0 20px rgba(255, 255, 255, .5);
+}
+
+.button-outshadow.button-orange {
+  box-shadow: 0 0 20px rgba(254, 156, 0, .5);
+}
+
+.button-outshadow.button-blue {
+  box-shadow: 0 0 20px rgba(178, 240, 255, .5);
+}
+
+.button-outshadow.button-green {
+  box-shadow: 0 0 20px rgba(89, 255, 0, 0.5);
+}
+
+.button-outshadow.button-yellow {
+  box-shadow: 0 0 20px rgba(255, 255, 0, .5);
+}
+
+/* Button Infill */
+
+.button-infill.button-yellow {
+  background-color: rgba(255, 255, 0, .8);
+}
+
+.button-infill.button-orange {
+  background-color: rgba(254, 156, 0, .8);
+}
+
+.button-infill.button-blue {
+  background-color: rgba(83, 181, 206, .8);
+}
+
+.button-infill.button-green {
+  background-color: rgba(89, 255, 0, .7);
+}
+
+.button-infill {
+  color: rgba(255, 255, 255, .8);
+  background-color: rgba(128, 128, 128, .8);
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 1), inset 0 0 6em 2em rgba(0, 0, 0, .5);
+}
+
+/* Clear Button */
+
+.clear-button::after { 
+  margin-left: -50px; 
+  content: "\00d7";
+  line-height: 100px;
+  font-size: 5rem;
+  color: gray; 
+}
+
+
+/* Boxes and Modules **************************************/
+
+.box-outline,
+.box-inshadow,
+.box-outshadow,
+.box-infill {
+  color: #fe9c00;
+  padding: 20px;
+  margin: 20px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(0, 0, 0, .8);
+}
+
+.box-inshadow {
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, .5);
+}
+
+.box-outshadow {
+  box-shadow: 0 0 20px rgba(255, 255, 255, .5);
+}
+
+.box-infill {
+  color: rgba(255, 255, 255, .8);
+  background-color: rgba(128, 128, 128, .8);
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 1), inset 0 0 6em 2em rgba(0, 0, 0, .5);
+}
+
+.box-header {
+  background-color: transparent;
+  padding: 20px;
+  margin: -20px -20px 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  color: inherit;
+  border-color: inherit;
+}
+
+.box-content {
+  padding: 20px;
+  margin: -20px;
+}
+
+.box-title {
+  margin: 0;
+  color: inherit;
+}
+
+/* Yellow */
+
+.box-yellow,
+.box-in-yellow,
+.box-out-yellow {
+  color: #ffffb2;
+  border-color: rgba(255, 255, 178, 0.5);
+}
+
+.box-in-yellow {
+  box-shadow: inset 0 0 20px rgba(255, 255, 0, .5);
+}
+
+.box-out-yellow {
+  box-shadow: 0 0 20px rgba(255, 255, 0, .5);
+}
+
+.box-infill-yellow {
+  background-color: rgba(255, 255, 0, .8);
+}
+
+/* Orange */
+
+.box-orange,
+.box-in-orange,
+.box-out-orange {
+  color: #FE9C00;
+  border-color: rgba(254, 156, 0, 0.5);
+}
+
+.box-in-orange {
+  box-shadow: inset 0 0 20px rgba(254, 156, 0, .5);
+}
+
+.box-out-orange {
+  box-shadow: 0 0 20px rgba(254, 156, 0, .5);
+}
+
+.box-infill-orange {
+  background-color: rgba(254, 156, 0, .8);
+}
+
+/* Blue */
+
+.box-blue,
+.box-in-blue,
+.box-out-blue {
+  color: #b2f0ff;
+  border-color: rgba(178, 240, 255, 0.5);
+}
+
+.box-in-blue {
+  box-shadow: inset 0 0 20px rgba(178, 240, 255, .5);
+}
+
+.box-out-blue {
+  box-shadow: 0 0 20px rgba(178, 240, 255, .5);
+}
+
+.box-infill-blue {
+  background-color: rgba(83, 181, 206, .8);
+}
+
+/* Green */
+
+.box-green,
+.box-in-green,
+.box-out-green {
+  color: #cdffb2;
+  border-color: rgba(205, 255, 178, 0.5);
+}
+
+.box-in-green {
+  box-shadow: inset 0 0 20px rgba(205, 255, 178, .5);
+}
+
+.box-out-green {
+  box-shadow: 0 0 20px rgba(205, 255, 178, .5);
+}
+
+.box-infill-green {
+  background-color: rgba(89, 255, 0, .7);
+}
+
+/* Switches ***********************************************/
+
+.switch {
+  margin: 20px;
+}
+
+/* Sizes for varying switches */
+
+.switch-large {
+  width: 300px;
+  height: 150px;
+} 
+
+.switch-large .switch-control {
+  -webkit-filter: drop-shadow(8px 8px 8px rgba(0,0,0,0.35));
+}
+
+.switch-medium {
+  width: 210px;
+  height: 105px;
+}
+
+.switch-medium .switch-control {
+  -webkit-filter: drop-shadow(5px 5px 5px rgba(0,0,0,0.35));
+}
+
+.switch-small {
+  width: 150px;
+  height: 75px;
+}
+
+.switch-small .switch-control {
+  -webkit-filter: drop-shadow(4px 4px 4px rgba(0,0,0,0.35));
+}
+
+.switch-xsmall {
+  width: 100px;
+  height: 50px;
+}
+
+.switch-xsmall .switch-control {
+  -webkit-filter: drop-shadow(2px 2px 2px rgba(0,0,0,0.35));
+}
+
+.switch-plate {
+  background-repeat: no-repeat;
+  background-size: 100%;
+  box-sizing: border-box;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.switch-control {
+  height: 80%;
+  width: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+  background-image: url('../images/switchplate_control.svg');
+} 
+
+/* On/Off Styles for Background Plate */
+
+.off .switch-plate {
+  padding-left: 10%;
+  padding-right: 0 !important; 
+  background-image: url('../images/switchplate_off.svg');
+  justify-content: flex-start;
+}
+
+.on .switch-plate {
+  padding-right: 10%;
+  padding-left: 0 !important; 
+  background-image: url('../images/switchplate_on.svg');
+  justify-content: flex-end;
+}
+
+/* Close button */
+
+.close-button::after {
+  content: "\00d7";
+  width: 60px;
+  height: 60px;
+  color: white;
+  font-size: 5rem;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  line-height: 5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Forms */
+
+/* Text Inputs */
+
+.text-input {
+  font-size: 3rem; 
+  color: rgba(255,255,255,.8);
+  padding: 20px;
+  margin: 10px;
+  border: none;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+input,
+textarea,
+.text-input {
+  font-family: inherit;
+}
+
+::-webkit-input-placeholder,
+::-moz-placeholder {
+   color: #444;
+}
+
+label {
+  text-transform: uppercase;
+  color: #fe9c00;
+  display: block;
+}
+
+label,
+.text-input {
+  margin: 10px;
+}
+
+.text-input:focus {
+  outline: none;
+  color: white;
+  box-shadow: 0 0 20px rgba(255,255,255,.8);
+}
+
+/* .input-group: A wrapper for grouping input fields, labels
+and other form content. Best used on block elements (eg. div) */ 
+
+.input-group label.left-label {
+  justify-content: flex-start;
+}
+
+.input-group label {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  text-align: right;
+}
+
+.input-group {
+  display: flex;
+  justify-content: space-between;
+} 
+
+.input-group .text-input { 
+  flex: 2;
+}
+
+/* Colorized text inputs*/
+
+.input-yellow {
+  color: rgba(255, 255, 178, 0.8);
+}
+
+.input-yellow:focus {
+  color: #ffffb2;
+  box-shadow: 0 0 20px rgba(255, 255, 178, 0.8);
+}
+
+.input-blue {
+  color: rgba(178, 240, 255, 0.8);
+}
+
+.input-blue:focus {
+  color: #b2f0ff;
+  box-shadow: 0 0 20px rgba(178, 240, 255, 0.8);
+}
+
+.input-green {
+  color: rgba(205, 255, 178, 0.8);
+}
+
+.input-green:focus {
+  color: #cdffb2;
+  box-shadow: 0 0 20px rgba(205, 255, 178, 0.8);
+}
+
+.input-orange {
+  color: rgba(255, 211, 140, 0.8);
+}
+
+.input-orange:focus {
+  color: #ffd38c;
+  box-shadow: 0 0 20px rgba(255, 211, 140, 0.8);
+}
+
+/* Sliders ************************************************/
+
+/* Resets */
+
+.slider-input::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Hides the slider thumb so that custom thumb can be made */
+}
+
+.slider-input:focus {
+  outline: none; /* Removes the blue accessibility border. */
+}
+
+/* Slider Styles */
+
+.slider-input {
+  -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+  background: transparent;
+  cursor: pointer;
+  flex: 1;
+  font-size: 4em; /* Base size for scalability */
+  line-height: 0;
+  margin: 0;
+  overflow:hidden;
+  position: relative;
+}
+
+.vertical-slider,
+.horizontal-slider {
+  align-items: center;
+  display: flex;
+  font-size: 1rem;
+  justify-content: space-between;
+  position: relative;
+}
+
+.vertical-slider {
+  flex-direction: column;
+}
+
+.horizontal-slider .slider-input {
+  height: 2em;
+  padding: .25em 0;
+}
+
+.vertical-slider .slider-input {
+  -webkit-appearance: slider-vertical;
+  width: 2em;
+}
+
+.slider-input::-webkit-slider-thumb {
+  font-size: 2em;
+  overflow: visible;
+  position:relative;
+}
+
+.horizontal-slider .slider-input::-webkit-slider-thumb {
+  -webkit-filter: drop-shadow(.05em .05em .05em rgba(0,0,0,.25));
+  background-image: url('../images/hex_thumb_white_vert.png');
+  background-repeat: no-repeat;
+  background-size: .85em;
+  background-position: center;
+  height: 1em;
+  margin: -.25em 0;
+  width: .85em;
+}
+
+/* Style the level bar */
+.slider-input::-webkit-slider-thumb:after{
+  background: rgba(178, 240, 255, 1);
+  box-shadow: inset .125em .125em .5em rgba(255,255,255,.6),
+              inset -1em -1em .125em -1em rgba(0,0,0,.5);
+  content:" ";
+  position: absolute;
+}
+
+.horizontal-slider .slider-input::-webkit-slider-thumb:after {
+  height: .5em;
+  margin: .25em 0;
+  right: 100%;
+  width: 100vw;
+}
+
+.vertical-slider .slider-input::-webkit-slider-thumb:after {
+  height: 100vh;
+  margin: 0;
+  top: 100%;
+  width: .5em;
+}
+
+.vertical-slider .slider-input::-webkit-slider-thumb:before {
+  -webkit-filter: drop-shadow(.05em .05em .05em rgba(0,0,0,.25));
+  background-image: url('../images/hex_thumb_white_horz.png');
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: 1em;
+  bottom: 0;
+  content: " ";
+  height: 100vh;
+  margin: 0 -.5em;
+  position: absolute;
+  width: 1.5em;
+  z-index: 1;
+}
+
+/* Styles the track */
+.slider-input::-webkit-slider-runnable-track {
+  background-color: #222;
+  box-shadow: inset 0 0 0 .125em rgba(110,110,110,.25),
+              inset 0 0 .5em .125em rgba(0,0,0,.5);
+}
+  
+.horizontal-slider .slider-input::-webkit-slider-runnable-track {
+  height: 1em;            
+}
+
+.vertical-slider .slider-input::-webkit-slider-runnable-track {
+  overflow-y: visible; 
+  padding-top: 1.4em;
+  width: 1em;
+}
+
+/* prevents thumb from getting cropped out at ends */
+.vertical-slider.thin-slider .slider-input::-webkit-slider-runnable-track {
+  padding-top: 1.2em;
+}
+
+.vertical-slider.thick-slider .slider-input::-webkit-slider-runnable-track {
+  padding-top: 1.5em;
+}
+
+.button-slider .slider-input {
+  flex: 0 0 82.5%;
+}
+
+.button-slider.thin-slider .slider-input {
+  flex: 0 0 90%;
+}
+
+.button-slider.thick-slider .slider-input {
+  flex: 0 0 75%;
+}
+
+.thin-slider {
+  font-size: .5rem;
+}
+
+.thick-slider {
+  font-size: 1.5rem;
+}
+
+.slider-button {
+  align-items: center;
+  animation: bounceInDown 900ms 200ms ease-in-out both;
+  background: linear-gradient(#db9604, #915a00);
+  border: 1px solid rgba(255, 255, 255, .4);
+  box-shadow: inset 0px 0px 2px 1px #5a3800;
+  display: flex;
+  font-size: 4em;
+  height: 40px;
+  justify-content: center;
+  text-align: center;
+  text-shadow: 1px 1px 3px #444;
+  width: 40px;
+}
+
+.thin-slider .slider-button {
+  width: 20px;
+  height: 20px;
+}
+
+.thick-slider .slider-button {
+  width: 60px;
+  height: 60px;
+}
+
+.less-button::after {
+  content: "\02212";
+}
+
+.more-button::after {
+  content: "\0002b";
+}
+
+.less-button::after,
+.more-button::after {
+  color: white;
+  font-size: 1em;
+}
+
+/* Tabs */
+
+.tabs-component {
+  display: flex;
+  flex-direction: column;
+}
+
+.tabs-labels {
+  display: flex;
+  flex: 1;
+  z-index: 1;
+  border-bottom: 1px solid rgba(0,0,0,.25);
+  margin-bottom: 1em;
+}
+
+.tab-item {
+  flex: 1;
+  text-align: center;
+  color: rgba(0,0,0,.5);
+  padding: 5px 0;
+  margin-bottom: 10px;
+  border-radius: 40px;
+}
+
+.tab-item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.tab-item.active {
+  background-color: rgba(0,0,0,.25);
+  color: rgba(0,0,0,.8);
+  text-shadow: 1px 1px 0 rgba(255,255,255,.5);
+}
+
+.tabs-content {
+  z-index: 0;
+}
+
+/* Touch Behavior *****************************************/
+
+/* Prevents scrolling and zooming where not specified */
+html,
+input,
+textarea {
+  touch-action: none;
+}
+
+/* Allows vertical and horizontal scrolling where specified 
+   for lists */
+ul, ol {
+  touch-action: pan-x pan-y;
+}
+
+/* 
+  Apply to elements where a scrollbar is desired.
+  Shows a standard scrollbar as needed.
+*/ 
+
+.scrollbar-x { 
+  overflow-x: auto;
+  touch-action: pan-x;
+  white-space: nowrap;
+} 
+
+.scrollbar-y {
+  overflow-y: auto;
+  touch-action: pan-y;
+}
+
+.scrollbar-xy {
+  overflow: auto;
+  touch-action: pan-x pan-y;
+}
+
+/*
+  Apply to elements where a scrolling without
+  a scrollbar is desired.
+*/
+
+.scrollable-x { 
+  overflow-x: auto; 
+  touch-action: pan-x;
+  white-space: nowrap;
+}
+
+.scrollable-y {
+  overflow-y: auto;
+  touch-action: pan-y;
+}
+
+.scrollable-xy {
+  overflow: auto;
+  touch-action: pan-x pan-y;
+}
+
+.scrollable-x::-webkit-scrollbar,
+.scrollable-y::-webkit-scrollbar,
+.scrollable-xy::-webkit-scrollbar {
+  -webkit-appearance: none; 
+}
+
+/* Custom Scrollbar Styling */
+
+.scrollbar-x::-webkit-scrollbar,
+.scrollbar-y::-webkit-scrollbar,
+.scrollbar-xy::-webkit-scrollbar {
+  -webkit-appearance: none; 
+  width: 20px;
+  height: 20px;
+}
+
+.scrollbar-x::-webkit-scrollbar-track, 
+.scrollbar-y::-webkit-scrollbar-track, 
+.scrollbar-xy::-webkit-scrollbar-track {
+  -webkit-appearance: none; 
+  background-color: transparent;
+  box-shadow: inset 0 0 .5em .125em rgba(0,0,0,.5);
+}
+
+.scrollbar-x::-webkit-scrollbar-thumb,   
+.scrollbar-y::-webkit-scrollbar-thumb,   
+.scrollbar-xy::-webkit-scrollbar-thumb {   
+  -webkit-appearance: none;
+  border: 5px solid transparent;
+  border-radius: 10px; 
+}
+
+.scrollbar-x::-webkit-scrollbar-thumb,   
+.scrollbar-xy::-webkit-scrollbar-thumb:horizontal {
+  background:linear-gradient(to bottom, rgba(254, 156, 0, .8), rgba(254, 156, 0, .5));  
+  background-clip: content-box;
+}
+
+.scrollbar-y::-webkit-scrollbar-thumb,   
+.scrollbar-xy::-webkit-scrollbar-thumb:vertical {
+  background:linear-gradient(to right, rgba(254, 156, 0, .8), rgba(254, 156, 0, .5));  
+  background-clip: content-box;
+}
+
+.scrollbar-x::-webkit-scrollbar-button, 
+.scrollbar-y::-webkit-scrollbar-button, 
+.scrollbar-xy::-webkit-scrollbar-button {
+  -webkit-appearance: none;
+  background-repeat: no-repeat;
+  background-position: center;
+  box-shadow: inset .1em .1em .25em rgba(126,126,126,.1), inset -.1em -.1em .25em rgba(0,0,0,.2);
+}
+
+.scrollbar-x::-webkit-scrollbar-button,
+.scrollbar-xy::-webkit-scrollbar-button:horizontal {
+  background-size: 6px 10px;
+}
+
+.scrollbar-y::-webkit-scrollbar-button,
+.scrollbar-xy::-webkit-scrollbar-button:vertical {
+  background-size: 10px 6px;
+}
+
+.scrollbar-x::-webkit-scrollbar-button:start,
+.scrollbar-xy::-webkit-scrollbar-button:horizontal:start {
+  background-image: url('../images/scroll_button_left_arrow_white.png');
+}
+
+.scrollbar-x::-webkit-scrollbar-button:end,
+.scrollbar-xy::-webkit-scrollbar-button:horizontal:end {
+  background-image: url('../images/scroll_button_right_arrow_white.png');
+}
+
+.scrollbar-y::-webkit-scrollbar-button:start,
+.scrollbar-xy::-webkit-scrollbar-button:vertical:start {
+  background-image: url('../images/scroll_button_up_arrow_white.png');
+}
+
+.scrollbar-y::-webkit-scrollbar-button:end,
+.scrollbar-xy::-webkit-scrollbar-button:vertical:end {
+  background-image: url('../images/scroll_button_down_arrow_white.png');
+}
+
+.scrollable-x::-webkit-scrollbar-corner,  
+.scrollable-y::-webkit-scrollbar-corner,  
+.scrollable-xy::-webkit-scrollbar-corner {
+  -webkit-appearance: none;
+} 
+
+.scrollbar-x::-webkit-scrollbar-corner,  
+.scrollbar-y::-webkit-scrollbar-corner,  
+.scrollbar-xy::-webkit-scrollbar-corner {  
+  -webkit-appearance: none;
+  background-color: transparent;
+  box-shadow: inset 0 0 .5em .125em rgba(0,0,0,.5);
+} 
+
+/* Modifiers */
+
+.borderless {
+  border: none;
+}
+
+.flex-item-2 {
+  flex: 2;
+}
+
+/* Positions within the first positioned parent */
+.z-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* Already in common.css; here for cascading */
+
+.no-margin {
+  margin: 0;
+}

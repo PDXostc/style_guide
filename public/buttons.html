@@ -1,0 +1,195 @@
+<h2 class="sub-title doc">Buttons</h2>
+<p class="doc">These buttons provide a UI for the user to initiate actions such as submitting a form or confirming a choice.</p>
+<section class="sub-section inset" id="button-classes-vs-elements">
+  <h3 class="doc">Button class and button elements</h3>
+  <h4 class="doc">Button Class</h4>
+  <p class="doc">The <span class="inline-code">.button-</span> classes allow for <em>button styling</em> on any element including the <span class="inline-code">button</span> element and <span class="inline-code">input type="button"</span> element.</p>
+  <p class="doc">Use classes on non-button elements when you want the appearance of a button but aren't submitting any information. For example, you can use a button class to style an anchor link.</p>
+  <h4 class="doc">Button Element</h4>
+  <p class="doc">The <span class="inline-code">button</span> element should be used exclusively within the <span class="inline-code">form</span> element for <em>submitting information to the application.</em></p>
+  <h5 class="doc">Reference:</h5>
+  <p class="doc"><a class="external-link" href="http://davidwalsh.name/html5-buttons">http://davidwalsh.name/html5-buttons</a></p>
+  <p class="doc"><a class="external-link" href="https://css-tricks.com/use-button-element/">https://css-tricks.com/use-button-element/</a></p>
+</section>
+
+  <section id="basic-buttons">
+    <h3 class="doc">Basic Buttons</h3>
+    <h4 class="doc"><span class="inline-code">&lt;button&gt;</span> and <span class="inline-code">&lt;input type='button'&gt;</span></h4>
+    <p class="doc">The <span class="inline-code">button</span> element and <span class="inline-code">input type='button'</span> element will default to the style of a neutral outline button.</p>
+    <div class="example">
+      <div class="flex-parent">
+        <div class="flex-item">
+          <p class="doc white">
+            <span class="inline-code">&lt;button&gt;</span>
+            <form action="" style="display:inline">
+              <button>button</button>
+            </form>
+          </p>
+        </div>
+        <div class="flex-item">
+          <p class="doc white">
+            <span class="inline-code">&lt;input type="button"&gt;</span>
+            <form action="">
+              <input type="button" value="button">
+            </form>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<section id="button-variations">
+  <h3 class="doc">Button Variations</h3>
+
+  <section id="button-outline">
+    <h4 class="doc">Button Variation: <span class="inline-code">outline</span></h4>
+    <div class="example">
+      <div class="flex-parent flex-column">
+        <div class="flex-item">
+          <p class="doc white">
+            <a class="button-outline">button</a>
+            <span class="inline-code">.button-outline</span>
+          </p>
+        </div>
+        <div class="flex-item">
+          <p class="doc white">
+            <a class="button-outline button-orange">button</a>
+            <span class="inline-code">.button-outline .button-orange</span>
+          </p>
+        </div>
+        <div class="flex-item">
+          <p class="doc white">
+            <a class="button-outline button-blue">button</a>
+            <span class="inline-code">.button-outline .button-blue</span>
+          </p>
+        </div>
+        <div class="flex-item">
+          <p class="doc white">
+            <a class="button-outline button-green">button</a>
+            <span class="inline-code">.button-outline .button-green</span>
+          </p>
+        </div>
+        <div class="flex-item">
+          <p class="doc white">
+            <a class="button-outline button-yellow">button</a>
+            <span class="inline-code">.button-outline .button-yellow</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="button-infill">
+    <h4 class="doc">Button Variation: <span class="inline-code">infill</span></h4>
+    <div class="example">
+      <div class="flex-parent flex-column">
+        <div class="flex-item">
+          <p class="doc white">
+            <a class="button-infill">button</a>
+            <span class="inline-code">.button-infill</span>
+          </p>
+        </div>
+        <div class="flex-item">
+          <p class="doc white">
+            <a class="button-infill button-orange">button</a>
+            <span class="inline-code">.button-infill .button-orange</span>
+          </p>
+        </div>
+        <div class="flex-item">
+          <p class="doc white">
+            <a class="button-infill button-blue">button</a>
+            <span class="inline-code">.button-infill .button-blue</span>
+          </p>
+        </div>
+        <div class="flex-item">
+          <p class="doc white">
+            <a class="button-infill button-green">button</a>
+            <span class="inline-code">.button-infill .button-green</span>
+          </p>
+        </div>
+        <div class="flex-item">
+          <p class="doc white">
+            <a class="button-infill button-yellow">button</a>
+            <span class="inline-code">.button-infill .button-yellow</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="button-inshadow">
+    <h4 class="doc">Button Variation: <span class="inline-code">inshadow</span></h4>  
+    <div class="example">
+      <div class="flex-parent flex-column">
+        <div class="flex-item">
+          <p class="doc white">
+            <a class="button-inshadow">button</a>
+            <span class="inline-code">.button-inshadow</span>
+          </p>
+        </div>
+        <div class="flex-item">
+          <p class="doc white">
+            <a class="button-inshadow button-orange">button</a>
+            <span class="inline-code">.button-inshadow .button-orange</span>
+          </p>
+        </div>
+        <div class="flex-item">
+          <p class="doc white">
+            <a class="button-inshadow button-blue">button</a>
+            <span class="inline-code">.button-inshadow .button-blue</span>
+          </p>
+        </div>
+        <div class="flex-item">
+          <p class="doc white">
+            <a class="button-inshadow button-green">button</a>
+            <span class="inline-code">.button-inshadow .button-green</span>
+          </p>
+        </div>
+        <div class="flex-item">
+          <p class="doc white">
+            <a class="button-inshadow button-yellow">button</a>
+            <span class="inline-code">.button-inshadow .button-yellow</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="button-outshadow">
+    <h4 class="doc">Button Variation: <span class="inline-code">outshadow</span></h4>
+    <div class="example">
+      <div class="flex-parent flex-column">
+        <div class="flex-item">
+          <p class="doc white">
+            <a class="button-outshadow">button</a>
+            <span class="inline-code">.button-outshadow</span>
+          </p>
+        </div>
+        <div class="flex-item">
+          <p class="doc white">
+            <a class="button-outshadow button-orange">button</a>
+            <span class="inline-code">.button-outshadow .button-orange</span>
+          </p>
+        </div>
+        <div class="flex-item">
+          <p class="doc white">
+            <a class="button-outshadow button-blue">button</a>
+            <span class="inline-code">.button-outshadow .button-blue</span>
+          </p>
+        </div>
+        <div class="flex-item">
+          <p class="doc white">
+            <a class="button-outshadow button-green">button</a>
+            <span class="inline-code">.button-outshadow .button-green</span>
+          </p>
+        </div>
+        <div class="flex-item">
+          <p class="doc white">
+            <a class="button-outshadow button-yellow">button</a>
+            <span class="inline-code">.button-outshadow .button-yellow</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</section>

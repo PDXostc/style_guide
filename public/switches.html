@@ -1,0 +1,101 @@
+<h2 class="sub-title doc">Switches</h2>
+<p class="doc">Switches provide an interface for receiving A/B type user input. Such user interactions include toggling settings and on/off states. The switch UI comes in three sizes:</p>
+<code><pre>.switch-large, .switch-small, .switch-xsmall</pre></code>
+<section class="js">
+  <p class="doc">JS toggles the <em>".on"</em> and <em>".off"</em> classes of the ancestor <em>".switch".</em></p>
+  <code class="highlights" contenteditable></code>
+</section>
+<section class="html">
+  <p class="doc"><em>".switch"</em> has 2 descendants:<br><em>".switch-plate"</em> which is the housing that changes color, and<br> <em>".switch-control"</em> which is the knob that toggles position.</p>
+  <code class="highlights" contenteditable></code>
+</section>
+<p class="doc">The switch class is set to <em>".off"</em> by default.</p>
+<div class="example">
+  <div class="flex-parent">
+    <div id="switch-sizes" class="flex-item">
+      <div class="switch off switch-large">
+        <div class="switch-plate">
+          <div class="switch-control"></div>
+        </div>
+      </div>
+       <div class="switch off switch-medium">
+        <div class="switch-plate">
+          <div class="switch-control"></div>
+        </div>
+      </div>
+      <div class="switch off switch-small">
+        <div class="switch-plate">
+          <div class="switch-control"></div>
+        </div>
+      </div>
+      <div class="switch off switch-xsmall">
+        <div class="switch-plate">
+          <div class="switch-control"></div>
+        </div>
+      </div>
+    </div>
+    <div id="switch-list-demo" class="flex-item">
+      <ul>
+        <h6>Settings List</h6>
+        <li class="flex-parent space-between">
+          Setting 1
+          <div class="switch switch-xsmall no-margin on">
+            <div class="switch-plate">
+              <div class="switch-control"></div>
+            </div>
+          </div>
+        </li>
+        <li class="flex-parent space-between">
+          Setting 2
+          <div class="switch switch-xsmall no-margin on">
+            <div class="switch-plate">
+              <div class="switch-control"></div>
+            </div>
+          </div>
+        </li>
+        <li class="flex-parent space-between">
+          Setting 3
+          <div class="switch switch-xsmall no-margin off">
+            <div class="switch-plate">
+              <div class="switch-control"></div>
+            </div>
+          </div>
+        </li>
+        <li class="flex-parent space-between">
+          Setting 4
+          <div class="switch switch-xsmall no-margin on">
+            <div class="switch-plate">
+              <div class="switch-control"></div>
+            </div>
+          </div>
+        </li>
+        <li class="flex-parent space-between">
+          Setting 5
+          <div class="switch switch-xsmall no-margin off">
+            <div class="switch-plate">
+              <div class="switch-control"></div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<section class="sub-section html" data-content-id="html">
+  <code contenteditable></code>
+</section>
+
+<section class="sub-section js hidden" data-content-id="js">
+  <code contenteditable></code>
+</section>
+
+<section class="sub-section">
+  <h4 class="doc">The Images</h4>
+  <p class="doc">The switch uses 3 images:</p>
+  <ul class="doc">
+    <li>images/switchcontrol.svg</li>
+    <li>images/switchplate_off.svg</li>
+    <li>images/switchplate_on.svg</li>
+  </ul>
+</section>

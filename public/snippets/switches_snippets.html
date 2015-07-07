@@ -1,0 +1,28 @@
+<template id="switches-html-highlights">
+<pre>&lt;div class="switch <span class="orange-viv">off</span> switch-large"&gt;
+  &lt;div class="<span class="orange-viv">switch-plate</span>"&gt;
+    &lt;div class="<span class="orange-viv">switch-control</span>"&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+</template>
+
+
+<template id="switches-html">
+<pre>&lt;div class="switch off switch-large"&gt;
+  &lt;div class="switch-plate"&gt;
+    &lt;div class="switch-control"&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+</template>
+
+<template id="switches-js-highlights">
+<pre>$(document).on("click", ".switch-plate", function() {
+  $(this).closest(".switch").<span class="orange-viv">toggleClass("on off")</span>;
+})</pre>
+</template>
+
+<template id="switches-js">
+<pre>$(document).on("click", ".switch-plate", function() {
+  $(this).closest(".switch").toggleClass("on off");
+})</pre>
+</template>

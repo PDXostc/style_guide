@@ -1,0 +1,290 @@
+<h1 class="section-title">Tables <span class="back-to-top"><a href="#top" class="fa fa-chevron-up"></a></span></h1>
+<p class="doc">Tables provide an interface for displaying tabular data to the user in a grid. Such data should necessitate the use of columns, rows and possibly headings. Examples of tabular data include media player lists, gathered statistics, and contact lists. Tables should not be used purely as a means to layout document content or for simple lists.</p>
+
+<!-- Basic Table -->
+<div class="sub-section" id="basic-table">
+<h2 class="doc sub-title">Basic Table</h2>
+	<div class="example default">
+	<table>
+		<tbody>
+			<tr>
+				<th>Column 1 Header</th>
+				<th>Column 2 Header</th>
+				<th>Column 3 Header</th>
+				<th>Column 4 Header</th>
+			</tr>
+			<tr>
+				<td>Column 1 Cell</td>
+				<td>Column 2 Cell</td>
+				<td>Column 3 Cell</td>
+				<td>Column 4 Cell</td>
+			</tr>
+			<tr>
+				<td>Column 1 Cell</td>
+				<td>Column 2 Cell</td>
+				<td>Column 3 Cell</td>
+				<td>Column 4 Cell</td>
+			</tr>
+			<tr>
+				<td>Column 1 Cell</td>
+				<td>Column 2 Cell</td>
+				<td>Column 3 Cell</td>
+				<td>Column 4 Cell</td>
+			</tr>
+			<tr>
+				<td>Column 1 Cell</td>
+				<td>Column 2 Cell</td>
+				<td>Column 3 Cell</td>
+				<td>Column 4 Cell</td>
+			</tr>
+			<tr>
+				<td>Column 1 Cell</td>
+				<td>Column 2 Cell</td>
+				<td>Column 3 Cell</td>
+				<td>Column 4 Cell</td>
+			</tr>
+			<tr>
+				<td>Column 1 Cell</td>
+				<td>Column 2 Cell</td>
+				<td>Column 3 Cell</td>
+				<td>Column 4 Cell</td>
+			</tr>
+			<tr>
+				<td>Column 1 Cell</td>
+				<td>Column 2 Cell</td>
+				<td>Column 3 Cell</td>
+				<td>Column 4 Cell</td>
+			</tr>
+			<tr>
+				<td>Column 1 Cell</td>
+				<td>Column 2 Cell</td>
+				<td>Column 3 Cell</td>
+				<td>Column 4 Cell</td>
+			</tr>
+			<tr>
+				<td>Column 1 Cell</td>
+				<td>Column 2 Cell</td>
+				<td>Column 3 Cell</td>
+				<td>Column 4 Cell</td>
+			</tr>
+		</tbody>
+	</table>
+	</div>
+	<h3 class="doc">Flex-Based Column Widths</h3>
+	<p class="doc">Column widths are set by way of the <span class="inline-code">flex</span> property. This allows for control over column width versus dynamic sizing based on text content.</p>
+	<p class="doc">The default flex settings for the <span class="inline-code">table</span> element have been set to:
+	<ul class="doc">
+		<li class="doc"><span class="inline-code">flex: 2</span> for the first column</li>
+		<li class="doc"><span class="inline-code">flex: 1</span> for the remaining columns</li>
+	</ul>
+	<p class="doc">In the example above, the column widths are calculated like this:</p>
+	<div class="example no-title">
+		<table>
+			<tr>
+				<td>Column 1</td>
+				<td>Column 2</td>
+				<td>Column 3</td>
+				<td>Column 4</td>
+			</tr>
+			<tr>
+				<td><span class="inline-code">flex: 2</span></td>
+				<td><span class="inline-code">flex: 1</span></td>
+				<td><span class="inline-code">flex: 1</span></td>
+				<td><span class="inline-code">flex: 1</span></td>
+			</tr>
+			<tr>
+				<td class="no-flex center highlight-cell" colspan="4">5 total <span class="inline-code">flex</span> units</td>
+			</tr>
+			<tr>
+				<td>2 of 5 = 40%</td>
+				<td>1 of 5 = 20%</td>
+				<td>1 of 5 = 20%</td>
+				<td>1 of 5 = 20%</td>
+			</tr>
+		</table>
+	</div>
+
+  <section class="sub-section html" data-content-id="html">
+    <p class="doc reverse-highlight"><small>Last updated: 3/03/15</small></p>
+    <code contenteditable></code>
+  </section>
+</div>
+
+<div class="sub-section" id="custom-tables">
+	<h2 class="doc sub-title">Customizing Tables</h2>
+	<div class="example">
+		<table class="playlist no-text-wrap">
+	    <tbody>
+	      <tr>
+	      	<th>Fav</th>
+	        <th>Song Title</th>
+	        <th>Artist</th>
+	        <th>Album</th>
+	        <th>Time</th>
+	      </tr>
+	      <tr>
+		      <td class="fav-song"></td>
+	        <td>After The Storm</td>
+	        <td>Mumford &amp; Sons</td>
+	        <td>Sigh No More</td>
+	        <td>4:07</td>
+	      </tr>
+	      <tr>
+		      <td></td>
+	        <td>Au Revoir</td>
+	        <td>OneRepublic</td>
+	        <td>Native (Deluxe) [+digital booklet]</td>
+	        <td>4:50</td>	
+	      </tr>
+	      <tr>
+		      <td class="fav-song"></td>
+	        <td>Bad Blood</td>
+	        <td>Bastille</td>
+	        <td>Bad Blood</td>
+	        <td>3:32</td>
+	      </tr>
+	      <tr>
+	      	<td></td>
+	        <td>Cheap Clothes</td>
+	        <td>Whitley</td>
+	        <td>The Submarine</td>
+	        <td>3:40</td>
+	      </tr>
+	      <tr>
+	      	<td class="fav-song"></td>
+	        <td>Don't Say A Word</td>
+	        <td>Ellie Goulding</td>
+	        <td>Halcyon</td>
+	        <td>4:07</td>
+	      </tr>
+	      <tr>
+	      	<td class="fav-song"></td>
+	        <td>Every Word (Album Version)</td>
+	        <td>Sade</td>
+	        <td>Lovers Rock</td>
+	        <td>4:04</td>
+	      </tr>
+	      <tr>
+	      	<td></td>
+	        <td>From Finner</td>
+	        <td>Of Monsters And Men</td>
+	        <td>My Head Is An Animal</td>
+	        <td>3:43</td>
+	      </tr>
+	      <tr>
+	      	<td class="fav-song"></td>
+	        <td>Hall of Fame</td>
+	        <td>The Script feat. will.i.am</td>
+	        <td>#3 [Explicit]</td>
+	        <td>3:22</td>
+	      </tr>
+	      <tr>
+	      	<td></td>
+	        <td>I Need Your Love (Bonus Track) [feat. Ellie Goulding]</td>
+	        <td>Calvin Harris</td>
+	        <td>Halcyon</td>
+	        <td>3:54</td>
+	      </tr>
+	      <tr>
+	      	<td class="fav-song"></td>
+	        <td>Ten Feet Tall [feat. Wrabel]</td>
+	        <td>Afrojack</td>
+	        <td>Forget The World [Explicit]</td>
+	        <td>3:49</td>
+	      </tr>
+	      <tr>
+	      	<td></td>
+	        <td>Titanium (Feat. Sia)</td>
+	        <td>David Guetta</td>
+	        <td class="ellipsis-one-line">Nothing But The Beat</td>
+	        <td>4:05</td>
+	      </tr>
+	      <tr>
+	      	<td class="fav-song"></td>
+	        <td>King And Lionheart</td>
+	        <td>Of Monsters And Men</td>
+	        <td>My Head Is An Animal</td>
+	        <td>4:33</td>
+	      </tr>
+	    </tbody>
+	  </table>
+	</div>
+
+	<section id="custom-tables-class">
+		<h3 class="doc">Using a Table Class</h3>
+		<p class="doc">Create a class to apply to the table element to allow for easier selection and styling of table elements.</p>
+		<section class="sub-section html">
+			<code contenteditable></code>
+		</section>
+	</section>
+
+	<section id="custom-column-widths">
+		<h3 class="doc">Custom Column Widths</h3>
+		<p class="doc">To customize column widths, use :pseudo selectors to target rows by position, index or occurence. Then set the flex property as desired.</p>
+		<section class="sub-section css">
+			<code contenteditable></code>
+		</section>
+	</section>
+
+	<section id="custom-row-styles">
+	 <h3 class="doc">Custom Row Styles</h3>
+	 <p class="doc">To select alternating rows, use the <span class="inline-code">:nth-child(even)</span> and <span class="inline-code">:nth-child(odd)</span> :pseudo selectors.</p>
+	 <section class="sub-section css">
+		 <code contenteditable></code>
+	 </section>
+	</section>
+	
+	<section id="custom-cell-graphics">
+		<h3 class="doc">Adding Cell Graphics</h3>
+		<div class="example">
+			<table class="playlist no-text-wrap">
+		    <tbody>
+		      <tr>
+		      	<th>Fav</th>
+		        <th>Song Title</th>
+		        <th>Artist</th>
+		        <th>Album</th>
+		        <th>Time</th>
+		      </tr>
+		      <tr>
+			      <td class="fav-song"></td>
+		        <td>After The Storm</td>
+		        <td>Mumford &amp; Sons</td>
+		        <td>Sigh No More</td>
+		        <td>4:07</td>
+		      </tr>
+		      <tr>
+			      <td></td>
+		        <td>Au Revoir</td>
+		        <td>OneRepublic</td>
+		        <td>Native (Deluxe) [+digital booklet]</td>
+		        <td>4:50</td>	
+		      </tr>
+		      <tr>
+			      <td class="playing"></td>
+		        <td>Bad Blood</td>
+		        <td>Bastille</td>
+		        <td>Bad Blood</td>
+		        <td>3:32</td>
+		      </tr>
+		      <tr>
+		      	<td class="dancing"></td>
+		        <td>Cheap Clothes</td>
+		        <td>Whitley</td>
+		        <td>The Submarine</td>
+		        <td>3:40</td>
+		      </tr>
+	      </tbody>
+	    </table>
+		</div>
+		<section id="html-symbols">
+			<p class="doc"><strong>HTML Symbols:</strong> To add an HTML symbol to a cell, add a class to the cell and use the <span class="inline-code">:before</span> :pseudo selector and <span class="inline-code">content</span> property. Symbols in CSS must use their Hex reference and be escaped with a leading "\".</p>
+			<code contenteditable></code>
+		</section>
+
+		<section id="cell-images">
+			<p class="doc"><strong>Background Images:</strong> To add a background image to a cell, apply a class and use the <span class="inline-code">background-image</span> property. Be sure to override any <span class="inline-code">content</span> symbols being added.</p>
+			<code contenteditable></code>
+		</section>
+	</section>
+</div>

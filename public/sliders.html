@@ -1,0 +1,228 @@
+<h2 class="doc">Sliders</h2>
+<p class="doc">These sliders provide a UI for sliding components that receive scalable user inputs such as volume.</p>
+
+<section class="sub-section inset">
+  <h3 class="doc">Input type: range</h3>
+  <p class="doc">HTML5 provides a new input type, "range", which reduces the complexity of receiving scalable input from the user. In its simplest form, a range input looks like this:</p>
+  <code><pre>&lt;input type="range" /&gt;</pre></code>
+  <input type="range">
+  <p class="doc">The input can include the following useful attributes:</p>
+  <ul class="doc">
+    <li><strong>value:</strong> the initial value</li>
+    <li><strong>name:</strong> the name of the input within the form</li>
+    <li><strong>min:</strong> the minimum allowed value</li>
+    <li><strong>max:</strong> the maximum allowed value</li>
+    <li><strong>step:</strong> the intervals of the input (default is 1)</li>
+  </ul>
+  <p class="doc">The range input is styled using a variety of pseudo-selectors:</p>
+  <ul class="doc">
+    <li><strong><span class="inline-code">::-webkit-slider-thumb</span></strong>: Styles the slider handle</li>
+    <li><strong><span class="inline-code">::-webkit-slider-runnable-track</span></strong>: Styles the track that the slider moves within</li>
+    <li><strong><span class="inline-code">::-webkit-slider-thumb:after</span></strong>: Styles the color level bar adjacent to the slider handle</li>
+  </ul>
+  <h5 class="doc">Reference:</h5>
+  <p class="doc"><a href="https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/" class="external-link">https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/</a></p>
+  <p class="doc"><a href="http://demosthenes.info/blog/757/Playing-With-The-HTML5-range-Slider-Input" class="external-link">http://demosthenes.info/blog/757/Playing-With-The-HTML5-range-Slider-Input</a></p>
+</section>
+
+<section id="sliders-intro">
+  <h3 class="doc">Using Sliders</h3>
+  <p class="doc">Sliders come in vertical and horizontal formats:</p>
+  <code><pre>.vertical-slider, .horizontal-slider</pre></code>
+  <p class="doc">Sliders come in three preset weights:</p>
+  <div class="example no-title">
+    <table>
+      <tbody>
+        <tr>
+          <th>Style</th>
+          <th>Class</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>Standard Weight</td>
+          <td><em>no class required</em></td>
+          <td><span>Has a 40px track and an 80px thumb</span></td>
+        </tr>
+        <tr>
+          <td>Thin Weight</td>
+          <td><span class="inline-code">.thin-slider</span></td>
+          <td><span>Has a 20px track and an 40px thumb</span></td>
+        </tr>
+        <tr>
+          <td>Thick Weight</td>
+          <td><span class="inline-code">.thick-slider</span></td>
+          <td><span>Has a 60px track and an 120px thumb</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="doc">To use the sliders you need a parent element with the slider format class and the slider weight class (if desired). Within the parent you need an <span class="inline-code">input type="range"</span> with the class <span class="inline-code">.slider-input</span>. For example, a horizontal thin slider would be structured like this:</p>
+
+  <code><pre>&lt;div class="horizontal-slider thin-slider"&gt;
+  &lt;input class="slider-input" type="range" value="50"&gt;
+&lt;/div&gt;</pre></code>
+</section>
+
+
+<!-- Vertical Sliders -->
+<section class="sub-section" id="vertical-sliders">
+  <h3 class="doc">Vertical Sliders</h3>
+  <div class="flex-parent">
+    <div class="example flex-parent flex-column space-between">
+      <p class="doc white">Thin Slider</p>
+      <p class="doc white"><span class="inline-code">.vertical-slider<br>.thin-slider</span></p>
+      <div class="vertical-slider thin-slider">
+        <input class="slider-input" type="range" value="25" />
+      </div>
+      <output class="orange-viv center">25</output>
+    </div>
+
+    <div class="example flex-parent flex-column space-between">
+      <p class="doc white">Standard Slider</p>
+      <p class="doc white"><span class="inline-code">.vertical-slider</span></p>
+      <div class="vertical-slider">
+        <input class="slider-input" type="range" value="50" />
+      </div>
+      <output class="orange-viv center">50</output>
+    </div>
+
+    <div class="example flex-parent flex-column space-between">
+      <p class="doc white">Thick Slider</p>
+      <p class="doc white"><span class="inline-code">.vertical-slider<br>.thick-slider</span></p>
+      <div class="vertical-slider thick-slider">
+        <input class="slider-input" type="range" value="75" />
+      </div>
+      <output class="orange-viv center">75</output>
+    </div>
+  </div>
+  <section class="sub-section html" data-content-id="html">
+    <p class="doc reverse-highlight"><small>Last updated: 3/23/15</small></p>
+    <code contenteditable></code>
+  </section>
+</section>
+
+<!-- Horizontal Sliders -->
+<section class="sub-section" id="horizontal-sliders">
+  <h3 class="doc">Horizontal Sliders</h3>
+
+  <div class="example flex-parent flex-column">
+    <p class="doc white">Thin Slider</p>
+    <p class="doc white"><span class="inline-code">.horizontal-slider</span> <span class="inline-code">.thin-slider</span></p>
+    <div class="horizontal-slider thin-slider">
+      <input class="slider-input" type="range" value="25" />
+    </div>
+
+    <output class="orange-viv center">25</output>
+  </div>
+
+  <div class="example flex-parent flex-column">
+    <p class="doc white">Standard Slider</p>
+    <p class="doc white"><span class="inline-code">.horizontal-slider</span></p>
+    <div class="horizontal-slider">
+      <input class="slider-input" type="range" value="50" />
+    </div>
+
+    <output class="orange-viv center">50</output>
+  </div>
+
+  <div class="example flex-parent flex-column">
+    <p class="doc white">Thick Slider</p>
+    <p class="doc white"><span class="inline-code">.horizontal-slider</span> <span class="inline-code">.thick-slider</span></p>
+    <div class="horizontal-slider thick-slider">
+      <input class="slider-input" type="range" value="75" />
+    </div>
+
+    <output class="orange-viv center">75</output>
+  </div>
+
+  <section class="sub-section html" data-content-id="html">
+    <p class="doc reverse-highlight"><small>Last updated: 3/23/15</small></p>
+    <code contenteditable></code>
+  </section>
+</section>
+
+<section class="sub-section" id="button-sliders">
+  <h3 class="doc">Button Sliders</h3>
+  <h4 class="doc">Horizontal Button Sliders</h4>
+  <div class="example flex-parent flex-column">
+    <div class="flex-parent flex-column">
+      <p class="doc white">Thin Slider</p>
+      <p class="doc white"><span class="inline-code">.horizontal-slider</span> <span class="inline-code">.thin-slider</span></p>
+      <div class="horizontal-slider button-slider thin-slider">
+        <div class="slider-button less-button"></div>
+        <input class="slider-input" type="range" value="25"/>
+        <div class="slider-button more-button"></div>
+      </div>
+
+      <output class="orange-viv center">25</output>
+    </div>
+
+    <div class="flex-parent flex-column">
+      <p class="doc white">Standard Slider</p>
+      <p class="doc white"><span class="inline-code">.horizontal-slider</span></p>
+      <div class="horizontal-slider button-slider">
+        <div class="slider-button less-button"></div>
+        <input class="slider-input" type="range" value="50" />
+        <div class="slider-button more-button"></div>
+      </div>
+
+      <output class="orange-viv center">50</output>
+    </div>
+
+    <div class="flex-parent flex-column">
+      <p class="doc white">Thick Slider</p>
+      <p class="doc white"><span class="inline-code">.horizontal-slider</span> <span class="inline-code">.thick-slider</span></p>
+      <div class="horizontal-slider button-slider thick-slider">
+        <div class="slider-button less-button"></div>
+        <input class="slider-input" type="range" value="75" />
+        <div class="slider-button more-button"></div>
+      </div>
+
+      <output class="orange-viv center">75</output>
+    </div>
+  </div>
+  <h4 class="doc">Vertical Button Sliders</h4>
+
+  <div class="example flex-parent">
+    <div class="flex-parent flex-column flex-item space-between">
+      <p class="doc white">Thin Slider</p>
+      <p class="doc white"><span class="inline-code">.vertical-slider</span> <span class="inline-code">.thin-slider</span></p>
+      <div class="vertical-slider button-slider thin-slider">
+        <div class="slider-button less-button"></div>
+        <input class="slider-input" type="range" value="25"/>
+        <div class="slider-button more-button"></div>
+      </div>
+
+      <output class="orange-viv center">25</output>
+    </div>
+
+    <div class="flex-parent flex-column flex-item space-between">
+      <p class="doc white">Standard Slider</p>
+      <p class="doc white"><span class="inline-code">.vertical-slider</span></p>
+      <div class="vertical-slider button-slider">
+        <div class="slider-button less-button"></div>
+        <input class="slider-input" type="range" value="50" />
+        <div class="slider-button more-button"></div>
+      </div>
+
+      <output class="orange-viv center">50</output>
+    </div>
+
+    <div class="flex-parent flex-column flex-item space-between">
+      <p class="doc white">Thick Slider</p>
+      <p class="doc white"><span class="inline-code">.vertical-slider</span> <span class="inline-code">.thick-slider</span></p>
+      <div class="vertical-slider button-slider thick-slider">
+        <div class="slider-button less-button"></div>
+        <input class="slider-input" type="range" value="75" />
+        <div class="slider-button more-button"></div>
+      </div>
+
+      <output class="orange-viv center">75</output>
+    </div>
+  </div>
+
+  <section class="sub-section html" data-content-id="html">
+    <p class="doc reverse-highlight"><small>Last updated: 3/23/15</small></p>
+    <code contenteditable></code>
+  </section>
+</section>

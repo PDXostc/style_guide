@@ -1,0 +1,141 @@
+<h2 class="doc">Scrolling Content</h2>
+<h3 class="doc">Touch Action</h3>
+<p class="doc">The <span class="inline-code">touch-action</span> CSS property specifies whether and how a given region can be manipulated by the user (for instance, by panning or zooming).<sup><small>1</small></sup></p>
+<p class="doc">The <span class="inline-code">touch-action</span> property has been set to <span class="inline-code">none</span> across the app suite via the <span class="inline-code">body</span> element. This was implemented to prevent unwanted zooming and scrolling of the viewport area. The side-effect is that it disables the ability to scroll overflow content.</p>
+<p class="doc">The <span class="inline-code">ul</span> element (unordered list) and the <span class="inline-code">ol</span> element (ordered list) have been updated to allow for scrolling.</p>
+
+<h3 class="doc">Scrolling Classes</h3>
+
+<p class="doc">To enable scrolling on any other element, use any of the following classes:</p>
+
+<div class="example no-title">
+  <table>
+    <tbody>
+      <tr>
+        <th>Class</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td><span class="inline-code">.scrollable-x</span></td>
+        <td><span>Allows horizontal scrolling <em>without a scrollbar</em></span></td>
+      </tr>
+      <tr>
+        <td><span class="inline-code">.scrollable-y</span></td>
+        <td><span>Allows vertical scrolling <em>without a scrollbar</em></span></td>
+      </tr>
+      <tr>
+        <td><span class="inline-code">.scrollable-xy</span></td>
+        <td><span>Allows horizontal and vertical scrolling <em>without a scrollbar</em></span></td>
+      </tr>
+      <tr>
+        <td><span class="inline-code">.scrollbar-x</span></td>
+        <td><span>Allows horizontal scrolling <em>with a scrollbar</em></span></td>
+      </tr>
+      <tr>
+        <td><span class="inline-code">.scrollbar-y</span></td>
+        <td><span>Allows vertical scrolling <em>with a scrollbar</em></span></td>
+      </tr>
+      <tr>
+        <td><span class="inline-code">.scrollbar-xy</span></td>
+        <td><span>Allows horizontal and vertical scrolling <em>with a scrollbar</em></span></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<h3 class="doc" id="scrollable">Scrollable Content</h3>
+
+<div class="example">
+  <p class="doc white"><span class="inline-code">.scrollable-x</span></p>
+  <div class="scrollable-x">
+    <p class="doc white">Lorem ipsum dolor sit amet, consectetur 
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+    proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  </div>
+</div>
+
+<div class="example h300 flex-parent flex-column">
+  <p class="doc white"><span class="inline-code">.scrollable-y</span></p>
+  <div class="scrollable-y flex-item">
+    <p class="doc white">Lorem ipsum dolor sit amet, consectetur 
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+    proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  </div>
+</div>
+
+<div class="example h500 flex-parent flex-column">
+  <p class="doc white"><span class="inline-code">.scrollable-xy</span></p>
+  <div class="scrollable-xy flex-item">
+    <p class="doc white"><img src="images/ftype_incontrol.jpg" height="860" width="1366"></p>
+  </div>
+</div>
+
+<h3 class="doc" id="scrollbars">Scrollbar Content</h3>
+
+<div class="example">
+  <p class="doc white"><span class="inline-code">.scrollbar-x</span></p>
+  <div class="scrollbar-x">
+    <p class="doc white">Lorem ipsum dolor sit amet, consectetur 
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+    proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  </div>
+</div>
+
+<div class="example h300 flex-parent flex-column">
+  <p class="doc white"><span class="inline-code">.scrollbar-y</span></p>
+  <div class="scrollbar-y flex-item">
+    <p class="doc white">Lorem ipsum dolor sit amet, consectetur 
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+    proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  </div>
+</div>
+
+<div class="example h500 flex-parent flex-column">
+  <p class="doc white"><span class="inline-code">.scrollbar-xy</span></p>
+  <div class="scrollbar-xy flex-item">
+    <p class="doc white"><img src="images/ftype_incontrol.jpg" height="860" width="1366"></p>
+  </div>
+</div>
+
+<section class="sub-section html" data-content-id="html">
+  <p class="doc reverse-highlight"><small>Last updated: 3/05/15</small></p>
+  <code contenteditable></code>
+</section>
+
+<p class="doc"><small><sup>1</sup> <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/touch-action" class="external-link" target="blank">https://developer.mozilla.org/en-US/docs/Web/CSS/touch-action</a></small></p>
